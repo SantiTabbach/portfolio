@@ -1,0 +1,9 @@
+export { default as ReduxIcon } from "./redux-icon.svg";
+export { default as ReactIcon } from "./react-icon.svg";
+export { default as TypescriptIcon } from "./typescript-icon.svg";
+export { default as JestIcon } from "./jest-icon.svg";
+export { default as FigmaIcon } from "./figma-icon.svg";
+export { default as GithubIcon } from "./github-icon.svg";
+export { default as FirebaseIcon } from "./firebase-icon.svg";
+export { default as DockerIcon } from "./docker-icon.svg";
+export { default as NodeIcon } from "./node-icon.svg";
