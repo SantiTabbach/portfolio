@@ -2,7 +2,7 @@
 
 - [x] Add a personal picture.
 - [ ] Add translation option.
-- [ ] Adjust blank space between sections (less dead space).
+- [x] Adjust blank space between sections (less dead space).
 - [x] Align elements to the center in mobile size.
 - [x] Adjust media box to be aligned to the center in mobile size.
 - [ ] Add a footer with contact info, personal info, etc.
