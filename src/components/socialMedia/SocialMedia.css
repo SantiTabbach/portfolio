@@ -25,13 +25,7 @@
     }
   }
 
-  @media (max-width: 400px) {
-    .social-media-content {
-      flex-direction: column;
-      .media-btn {
-        width: auto;
-        height: 40px;
-      }
-    }
+  @media (max-width: 520px) {
+    text-align: -webkit-center;
   }
 }
