@@ -1,16 +1,16 @@
-interface IRegularList<T, K> {
+interface RegularListProps<T, P = object> {
   items: T[];
   resourceName: string;
-  itemComponent: React.FC<K>;
+  itemComponent: React.ComponentType<P>;
 }
 
-const RegularList = <T, K>({
+const RegularList = <T extends object, P extends { key: string | number }>({
   items,
   resourceName,
   itemComponent: ItemComponent,
-}: IRegularList<T, K>) => {
+}: RegularListProps<T, P>) => {
   return items.map((item, index) => (
-    <ItemComponent key={index} {...{ [resourceName]: item }} /> //TODO: Fix type
+    <ItemComponent {...({ [resourceName]: item, key: index } as P)} />
   ));
 };
 
