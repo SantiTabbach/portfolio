@@ -3,8 +3,8 @@
 - [x] Add a personal picture.
 - [ ] Add translation option.
 - [ ] Adjust blank space between sections (less dead space).
-- [ ] Align element to the center in mobile size.
-- [ ] Adjust media box to be aligned to the center in mobile size.
+- [x] Align elements to the center in mobile size.
+- [x] Adjust media box to be aligned to the center in mobile size.
 - [ ] Add a footer with contact info, personal info, etc.
 - [x] Text too plain, highlight important things.
 - [ ] Follow 60/30/10 design rule.
