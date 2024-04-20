@@ -4,20 +4,21 @@ import {
   MediumPosts,
   Section,
   SocialMedia,
+  Header,
 } from "./components";
 import "./App.css";
 
-const { Title, Subtitle, Paragraph } = Typography;
+const { Paragraph, Subtitle } = Typography;
 
 function App() {
   return (
     <div>
+      <Header />
       <div className="main-container">
         <div className="col">
           <Section>
             <>
-              <Title>Santi Tabbach</Title>
-              <Subtitle>SSR React Developer</Subtitle>
+              <Subtitle fontWeight="100">SSR React Developer</Subtitle>
               <Paragraph>
                 Currently contributing to the implementation of new
                 functionalities for a USA healthcare project. Simultaneously

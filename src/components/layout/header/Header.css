@@ -1,0 +1,44 @@
+.header-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+
+  .santi-tabbach {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .avatar {
+      width: 250px;
+    }
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: start;
+
+      @media (max-width: 520px) {
+        flex-direction: row;
+        .title {
+          margin-right: 10px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        .title {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
