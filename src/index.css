@@ -3,23 +3,3 @@
 
   background-color: #0b111f;
 }
-
-.main-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  @media (max-width: 769px) {
-    flex-direction: column;
-  }
-}
-
-.col {
-  width: 48%;
-  height: 100%;
-  justify-content: center;
-  text-align: start;
-  @media (max-width: 769px) {
-    width: 100%;
-  }
-}
