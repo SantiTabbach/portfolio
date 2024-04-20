@@ -6,7 +6,7 @@
 - [ ] Align element to the center in mobile size.
 - [ ] Adjust media box to be aligned to the center in mobile size.
 - [ ] Add a footer with contact info, personal info, etc.
-- [ ] Text too plain, highlight important things.
+- [x] Text too plain, highlight important things.
 - [ ] Follow 60/30/10 design rule.
 - [x] Add `target="_blank"` attribute to the links.
 

@@ -28,19 +28,20 @@ function App() {
           <Section title="About me">
             <>
               <Paragraph>
-                Passionate SSR software engineer specialized in frontend
-                development with experience in React and React Native.
+                Passionate <b>SSR software engineer</b> specialized in frontend
+                development with experience in <b>React</b> and{" "}
+                <b>React Native</b>.
               </Paragraph>
               <Paragraph>
                 While I love frontend development, I also have a strong interest
-                in and recognize the importance of UX/UI design. Currently, I am
-                honing my technologies in this area using Figma as a design tool
-                and applying design patterns, Nielsen heuristics, Shneiderman's
-                Golden Rules, among others.
+                in and recognize the importance of <b>UX/UI design</b>.
+                Currently, I am honing my technologies in this area using Figma
+                as a design tool and applying design patterns, Nielsen
+                heuristics, Shneiderman's Golden Rules, among others.
               </Paragraph>
             </>
           </Section>
-          <Section title="Technologies that I love">
+          <Section title="Technologies that I use">
             <Technologies />
           </Section>
         </div>
