@@ -1,20 +1,27 @@
 import Typography from "../typography/Typography";
-import "./GlassBox.css";
+import { Footer, GlassBoxContainer } from "./styled";
 
 interface IGlassBox {
   title?: React.ReactNode;
   children: React.ReactNode;
   footer?: React.ReactNode;
   active?: boolean;
+  className?: string;
 }
 
-const GlassBox: React.FC<IGlassBox> = ({ title, children, footer, active }) => {
+const GlassBox: React.FC<IGlassBox> = ({
+  title,
+  children,
+  footer,
+  active,
+  className,
+}) => {
   return (
-    <div className={`glass-box${active ? "-active" : ""}`}>
+    <GlassBoxContainer active={active} className={className}>
       {title && <Typography.Subtitle>{title}</Typography.Subtitle>}
       {children}
-      {footer && <div className="footer">{footer}</div>}
-    </div>
+      {footer && <Footer>{footer}</Footer>}
+    </GlassBoxContainer>
   );
 };
 
