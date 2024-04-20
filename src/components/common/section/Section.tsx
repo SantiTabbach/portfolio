@@ -4,7 +4,7 @@ import "./Section.css";
 type TTitleProps = React.ComponentProps<typeof Typography>;
 
 interface ISection {
-  children: React.ReactElement;
+  children: React.ReactNode;
   titleProps?: TTitleProps;
   title?: string;
 }
