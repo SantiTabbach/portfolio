@@ -8,7 +8,7 @@
 - [ ] Add a footer with contact info, personal info, etc.
 - [ ] Text too plain, highlight important things.
 - [ ] Follow 60/30/10 design rule.
-- [ ] Add `target="_blank"` attribute to the links.
+- [x] Add `target="_blank"` attribute to the links.
 
 # Personal TODOs:
 

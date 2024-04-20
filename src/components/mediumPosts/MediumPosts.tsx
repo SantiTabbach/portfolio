@@ -23,7 +23,11 @@ const MediumPosts = () => {
       {MEDIUM_POSTS.map(({ title, url, description, topics }) => (
         <GlassBox
           key={title}
-          title={<a href={url}>{title}</a>}
+          title={
+            <a target="_blank" href={url}>
+              {title}
+            </a>
+          }
           footer={<Topics topics={topics} />}
         >
           <Paragraph>{description}</Paragraph>

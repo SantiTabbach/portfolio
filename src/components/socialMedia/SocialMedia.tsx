@@ -42,7 +42,13 @@ const SocialMedia = () => {
       <GlassBox active>
         <div className="social-media-content">
           {MEDIA_BUTTONS.map(({ icon, url, title }) => (
-            <a className="media-btn" key={icon} href={url} title={title}>
+            <a
+              target="_blank"
+              className="media-btn"
+              key={icon}
+              href={url}
+              title={title}
+            >
               <img className="media-icon" src={icon} />
             </a>
           ))}
