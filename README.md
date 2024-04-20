@@ -12,7 +12,7 @@
 
 # Personal TODOs:
 
-- [ ] Improve text contrast.
+- [x] Improve text contrast.
 - [ ] Add theme toggle.
 - [ ] Add a professional experience section.
 - [ ] Add a studies section.
