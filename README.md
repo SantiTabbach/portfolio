@@ -1,6 +1,6 @@
 # Friendly Suggestions:
 
-- [ ] Add a personal picture.
+- [x] Add a personal picture.
 - [ ] Add translation option.
 - [ ] Adjust blank space between sections (less dead space).
 - [ ] Align element to the center in mobile size.
