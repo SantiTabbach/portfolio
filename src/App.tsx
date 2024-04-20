@@ -8,7 +8,6 @@ import {
   Header,
   Content,
 } from "./components";
-import "./App.css";
 
 const { Paragraph, Subtitle } = Typography;
 
