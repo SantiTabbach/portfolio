@@ -1,6 +1,8 @@
 .medium-posts-container {
   max-height: 400px;
   overflow: auto;
+  background-color: #090e19;
+  border-radius: 8px;
 
   .glass-box {
     margin-bottom: 25px;
