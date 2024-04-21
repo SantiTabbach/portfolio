@@ -1,5 +1,9 @@
 import React from "react";
-import "./Typography.css";
+import {
+  StyledParagraph,
+  StyledSubtitle,
+  StyledTitle,
+} from "./styled/Typography";
 
 interface ITypography {
   children: React.ReactNode;
@@ -15,58 +19,16 @@ const Typography: React.FC<ITypography> & {
   return <div>{children}</div>;
 };
 
-const Title: React.FC<ITypography> = ({
-  children,
-  color = "#4BFFBE",
-  fontWeight = 400,
-}) => {
-  return (
-    <p
-      className="title"
-      style={{
-        color,
-        fontWeight,
-      }}
-    >
-      {children}
-    </p>
-  );
+const Title: React.FC<ITypography> = (props) => {
+  return <StyledTitle {...props}>{props.children}</StyledTitle>;
 };
 
-const Subtitle: React.FC<ITypography> = ({
-  children,
-  color = "#ffff",
-  fontWeight = 200,
-}) => {
-  return (
-    <p
-      className="subtitle"
-      style={{
-        color,
-        fontWeight,
-      }}
-    >
-      {children}
-    </p>
-  );
+const Subtitle: React.FC<ITypography> = (props) => {
+  return <StyledSubtitle {...props}>{props.children}</StyledSubtitle>;
 };
 
-const Paragraph: React.FC<ITypography> = ({
-  children,
-  color = "#8799bc",
-  fontWeight = 200,
-}) => {
-  return (
-    <p
-      className="paragraph"
-      style={{
-        color,
-        fontWeight,
-      }}
-    >
-      {children}
-    </p>
-  );
+const Paragraph: React.FC<ITypography> = (props) => {
+  return <StyledParagraph {...props}>{props.children}</StyledParagraph>;
 };
 
 Typography.Title = Title;
