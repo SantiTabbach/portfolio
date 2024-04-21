@@ -10,7 +10,8 @@
     flex-direction: row;
 
     .avatar {
-      width: 225px;
+      width: 150px;
+      margin: 25px;
     }
 
     @media (max-width: 520px) {
