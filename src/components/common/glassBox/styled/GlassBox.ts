@@ -10,26 +10,26 @@ export const GlassBoxContainer = styled.div<{
   transition: background 0.3s ease-in-out;
 
   &:hover {
-    background: rgba(31, 42, 70, 0.4);
+    background: ${({ theme }) => theme.glassBox.active.background};
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.05);
+    border: ${({ theme }) => theme.glassBox.active.border};
+    box-shadow: ${({ theme }) => theme.glassBox.active.boxShadow};
   }
 
   ${(props) =>
     props.active &&
     css`
-      background: rgba(31, 42, 70, 0.4);
+      background: ${({ theme }) => theme.glassBox.active.background};
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.01);
-      box-shadow: inset 0 1px 0 0 rgba(148, 163, 184, 0.05);
+      border: ${({ theme }) => theme.glassBox.active.border};
+      box-shadow: ${({ theme }) => theme.glassBox.active.boxShadow};
     `}
 `;
 
 export const Footer = styled.div`
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-top: ${({ theme }) => theme.glassBox.footer.borderTop};
 `;

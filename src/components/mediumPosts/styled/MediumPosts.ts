@@ -5,7 +5,7 @@ export const MediumPostsContainer = styled.div`
   overflow: auto;
   border-radius: 8px;
   padding: 10px;
-  box-shadow: inset 0 4px 40px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: ${({ theme }) => theme.shadow};
 `;
 
 export const Description = styled.div`
@@ -26,9 +26,9 @@ export const Description = styled.div`
 
 export const Avatar = styled.img`
   width: 150px;
-  height: 136.6px;
+  height: 120px;
   margin: 25px;
-  margin-top: 0;
+  margin-top: 16px;
 
   @media (max-width: 520px) and (min-width: 400px) {
     margin-bottom: 0;
