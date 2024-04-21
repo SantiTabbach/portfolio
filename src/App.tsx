@@ -1,4 +1,4 @@
-import React from "react";
+import { ThemeProvider } from "styled-components";
 import {
   Technologies,
   Typography,
@@ -8,6 +8,9 @@ import {
   Header,
   Content,
 } from "./components";
+import { ThemeConfig } from "./theme/Theme";
+import { useTheme } from "./theme/hooks/useTheme";
+import { GlobalStyles } from "./theme/GlobalStyles";
 
 const { Paragraph, Subtitle } = Typography;
 
@@ -43,15 +46,21 @@ const LeftColumn = () => (
 const RightColumn = () => <MediumPosts />;
 
 function App() {
+  const { theme, themeToggler } = useTheme();
+
+  console.log(theme);
+
   return (
-    <React.Fragment>
+    <ThemeProvider theme={ThemeConfig[theme]}>
+      <GlobalStyles />
       <Header />
+      <button onClick={themeToggler}>Switch Theme</button>
       <Content>
         <LeftColumn />
         <RightColumn />
       </Content>
       <SocialMedia />
-    </React.Fragment>
+    </ThemeProvider>
   );
 }
 
