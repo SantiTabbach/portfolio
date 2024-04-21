@@ -11,8 +11,8 @@ export const GlassBoxContainer = styled.div<{
 
   &:hover {
     background: ${({ theme }) => theme.glassBox.active.background};
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px) saturate(150%);
+    -webkit-backdrop-filter: blur(5px) saturate(150%);
     border: ${({ theme }) => theme.glassBox.active.border};
     box-shadow: ${({ theme }) => theme.glassBox.active.boxShadow};
   }
@@ -21,8 +21,8 @@ export const GlassBoxContainer = styled.div<{
     props.active &&
     css`
       background: ${({ theme }) => theme.glassBox.active.background};
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px) saturate(150%);
+      -webkit-backdrop-filter: blur(5px) saturate(150%);
       border: ${({ theme }) => theme.glassBox.active.border};
       box-shadow: ${({ theme }) => theme.glassBox.active.boxShadow};
     `}
