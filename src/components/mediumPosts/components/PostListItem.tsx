@@ -1,4 +1,5 @@
 import { TMediumPost, TTopics } from "../../../models";
+import { ThemeConfig } from "../../../theme/Theme";
 import { Typography } from "../../common";
 import {
   PostContainer,
@@ -25,7 +26,9 @@ const PostListItem: React.FC<IPostListItem> = ({ post }) => {
       <TopicsContainer>
         {topics.map((topic) => (
           <TopicElement key={topic}>
-            <Paragraph color="#4bffbe">{topic}</Paragraph>
+            <Paragraph color={ThemeConfig.dark.primary} fontWeight="400">
+              {topic}
+            </Paragraph>
           </TopicElement>
         ))}
       </TopicsContainer>

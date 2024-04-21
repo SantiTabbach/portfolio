@@ -10,7 +10,7 @@ export const TitleLink = styled.a`
   color: inherit;
 
   &:hover {
-    color: #4bffbe;
+    color: ${({ theme }) => theme.primary};
   }
 `;
 
@@ -22,7 +22,7 @@ export const TopicsContainer = styled.div`
 export const TopicElement = styled.div`
   padding: 2px 12px 2px 12px;
   margin: 5px;
-  background-color: #4affbd33;
+  background-color: #76abae26;
   border-radius: 16px;
   max-width: 200px;
   white-space: nowrap;

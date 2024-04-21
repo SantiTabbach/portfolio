@@ -4,6 +4,8 @@ import { PostListItem } from "./components";
 import { MEDIUM_POSTS } from "./const";
 import { MediumPostsContainer, Description, Avatar } from "./styled";
 import PeaceAvatar from "../../assets/avatars/peace-avatar.png";
+import PeaceAvatarLight from "../../assets/avatars/peace-avatar-light.png";
+import { useTheme } from "styled-components";
 
 const { Paragraph } = Typography;
 
@@ -13,6 +15,8 @@ interface IPostListItem {
 }
 
 const MediumPosts = () => {
+  const theme = useTheme();
+
   return (
     <Section title="Medium posts">
       <Description>
@@ -22,7 +26,7 @@ const MediumPosts = () => {
             a great way to learn and stay updated.
           </Paragraph>
         </div>
-        <Avatar src={PeaceAvatar} />
+        <Avatar src={theme.key === "light" ? PeaceAvatarLight : PeaceAvatar} />
       </Description>
       <Paragraph>
         Occasionally, I also feel motivated to publish my own writings:

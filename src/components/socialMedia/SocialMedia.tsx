@@ -8,29 +8,29 @@ import {
 import "./SocialMedia.css";
 
 type TMediaButton = {
-  icon: string;
+  icon: JSX.Element;
   url: string;
   title: string;
 };
 
 const MEDIA_BUTTONS: TMediaButton[] = [
   {
-    icon: LinkedinIcon,
+    icon: <LinkedinIcon />,
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/santiago-tabbach/",
   },
   {
-    icon: GithubIcon,
+    icon: <GithubIcon />,
     title: "GitHub",
     url: "https://github.com/SantiTabbach",
   },
   {
-    icon: MediumIcon,
+    icon: <MediumIcon />,
     title: "Medium",
     url: "https://medium.com/@ymmhydfct",
   },
   {
-    icon: MailIcon,
+    icon: <MailIcon />,
     title: "Mail",
     url: "mailto:tabbach97@gmail.com",
   },
@@ -45,11 +45,11 @@ const SocialMedia = () => {
             <a
               target="_blank"
               className="media-btn"
-              key={icon}
+              key={url}
               href={url}
               title={title}
             >
-              <img className="media-icon" src={icon} />
+              {icon}
             </a>
           ))}
         </div>
