@@ -14,7 +14,7 @@ const { Paragraph, Subtitle } = Typography;
 const LeftColumn = () => (
   <>
     <Section>
-      <Subtitle fontWeight="100">SSR React Developer</Subtitle>
+      <Subtitle>SSR React Developer</Subtitle>
       <Paragraph>
         Currently contributing to the implementation of new functionalities for
         a USA healthcare project. Simultaneously working on my thesis for

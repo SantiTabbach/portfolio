@@ -14,10 +14,12 @@ export const Description = styled.div`
   align-items: center;
 
   @media (max-width: 520px) and (min-width: 400px) {
+    align-items: start;
     flex-direction: row;
   }
 
   @media (min-width: 769px) and (max-width: 1400px) {
+    align-items: start;
     flex-direction: row;
   }
 `;
