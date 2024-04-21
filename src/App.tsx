@@ -40,11 +40,7 @@ const LeftColumn = () => (
   </>
 );
 
-const RightColumn = () => (
-  <Section title="Medium posts">
-    <MediumPosts />
-  </Section>
-);
+const RightColumn = () => <MediumPosts />;
 
 function App() {
   return (

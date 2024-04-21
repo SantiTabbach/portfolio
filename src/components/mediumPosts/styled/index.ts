@@ -1,1 +1,1 @@
-export * from "./MediumPostsContainer";
+export * from "./MediumPosts";

@@ -27,6 +27,7 @@ export const TopicElement = styled.div`
   max-width: 200px;
   white-space: nowrap;
   p {
+    margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
   }
