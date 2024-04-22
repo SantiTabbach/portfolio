@@ -1,13 +1,18 @@
+import { Theme } from "./models/types";
+
 export const ThemeConfig = {
   dark: {
     icon: "#FFFF",
-    key: "dark",
+    key: Theme.DARK,
     background: "#222831",
     primary: "#76ABAE",
     secondary: "#31363F",
     text: "#989AA0",
     subtitle: "#EEEEEE",
     shadow: "inset 0 0 40px 0 rgba(0, 0, 0, 0.8)",
+    settings: {
+      shadow: "inset 0 0 10px 0 rgba(0, 0, 0, 0.8)",
+    },
     glassBox: {
       active: {
         background: "rgba(49, 54, 63, 0.4)",
@@ -21,13 +26,16 @@ export const ThemeConfig = {
   },
   light: {
     icon: "#000",
-    key: "light",
+    key: Theme.LIGHT,
     background: "#EEEEEE",
     primary: "#76ABAE",
     secondary: "#D4D4D4",
     text: "#31363F",
     subtitle: "#222831",
     shadow: "inset 0 0 30px 0 rgba(11, 17, 31, 0.6)",
+    settings: {
+      shadow: "inset 0 0 10px 0 rgba(11, 17, 31, 0.6)",
+    },
     glassBox: {
       active: {
         background: "rgba(152, 154, 160, 0.4)",

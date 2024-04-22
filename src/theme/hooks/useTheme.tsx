@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Theme } from "../models/types";
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>(Theme.DARK);
 
   const themeToggler = () => {
-    const isDarkTheme = theme === "dark";
-    setTheme(isDarkTheme ? "light" : "dark");
+    const isDarkTheme = theme === Theme.DARK;
+    setTheme(isDarkTheme ? Theme.LIGHT : Theme.DARK);
   };
 
   return { theme, themeToggler };
