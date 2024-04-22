@@ -5,6 +5,7 @@ import {
   StyledTechnologyElement,
   StyledTenchnologiesContainer,
 } from "./StyledTechnologies";
+import { Section } from "../common";
 
 interface ISkillElement {
   icon: JSX.Element;
@@ -22,11 +23,13 @@ const Technologies: React.FC = () => {
   );
 
   return (
-    <StyledTenchnologiesContainer className="technologies-container">
-      {TECHNOLOGIES.map(({ name, icon: Icon }) => (
-        <TechnologyElement key={name} name={name} icon={<Icon />} />
-      ))}
-    </StyledTenchnologiesContainer>
+    <Section title="Technologies that I use">
+      <StyledTenchnologiesContainer className="technologies-container">
+        {TECHNOLOGIES.map(({ name, icon: Icon }) => (
+          <TechnologyElement key={name} name={name} icon={<Icon />} />
+        ))}
+      </StyledTenchnologiesContainer>
+    </Section>
   );
 };
 
