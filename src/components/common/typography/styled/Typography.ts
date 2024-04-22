@@ -23,5 +23,4 @@ export const StyledParagraph = styled.p<IStyledTypography>`
   color: ${(props) => props.color};
   font-weight: ${(props) => props.fontWeight || 200};
   font-size: 16px;
-  text-align: justify;
 `;

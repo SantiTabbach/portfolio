@@ -12,29 +12,26 @@ import { ThemeConfig } from "./theme/Theme";
 import { useTheme } from "./theme/hooks/useTheme";
 import { GlobalStyles } from "./theme/GlobalStyles";
 
-const { Paragraph, Subtitle } = Typography;
+const { Paragraph } = Typography;
+
+import styled from "styled-components";
+
+const Bold = styled.b`
+  font-weight: 500;
+  color: ${({ theme }) => theme.primary};
+`;
 
 const LeftColumn = () => (
   <>
-    <Section>
-      <Subtitle>SSR React Developer</Subtitle>
-      <Paragraph>
-        Currently contributing to the implementation of new functionalities for
-        a USA healthcare project. Simultaneously working on my thesis for
-        software engineering degree.
-      </Paragraph>
-    </Section>
     <Section title="About me">
       <Paragraph>
-        Passionate <b>SSR software engineer</b> specialized in frontend
-        development with experience in <b>React</b> and <b>React Native</b>.
+        Passionate <Bold>SSR Software Developer</Bold> with experience in{" "}
+        <Bold>React</Bold> and <Bold>React Native</Bold>. Also deeply interested
+        in <Bold>UX/UI design</Bold>.
       </Paragraph>
       <Paragraph>
-        While I love frontend development, I also have a strong interest in and
-        recognize the importance of <b>UX/UI design</b>. Currently, I am honing
-        my technologies in this area using Figma as a design tool and applying
-        design patterns, Nielsen heuristics, Shneiderman's Golden Rules, among
-        others.
+        Currently developing new features for a USA healthcare project and
+        working on my thesis for software engineering degree.
       </Paragraph>
     </Section>
     <Section title="Technologies that I use">
@@ -48,13 +45,10 @@ const RightColumn = () => <MediumPosts />;
 function App() {
   const { theme, themeToggler } = useTheme();
 
-  console.log(theme);
-
   return (
     <ThemeProvider theme={ThemeConfig[theme]}>
       <GlobalStyles />
-      <Header />
-      <button onClick={themeToggler}>Switch Theme</button>
+      <Header theme={theme} themeToggler={themeToggler} />
       <Content>
         <LeftColumn />
         <RightColumn />

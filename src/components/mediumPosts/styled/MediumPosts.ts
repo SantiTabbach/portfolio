@@ -10,31 +10,29 @@ export const MediumPostsContainer = styled.div`
 
 export const Description = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: row;
 
-  @media (max-width: 520px) and (min-width: 400px) {
-    align-items: start;
-    flex-direction: row;
+  @media (max-width: 1120px) and (min-width: 770px) {
+    flex-direction: column;
+    align-items: center;
   }
 
-  @media (min-width: 769px) and (max-width: 1400px) {
-    align-items: start;
-    flex-direction: row;
+  @media (max-width: 520px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
 export const Avatar = styled.img`
   width: 150px;
   height: 120px;
-  margin: 25px;
   margin-top: 16px;
-
-  @media (max-width: 520px) and (min-width: 400px) {
-    margin-bottom: 0;
+  @media (max-width: 1120px) and (min-width: 770px) {
+    margin: 16px;
   }
 
-  @media (min-width: 769px) and (max-width: 1400px) {
-    margin-bottom: 0;
+  @media (max-width: 520px) {
+    margin: 16px;
   }
 `;

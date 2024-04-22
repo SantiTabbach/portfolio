@@ -1,8 +1,10 @@
 .header-container {
+  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: start;
+  margin-bottom: 25px;
 
   .santi-tabbach {
     width: 100%;
@@ -11,12 +13,16 @@
 
     .avatar {
       width: 150px;
-      margin: 25px;
+      margin-right: 25px;
     }
 
     @media (max-width: 520px) {
       flex-direction: column;
       align-items: center;
+
+      .avatar {
+        margin: 25px 0 25px 0;
+      }
     }
 
     .name {
@@ -27,7 +33,7 @@
 
       @media (max-width: 520px) {
         flex-direction: row;
-        .title {
+        p {
           margin-right: 10px;
         }
       }
@@ -36,10 +42,16 @@
         flex-direction: column;
         align-content: center;
         text-align: center;
-        .title {
+        p {
           margin-right: 0;
         }
       }
     }
   }
+}
+
+.settings-container {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

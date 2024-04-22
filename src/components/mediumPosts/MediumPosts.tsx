@@ -6,6 +6,7 @@ import { MediumPostsContainer, Description, Avatar } from "./styled";
 import PeaceAvatar from "../../assets/avatars/peace-avatar.png";
 import PeaceAvatarLight from "../../assets/avatars/peace-avatar-light.png";
 import { useTheme } from "styled-components";
+import { Theme } from "../../theme/models/types";
 
 const { Paragraph } = Typography;
 
@@ -20,13 +21,13 @@ const MediumPosts = () => {
   return (
     <Section title="Medium posts">
       <Description>
-        <div>
-          <Paragraph>
-            I really enjoy reading Medium posts about programming. I think it's
-            a great way to learn and stay updated.
-          </Paragraph>
-        </div>
-        <Avatar src={theme.key === "light" ? PeaceAvatarLight : PeaceAvatar} />
+        <Paragraph>
+          I find pleasure in reading programming articles on Medium during my
+          free time. It's a great way to stay up to date on the latest trends.
+        </Paragraph>
+        <Avatar
+          src={theme.key === Theme.LIGHT ? PeaceAvatarLight : PeaceAvatar}
+        />
       </Description>
       <Paragraph>
         Occasionally, I also feel motivated to publish my own writings:
