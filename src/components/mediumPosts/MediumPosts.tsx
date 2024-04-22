@@ -31,6 +31,7 @@ const MediumPosts = () => {
           free time. It's a great way to stay up to date on the latest trends.
         </Paragraph>
         <StyledAvatar
+          alt="santi memoji"
           src={theme.key === Theme.LIGHT ? PeaceAvatarLight : PeaceAvatar}
         />
       </StyledDescription>

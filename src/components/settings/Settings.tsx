@@ -13,7 +13,7 @@ const { Paragraph } = Typography;
 const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
   return (
     <StyledSettingsBox>
-      <StyledButton onClick={themeToggler}>
+      <StyledButton onClick={themeToggler} aria-label="theme switch">
         {theme === Theme.LIGHT ? <SunIcon /> : <MoonIcon />}
       </StyledButton>
       <StyledButton disabled>

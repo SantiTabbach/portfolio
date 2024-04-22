@@ -22,6 +22,7 @@ const Header: React.FC<IHeader> = ({ theme, themeToggler }) => {
     <StyledHeaderContainer>
       <StyledSantiContainer>
         <StyledAvatar
+          alt="santi memoji"
           className="avatar"
           src={theme === Theme.LIGHT ? AvatarLight : Avatar}
         />
