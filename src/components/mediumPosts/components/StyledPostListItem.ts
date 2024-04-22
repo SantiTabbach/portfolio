@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { GlassBox } from "../../../common";
-import { StyledParagraph } from "../../../common/typography/styled/Typography";
+import { GlassBox } from "../../common";
+import { StyledParagraph } from "../../common/typography/StyledTypography";
 
-export const PostContainer = styled(GlassBox)`
+export const StyledPostContainer = styled(GlassBox)`
   margin-bottom: 10px;
 `;
 
-export const TitleLink = styled.a`
+export const StyledTitleLink = styled.a`
   text-decoration: none;
   color: inherit;
   font-size: 16px;
@@ -16,12 +16,12 @@ export const TitleLink = styled.a`
   }
 `;
 
-export const TopicsContainer = styled.div`
+export const StyledTopicsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
 
-export const TopicElement = styled(StyledParagraph)`
+export const StyledTopicElement = styled(StyledParagraph)`
   padding: 2px 12px 2px 12px;
   margin: 5px;
   background-color: #76abae26;

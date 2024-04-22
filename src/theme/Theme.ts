@@ -1,4 +1,4 @@
-import { Theme } from "./models/types";
+import { Theme } from "../models";
 
 export const ThemeConfig = {
   dark: {

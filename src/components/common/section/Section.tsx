@@ -1,5 +1,5 @@
 import { Typography } from "../index";
-import "./Section.css";
+import { StyledSection } from "./StyledSection";
 
 type TTitleProps = React.ComponentProps<typeof Typography>;
 
@@ -11,12 +11,12 @@ interface ISection {
 
 const Section: React.FC<ISection> = ({ children, title, titleProps }) => {
   return (
-    <div className="section-container">
+    <StyledSection>
       {title && (
         <Typography.Subtitle {...titleProps}>{title}</Typography.Subtitle>
       )}
       {children}
-    </div>
+    </StyledSection>
   );
 };
 

@@ -5,7 +5,11 @@ import {
   LinkedinIcon,
   MailIcon,
 } from "../../assets/socialMedia";
-import "./SocialMedia.css";
+import {
+  StyledMediaBtn,
+  StyledSocialMediaContainer,
+  StyledSocialMediaContent,
+} from "./StyledSocialMedia";
 
 type TMediaButton = {
   icon: JSX.Element;
@@ -38,11 +42,11 @@ const MEDIA_BUTTONS: TMediaButton[] = [
 
 const SocialMedia = () => {
   return (
-    <div className="social-media-container">
+    <StyledSocialMediaContainer>
       <GlassBox active>
-        <div className="social-media-content">
+        <StyledSocialMediaContent>
           {MEDIA_BUTTONS.map(({ icon, url, title }) => (
-            <a
+            <StyledMediaBtn
               target="_blank"
               className="media-btn"
               key={url}
@@ -50,11 +54,11 @@ const SocialMedia = () => {
               title={title}
             >
               {icon}
-            </a>
+            </StyledMediaBtn>
           ))}
-        </div>
+        </StyledSocialMediaContent>
       </GlassBox>
-    </div>
+    </StyledSocialMediaContainer>
   );
 };
 

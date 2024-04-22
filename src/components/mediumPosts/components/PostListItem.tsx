@@ -2,11 +2,11 @@ import { TMediumPost, TTopics } from "../../../models";
 import { ThemeConfig } from "../../../theme/Theme";
 import { Typography } from "../../common";
 import {
-  PostContainer,
-  TitleLink,
-  TopicElement,
-  TopicsContainer,
-} from "./styled";
+  StyledPostContainer,
+  StyledTitleLink,
+  StyledTopicElement,
+  StyledTopicsContainer,
+} from "./StyledPostListItem";
 
 const { Paragraph } = Typography;
 
@@ -23,33 +23,33 @@ const PostListItem: React.FC<IPostListItem> = ({ post }) => {
 
   const Topics = ({ topics }: ITopicsList) => {
     return (
-      <TopicsContainer>
+      <StyledTopicsContainer>
         {topics.map((topic) => (
-          <TopicElement
+          <StyledTopicElement
             key={topic}
             color={ThemeConfig.dark.primary}
             fontWeight="400"
             fontSize="14"
           >
             {topic}
-          </TopicElement>
+          </StyledTopicElement>
         ))}
-      </TopicsContainer>
+      </StyledTopicsContainer>
     );
   };
 
   return (
-    <PostContainer
+    <StyledPostContainer
       key={title}
       title={
-        <TitleLink target="_blank" href={url}>
+        <StyledTitleLink target="_blank" href={url}>
           {title}
-        </TitleLink>
+        </StyledTitleLink>
       }
       footer={<Topics topics={topics} />}
     >
       <Paragraph fontSize="14">{description}</Paragraph>
-    </PostContainer>
+    </StyledPostContainer>
   );
 };
 

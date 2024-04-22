@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TenchnologiesContainer = styled.ul`
+export const StyledTenchnologiesContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0 0 0;

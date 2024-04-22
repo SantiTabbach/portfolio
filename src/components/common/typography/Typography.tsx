@@ -3,7 +3,7 @@ import {
   StyledParagraph,
   StyledSubtitle,
   StyledTitle,
-} from "./styled/Typography";
+} from "./StyledTypography";
 
 interface ITypography {
   children: React.ReactNode;

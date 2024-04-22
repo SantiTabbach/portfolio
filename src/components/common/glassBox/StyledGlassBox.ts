@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const GlassBoxContainer = styled.div<{
+export const StyledGlassBoxContainer = styled.div<{
   active?: boolean;
 }>`
   width: fit-content;
@@ -28,7 +28,7 @@ export const GlassBoxContainer = styled.div<{
     `}
 `;
 
-export const Footer = styled.div`
+export const StyledGlassBoxFooter = styled.div`
   margin-top: 20px;
   padding-top: 20px;
   border-top: ${({ theme }) => theme.glassBox.footer.borderTop};

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MediumPostsContainer = styled.div`
+export const StyledMediumPostsContainer = styled.div`
   max-height: 400px;
   overflow: auto;
   border-radius: 8px;
@@ -8,7 +8,7 @@ export const MediumPostsContainer = styled.div`
   box-shadow: ${({ theme }) => theme.shadow};
 `;
 
-export const Description = styled.div`
+export const StyledDescription = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: row;
@@ -24,7 +24,7 @@ export const Description = styled.div`
   }
 `;
 
-export const Avatar = styled.img`
+export const StyledAvatar = styled.img`
   width: 150px;
   height: 120px;
   margin-top: 16px;

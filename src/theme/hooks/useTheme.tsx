@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Theme } from "../models/types";
+import { Theme } from "../../models";
 
 export const useTheme = () => {
   const [theme, setTheme] = useState<Theme>(Theme.DARK);

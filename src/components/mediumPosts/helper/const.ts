@@ -1,4 +1,4 @@
-import { TMediumPost } from "../../models";
+import { TMediumPost } from "../../../models";
 
 //TODO: Pull metadata from link;
 export const MEDIUM_POSTS: TMediumPost[] = [

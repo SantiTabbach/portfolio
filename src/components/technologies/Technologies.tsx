@@ -3,8 +3,8 @@ import { TECHNOLOGIES } from "../../consts";
 import Typography from "../common/typography/Typography";
 import {
   StyledTechnologyElement,
-  TenchnologiesContainer,
-} from "./styled/Technologies";
+  StyledTenchnologiesContainer,
+} from "./StyledTechnologies";
 
 interface ISkillElement {
   icon: JSX.Element;
@@ -22,11 +22,11 @@ const Technologies: React.FC = () => {
   );
 
   return (
-    <TenchnologiesContainer className="technologies-container">
+    <StyledTenchnologiesContainer className="technologies-container">
       {TECHNOLOGIES.map(({ name, icon: Icon }) => (
         <TechnologyElement key={name} name={name} icon={<Icon />} />
       ))}
-    </TenchnologiesContainer>
+    </StyledTenchnologiesContainer>
   );
 };
 
