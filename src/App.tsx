@@ -23,9 +23,9 @@ const Bold = styled.b`
 
 const LeftColumn = () => (
   <>
-    <Section title="About me">
+    <Section title="Hey! I'm Santi">
       <Paragraph>
-        Passionate <Bold>SSR Software Developer</Bold> with experience in{" "}
+        Passionate <Bold>Software Developer</Bold> with experience in{" "}
         <Bold>React</Bold> and <Bold>React Native</Bold>. Also deeply interested
         in <Bold>UX/UI design</Bold>.
       </Paragraph>

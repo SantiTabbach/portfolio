@@ -25,10 +25,13 @@ const PostListItem: React.FC<IPostListItem> = ({ post }) => {
     return (
       <TopicsContainer>
         {topics.map((topic) => (
-          <TopicElement key={topic}>
-            <Paragraph color={ThemeConfig.dark.primary} fontWeight="400">
-              {topic}
-            </Paragraph>
+          <TopicElement
+            key={topic}
+            color={ThemeConfig.dark.primary}
+            fontWeight="400"
+            fontSize="14"
+          >
+            {topic}
           </TopicElement>
         ))}
       </TopicsContainer>
@@ -45,7 +48,7 @@ const PostListItem: React.FC<IPostListItem> = ({ post }) => {
       }
       footer={<Topics topics={topics} />}
     >
-      <Paragraph>{description}</Paragraph>
+      <Paragraph fontSize="14">{description}</Paragraph>
     </PostContainer>
   );
 };
