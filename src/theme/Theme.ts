@@ -2,7 +2,7 @@ import { Theme } from "./models/types";
 
 export const ThemeConfig = {
   dark: {
-    icon: "#FFFF",
+    icon: "#EEEEEE",
     key: Theme.DARK,
     background: "#222831",
     primary: "#76ABAE",
@@ -25,7 +25,7 @@ export const ThemeConfig = {
     },
   },
   light: {
-    icon: "#000",
+    icon: "#222831",
     key: Theme.LIGHT,
     background: "#EEEEEE",
     primary: "#76ABAE",

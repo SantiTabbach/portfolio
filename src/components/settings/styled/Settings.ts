@@ -21,6 +21,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: ${(props) => !props.disabled && "rgba(0, 0, 0, 0.1)"};

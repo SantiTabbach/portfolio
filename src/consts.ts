@@ -3,10 +3,10 @@ import {
   ReactIcon,
   JestIcon,
   TypescriptIcon,
-  GitHubIcon,
   FirebaseIcon,
   NodeIcon,
   DockerIcon,
+  FigmaIcon,
 } from "./assets/technologies";
 
 export const TECHNOLOGIES = [
@@ -27,8 +27,8 @@ export const TECHNOLOGIES = [
     name: "Jest",
   },
   {
-    icon: GitHubIcon,
-    name: "GitHub",
+    icon: FigmaIcon,
+    name: "Figma",
   },
   {
     icon: FirebaseIcon,

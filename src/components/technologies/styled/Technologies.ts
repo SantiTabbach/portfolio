@@ -17,10 +17,14 @@ export const StyledTechnologyElement = styled.li`
   padding-bottom: 20px;
 
   .technology-icon {
-    width: 36px;
+    height: 36px;
   }
 
   @media (max-width: 400px) {
     width: 50%;
+
+    .technology-icon {
+      height: 60px;
+    }
   }
 `;
