@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledGlassBoxContainer = styled.div<{
-  active?: boolean;
+  active?: string;
 }>`
   width: fit-content;
   padding: 15px 20px 15px 20px;

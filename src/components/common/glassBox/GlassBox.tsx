@@ -20,7 +20,10 @@ const GlassBox: React.FC<IGlassBox> = ({
   className,
 }) => {
   return (
-    <StyledGlassBoxContainer active={active} className={className}>
+    <StyledGlassBoxContainer
+      active={active ? "true" : ""}
+      className={className}
+    >
       {title && <Typography.Subtitle>{title}</Typography.Subtitle>}
       {children}
       {footer && <StyledGlassBoxFooter>{footer}</StyledGlassBoxFooter>}

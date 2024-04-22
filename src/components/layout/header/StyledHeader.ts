@@ -22,6 +22,7 @@ export const StyledSantiContainer = styled.div`
 
 export const StyledAvatar = styled.img`
   width: 150px;
+  height: 141px;
   margin-right: 25px;
 
   @media (max-width: 520px) {
