@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
-export const StyledSkillElement = styled.li`
+export const TenchnologiesContainer = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0 0 0;
+  list-style: none;
+  align-items: center;
+`;
+
+export const StyledTechnologyElement = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,19 +20,7 @@ export const StyledSkillElement = styled.li`
     width: 36px;
   }
 
-  @media (max-width: 481px) {
+  @media (max-width: 400px) {
     width: 50%;
-    height: 50px;
-    flex-direction: row;
-    justify-content: left;
-    padding-bottom: 0;
-
-    p {
-      margin-left: 15px;
-    }
-
-    .technology-icon {
-      width: 24px;
-    }
   }
 `;

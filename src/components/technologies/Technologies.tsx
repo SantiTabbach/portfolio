@@ -1,8 +1,10 @@
 import React from "react";
 import { TECHNOLOGIES } from "../../consts";
 import Typography from "../common/typography/Typography";
-import "./Technologies.css";
-import { StyledSkillElement } from "./styled/Technologies";
+import {
+  StyledTechnologyElement,
+  TenchnologiesContainer,
+} from "./styled/Technologies";
 
 interface ISkillElement {
   icon: JSX.Element;
@@ -12,19 +14,19 @@ interface ISkillElement {
 const { Paragraph } = Typography;
 
 const Technologies: React.FC = () => {
-  const SkillElement = ({ icon, name }: ISkillElement) => (
-    <StyledSkillElement>
+  const TechnologyElement = ({ icon, name }: ISkillElement) => (
+    <StyledTechnologyElement>
       {icon}
       <Paragraph>{name}</Paragraph>
-    </StyledSkillElement>
+    </StyledTechnologyElement>
   );
 
   return (
-    <ul className="technologies-container">
+    <TenchnologiesContainer className="technologies-container">
       {TECHNOLOGIES.map(({ name, icon: Icon }) => (
-        <SkillElement key={name} name={name} icon={<Icon />} />
+        <TechnologyElement key={name} name={name} icon={<Icon />} />
       ))}
-    </ul>
+    </TenchnologiesContainer>
   );
 };
 
