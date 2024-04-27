@@ -1,6 +1,6 @@
 import { MoonIcon, SunIcon } from "../../assets/settings";
 import { Theme } from "../../models";
-import { Typography } from "../common";
+// import { Typography } from "../common";
 import { StyledSettingsBox, StyledButton } from "./StyledSettings";
 
 interface ISettings {
@@ -8,7 +8,7 @@ interface ISettings {
   themeToggler: () => void;
 }
 
-const { Paragraph } = Typography;
+// const { Paragraph } = Typography;
 
 const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
   return (
@@ -16,16 +16,13 @@ const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
       <StyledButton onClick={themeToggler} aria-label="theme switch">
         {theme === Theme.LIGHT ? <SunIcon /> : <MoonIcon />}
       </StyledButton>
-      <StyledButton disabled>
-        {/* {theme === Theme.LIGHT ? (
+      {/* <StyledButton disabled>
+        {theme === Theme.LIGHT ? (
           <Paragraph>AR</Paragraph>
         ) : (
           <Paragraph>EN</Paragraph>
-        )} */}
-        <Paragraph color={theme === Theme.LIGHT ? "#D4D4D4" : "#31363F"}>
-          EN
-        </Paragraph>
-      </StyledButton>
+        )}
+      </StyledButton> */}
     </StyledSettingsBox>
   );
 };
