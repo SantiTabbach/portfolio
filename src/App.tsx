@@ -11,10 +11,12 @@ import {
 import { ThemeConfig } from "./theme/Theme";
 import { useTheme } from "./theme/hooks/useTheme";
 import { GlobalStyles } from "./theme/GlobalStyles";
+import WorkExperience from "./components/workExperiencie/WorkExperience";
 
 const LeftColumn = () => (
   <React.Fragment>
     <Presentation />
+    <WorkExperience />
     <Technologies />
   </React.Fragment>
 );
