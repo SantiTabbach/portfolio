@@ -6,6 +6,7 @@ export const StyledTenchnologiesContainer = styled.ul`
   padding: 20px 0 0 0;
   list-style: none;
   align-items: center;
+  justify-content: center;
 `;
 
 export const StyledTechnologyElement = styled.li`
@@ -21,7 +22,7 @@ export const StyledTechnologyElement = styled.li`
   }
 
   @media (max-width: 400px) {
-    width: 50%;
+    width: 33.33%;
 
     .technology-icon {
       height: 60px;
