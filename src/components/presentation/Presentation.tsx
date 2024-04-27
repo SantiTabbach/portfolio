@@ -7,7 +7,7 @@ const Presentation = () => {
   return (
     <Section title="Hey! I'm Santi">
       <Paragraph>
-        Passionate <StyledBold>SSR Software Engineer</StyledBold> with
+        Passionate <StyledBold>SSR Software Developer</StyledBold> with
         experience in <StyledBold>React</StyledBold> and{" "}
         <StyledBold>React Native</StyledBold>. Also deeply interested in{" "}
         <StyledBold>UX/UI design</StyledBold>.
