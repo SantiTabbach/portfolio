@@ -4,7 +4,7 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
-} from "../../assets/socialMedia";
+} from "../../assets/icons/socialMedia";
 import {
   StyledMediaBtn,
   StyledSocialMediaContainer,

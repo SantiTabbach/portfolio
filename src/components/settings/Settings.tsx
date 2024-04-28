@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "../../assets/settings";
+import { MoonIcon, SunIcon } from "../../assets/icons/settings";
 import { Theme } from "../../models";
 // import { Typography } from "../common";
 import { StyledSettingsBox, StyledButton } from "./StyledSettings";

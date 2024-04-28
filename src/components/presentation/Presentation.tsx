@@ -1,5 +1,6 @@
 import { Section, Typography } from "../common";
 import { StyledBold, StyledLink } from "../commonStyled";
+import DownloadButton from "../downloadButton/DownloadButton";
 
 const { Paragraph } = Typography;
 
@@ -19,6 +20,7 @@ const Presentation = () => {
         </StyledLink>
         .
       </Paragraph>
+      <DownloadButton />
     </Section>
   );
 };

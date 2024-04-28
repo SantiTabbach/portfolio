@@ -7,7 +7,7 @@ import {
   NodeIcon,
   DockerIcon,
   FigmaIcon,
-} from "./assets/technologies";
+} from "./assets/icons/technologies";
 
 export const TECHNOLOGIES = [
   {

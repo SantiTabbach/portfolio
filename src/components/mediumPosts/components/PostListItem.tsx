@@ -1,5 +1,5 @@
+import { useTheme } from "styled-components";
 import { TMediumPost, TTopics } from "../../../models";
-import { ThemeConfig } from "../../../theme/Theme";
 import { Typography } from "../../common";
 import {
   StyledPostContainer,
@@ -19,6 +19,8 @@ interface ITopicsList {
 }
 
 const PostListItem: React.FC<IPostListItem> = ({ post }) => {
+  const theme = useTheme();
+
   const { title, url, description, topics } = post;
 
   const Topics = ({ topics }: ITopicsList) => {
@@ -27,7 +29,7 @@ const PostListItem: React.FC<IPostListItem> = ({ post }) => {
         {topics.map((topic) => (
           <StyledTopicElement
             key={topic}
-            color={ThemeConfig.dark.primary}
+            color={theme.primary}
             fontWeight="400"
             fontSize="14"
           >

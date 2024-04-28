@@ -16,6 +16,7 @@ import WorkExperience from "./components/workExperiencie/WorkExperience";
 const LeftColumn = () => (
   <React.Fragment>
     <Presentation />
+
     <WorkExperience />
     <Technologies />
   </React.Fragment>
