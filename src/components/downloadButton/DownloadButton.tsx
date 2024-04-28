@@ -6,7 +6,7 @@ const DownloadButton = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
     link.href = resumePDF;
-    link.download = "resume.pdf";
+    link.download = "Santi Tabbach.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
