@@ -7,13 +7,13 @@
 - [x] Adjust media box to be aligned to the center in mobile size.
 - [ ] Add a footer with contact info, personal info, etc.
 - [x] Text too plain, highlight important things.
-- [ ] Follow 60/30/10 design rule.
+- [x] Follow 60/30/10 design rule.
 - [x] Add `target="_blank"` attribute to the links.
 
 # Personal TODOs:
 
 - [x] Improve text contrast.
 - [x] Add theme toggle.
-- [ ] Add a professional experience section.
+- [x] Add a professional experience section.
 - [ ] Add a studies section.
 - [ ] Add a personal project section.
