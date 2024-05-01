@@ -3,4 +3,8 @@ export interface IWorkExperience {
   company: string;
   time: string;
   summary: string;
+  project?: {
+    text: string;
+    url: string;
+  };
 }

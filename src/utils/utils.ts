@@ -22,8 +22,7 @@ export const getElapsedTime = (startDate: string, endDate: string) => {
   const diffMonths =
     (end.getFullYear() - start.getFullYear()) * 12 +
     end.getMonth() -
-    start.getMonth() +
-    1;
+    start.getMonth();
 
   const years = Math.floor(diffMonths / 12);
   const months = diffMonths % 12;
