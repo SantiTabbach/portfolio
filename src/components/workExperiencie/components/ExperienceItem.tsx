@@ -24,7 +24,7 @@ export const ExperienceItem: React.FC<IWorkExperience> = ({
       <Subtitle color={theme.primary} fontSize="16">
         {title} - {company}
       </Subtitle>
-      <Paragraph color={theme.subtitle} fontWeight="500">
+      <Paragraph color={theme.subtitle} fontWeight="400" fontSize="14">
         {time}
       </Paragraph>
       <StyledSummary>{summary}</StyledSummary>
