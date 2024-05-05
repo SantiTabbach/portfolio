@@ -3,8 +3,10 @@ import styled from "styled-components";
 export const StyledSocialMediaContainer = styled.div`
   bottom: 40px;
   position: sticky;
+  width: fit-content;
 
   @media (max-width: 520px) {
+    width: 100%;
     text-align: -webkit-center;
   }
 `;

@@ -6,16 +6,6 @@ export const StyledPostContainer = styled(GlassBox)`
   margin-bottom: 10px;
 `;
 
-export const StyledTitleLink = styled.a`
-  text-decoration: none;
-  color: inherit;
-  font-size: 16px;
-
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-`;
-
 export const StyledTopicsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;

@@ -1,5 +1,5 @@
-import { Section, Typography } from "../common";
-import { StyledBold, StyledLink } from "../commonStyled";
+import { Link, Section, Typography } from "../common";
+import { StyledBold } from "../commonStyled";
 import DownloadButton from "../downloadButton/DownloadButton";
 
 const { Paragraph } = Typography;
@@ -15,10 +15,7 @@ const Presentation = () => {
       </Paragraph>
       <Paragraph>
         Currently developing new features for a USA healthcare project at{" "}
-        <StyledLink href="https://intive.com/es" target="_blank">
-          Intive
-        </StyledLink>
-        .
+        <Link href="https://intive.com/es">Intive</Link>
       </Paragraph>
       <DownloadButton />
     </Section>

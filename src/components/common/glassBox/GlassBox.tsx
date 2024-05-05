@@ -1,4 +1,3 @@
-import Typography from "../typography/Typography";
 import {
   StyledGlassBoxFooter,
   StyledGlassBoxContainer,
@@ -24,7 +23,7 @@ const GlassBox: React.FC<IGlassBox> = ({
       active={active ? "true" : ""}
       className={className}
     >
-      {title && <Typography.Subtitle>{title}</Typography.Subtitle>}
+      {title && title}
       {children}
       {footer && <StyledGlassBoxFooter>{footer}</StyledGlassBoxFooter>}
     </StyledGlassBoxContainer>

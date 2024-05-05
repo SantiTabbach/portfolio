@@ -1,9 +1,8 @@
 import { useTheme } from "styled-components";
 import { TMediumPost, TTopics } from "../../../models";
-import { Typography } from "../../common";
+import { Link, Typography } from "../../common";
 import {
   StyledPostContainer,
-  StyledTitleLink,
   StyledTopicElement,
   StyledTopicsContainer,
 } from "./StyledPostListItem";
@@ -42,12 +41,7 @@ const PostListItem: React.FC<IPostListItem> = ({ post }) => {
 
   return (
     <StyledPostContainer
-      key={title}
-      title={
-        <StyledTitleLink target="_blank" href={url}>
-          {title}
-        </StyledTitleLink>
-      }
+      title={<Link href={url}>{title}</Link>}
       footer={<Topics topics={topics} />}
     >
       <Paragraph fontSize="14">{description}</Paragraph>

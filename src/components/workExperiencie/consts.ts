@@ -5,7 +5,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
     title: "SSR Software Engineer",
     company: "Intive",
     time: "2023-08-01 - Present",
-    summary: "Maintaining and developing new features for PROJECT.",
+    summary: "Maintaining and developing new features for PROJECT",
     project: {
       text: "medical software",
       url: "https://shoulderinnovations.com/provoyance-shoulder/",
