@@ -2,15 +2,12 @@ import { TMediumPost } from "../../../models";
 import { RegularList, Section, Typography } from "../../common";
 import PostListItem from "./components/PostListItem";
 import { MEDIUM_POSTS } from "./helper/const";
-import {
-  StyledMediumPostsContainer,
-  StyledDescription,
-  StyledAvatar,
-} from "./StyledMediumPosts";
+import { StyledMediumPostsContainer } from "./StyledMediumPosts";
 import PeaceAvatar from "../../../assets/avatars/peace-avatar.png";
 import PeaceAvatarLight from "../../../assets/avatars/peace-avatar-light.png";
 import { useTheme } from "styled-components";
 import { Theme } from "../../../models";
+import { StyledAvatar, StyledDescription } from "../../commonStyled";
 
 const { Paragraph } = Typography;
 
@@ -31,7 +28,7 @@ const MediumPosts = () => {
           free time. It's a great way to stay up to date on the latest trends.
         </Paragraph>
         <StyledAvatar
-          alt="santi memoji"
+          alt="santi tabbach memoji"
           src={theme.key === Theme.LIGHT ? PeaceAvatarLight : PeaceAvatar}
         />
       </StyledDescription>
