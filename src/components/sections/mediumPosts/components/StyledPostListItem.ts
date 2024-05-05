@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { GlassBox } from "../../common";
-import { StyledParagraph } from "../../common/typography/StyledTypography";
+import { GlassBox } from "../../../common";
+import { StyledParagraph } from "../../../common/typography/StyledTypography";
 
 export const StyledPostContainer = styled(GlassBox)`
   margin-bottom: 10px;

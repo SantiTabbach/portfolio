@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, Typography } from "../../common";
-import { IWorkExperience } from "../../../models";
+import { Link, Typography } from "../../../common";
+import { IWorkExperience } from "../../../../models";
 import { useTheme } from "styled-components";
 import {
   StyledCircle,

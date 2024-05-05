@@ -3,26 +3,31 @@ import { ThemeProvider } from "styled-components";
 import {
   Technologies,
   MediumPosts,
+  WorkExperience,
+  Presentation,
+  Projects,
   SocialMedia,
   Header,
   Content,
-  Presentation,
 } from "./components";
 import { ThemeConfig } from "./theme/Theme";
 import { useTheme } from "./theme/hooks/useTheme";
 import { GlobalStyles } from "./theme/GlobalStyles";
-import WorkExperience from "./components/workExperiencie/WorkExperience";
 
 const LeftColumn = () => (
   <React.Fragment>
     <Presentation />
-
     <WorkExperience />
     <Technologies />
   </React.Fragment>
 );
 
-const RightColumn = () => <MediumPosts />;
+const RightColumn = () => (
+  <React.Fragment>
+    <Projects />
+    <MediumPosts />
+  </React.Fragment>
+);
 
 function App() {
   const { theme, themeToggler } = useTheme();

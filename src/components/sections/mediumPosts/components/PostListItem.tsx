@@ -1,6 +1,6 @@
 import { useTheme } from "styled-components";
-import { TMediumPost, TTopics } from "../../../models";
-import { Link, Typography } from "../../common";
+import { TMediumPost, TTopics } from "../../../../models";
+import { Link, Typography } from "../../../common";
 import {
   StyledPostContainer,
   StyledTopicElement,

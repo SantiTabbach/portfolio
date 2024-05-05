@@ -1,5 +1,5 @@
-import { TMediumPost } from "../../models";
-import { RegularList, Section, Typography } from "../common";
+import { TMediumPost } from "../../../models";
+import { RegularList, Section, Typography } from "../../common";
 import PostListItem from "./components/PostListItem";
 import { MEDIUM_POSTS } from "./helper/const";
 import {
@@ -7,10 +7,10 @@ import {
   StyledDescription,
   StyledAvatar,
 } from "./StyledMediumPosts";
-import PeaceAvatar from "../../assets/avatars/peace-avatar.png";
-import PeaceAvatarLight from "../../assets/avatars/peace-avatar-light.png";
+import PeaceAvatar from "../../../assets/avatars/peace-avatar.png";
+import PeaceAvatarLight from "../../../assets/avatars/peace-avatar-light.png";
 import { useTheme } from "styled-components";
-import { Theme } from "../../models";
+import { Theme } from "../../../models";
 
 const { Paragraph } = Typography;
 

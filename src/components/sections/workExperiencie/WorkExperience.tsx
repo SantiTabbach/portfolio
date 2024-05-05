@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import React from "react";
-import { formatShortDate, getElapsedTime } from "../../utils/utils";
-import { Section } from "../common";
+import { formatShortDate, getElapsedTime } from "../../../utils/utils";
+import { Section } from "../../common";
 import ExperienceItem from "./components/ExperienceItem";
 import { StyledLine } from "./components/StyledExperienceItem";
 import { WORK_EXPERIENCE } from "./consts";

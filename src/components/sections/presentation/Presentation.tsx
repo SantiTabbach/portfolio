@@ -1,6 +1,6 @@
-import { Link, Section, Typography } from "../common";
-import { StyledBold } from "../commonStyled";
-import DownloadButton from "../downloadButton/DownloadButton";
+import { Link, Section, Typography } from "../../common";
+import { StyledBold } from "../../commonStyled";
+import DownloadButton from "../../downloadButton/DownloadButton";
 
 const { Paragraph } = Typography;
 

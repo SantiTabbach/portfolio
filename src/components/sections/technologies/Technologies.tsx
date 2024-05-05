@@ -1,11 +1,11 @@
 import React from "react";
-import { TECHNOLOGIES } from "../../consts";
-import Typography from "../common/typography/Typography";
+import { TECHNOLOGIES } from "../../../consts";
+import Typography from "../../common/typography/Typography";
 import {
   StyledTechnologyElement,
   StyledTenchnologiesContainer,
 } from "./StyledTechnologies";
-import { Section } from "../common";
+import { Section } from "../../common";
 
 interface ISkillElement {
   icon: JSX.Element;
