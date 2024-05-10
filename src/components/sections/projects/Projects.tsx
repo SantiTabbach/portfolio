@@ -21,6 +21,11 @@ const Projects = () => {
   return (
     <Section title="My projects">
       <StyledDescription>
+        <Paragraph>
+          My professional experience focuses on web development with React;
+          however, my true passion lies in mobile development. You'll catch that
+          vibe in my personal projects..
+        </Paragraph>
         <StyledAvatar
           alt="santi tabbach memoji"
           src={
@@ -29,11 +34,6 @@ const Projects = () => {
               : ProgrammingAvatar
           }
         />
-        <Paragraph>
-          My professional experience focuses on web development with React;
-          however, my true passion lies in mobile development. You'll catch that
-          vibe in my personal projects..
-        </Paragraph>
       </StyledDescription>
       <StyledProjectsContainer>
         <RegularList<TProject, IProjectItem>
