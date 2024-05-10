@@ -21,7 +21,7 @@ const Typography: React.FC<ITypography> & {
 };
 
 const Title: React.FC<ITypography> = ({
-  fontSize = "48",
+  fontSize = "46",
   fontWeight = "400",
   color,
   children,

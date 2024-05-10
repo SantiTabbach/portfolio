@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledAvatar = styled.img`
-  width: 150px;
-  height: 120px;
+  width: 112.5px;
+  height: 90px;
   margin-top: 16px;
   @media (max-width: 1120px) and (min-width: 770px) {
     margin: 16px;
