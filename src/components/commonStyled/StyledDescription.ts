@@ -4,6 +4,7 @@ export const StyledDescription = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: row;
+  margin-bottom: 16px;
 
   @media (max-width: 1120px) and (min-width: 770px) {
     flex-direction: column;
