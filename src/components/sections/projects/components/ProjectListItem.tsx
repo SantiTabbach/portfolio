@@ -1,12 +1,11 @@
 import { useTheme } from "styled-components";
 import { Typography } from "../../../common";
 import { TProject, TTechnologies } from "../../../../models/Projects";
-import { StyledAvatar } from "../../../commonStyled";
+import { StyledAvatar, StyledTag } from "../../../commonStyled";
 import { Theme } from "../../../../models";
 import {
   StyledProjectContainer,
   StyledProjectDescription,
-  StyledTechnologyElement,
   StyledTechnologiesContainer,
 } from "./StyledProjectListItem";
 
@@ -29,14 +28,14 @@ const ProjectListItem: React.FC<IProjectListItem> = ({ project }) => {
     return (
       <StyledTechnologiesContainer>
         {technologies.map((tech) => (
-          <StyledTechnologyElement
+          <StyledTag
             key={tech}
             color={theme.primary}
             fontWeight="400"
             fontSize="14"
           >
             {tech}
-          </StyledTechnologyElement>
+          </StyledTag>
         ))}
       </StyledTechnologiesContainer>
     );

@@ -3,9 +3,9 @@ import { TMediumPost, TTopics } from "../../../../models";
 import { Link, Typography } from "../../../common";
 import {
   StyledPostContainer,
-  StyledTopicElement,
   StyledTopicsContainer,
 } from "./StyledPostListItem";
+import { StyledTag } from "../../../commonStyled";
 
 const { Paragraph } = Typography;
 
@@ -26,14 +26,14 @@ const PostListItem: React.FC<IPostListItem> = ({ post }) => {
     return (
       <StyledTopicsContainer>
         {topics.map((topic) => (
-          <StyledTopicElement
+          <StyledTag
             key={topic}
             color={theme.primary}
             fontWeight="400"
             fontSize="14"
           >
             {topic}
-          </StyledTopicElement>
+          </StyledTag>
         ))}
       </StyledTopicsContainer>
     );
