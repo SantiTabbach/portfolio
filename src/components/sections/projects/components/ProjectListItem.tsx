@@ -1,13 +1,10 @@
 import { useTheme } from "styled-components";
 import { Typography } from "../../../common";
-import { TProject, TTechnologies } from "../../../../models/Projects";
-import { StyledAvatar, StyledTag } from "../../../commonStyled";
+import { TProject } from "../../../../models/Projects";
+import { StyledAvatar } from "../../../commonStyled";
 import { Theme } from "../../../../models";
-import {
-  StyledProjectContainer,
-  StyledProjectDescription,
-  StyledTechnologiesContainer,
-} from "./StyledProjectListItem";
+import BaseListElement from "../../../common/baseList/components/BaseListElement";
+import { StyledProjectDescription } from "./StyledProjectListItem";
 
 const { Paragraph, Subtitle } = Typography;
 
@@ -15,36 +12,15 @@ interface IProjectListItem {
   project: TProject;
 }
 
-interface ITechnologiesList {
-  technologies: TTechnologies;
-}
-
 const ProjectListItem: React.FC<IProjectListItem> = ({ project }) => {
-  const theme = useTheme();
-
   const { name, image, description, technologies } = project;
 
-  const Technologies = ({ technologies }: ITechnologiesList) => {
-    return (
-      <StyledTechnologiesContainer>
-        {technologies.map((tech) => (
-          <StyledTag
-            key={tech}
-            color={theme.primary}
-            fontWeight="400"
-            fontSize="14"
-          >
-            {tech}
-          </StyledTag>
-        ))}
-      </StyledTechnologiesContainer>
-    );
-  };
+  const theme = useTheme();
 
   return (
-    <StyledProjectContainer
+    <BaseListElement
       title={<Subtitle color={theme.primary}>{name}</Subtitle>}
-      footer={<Technologies technologies={technologies} />}
+      tags={technologies}
     >
       <StyledProjectDescription>
         <Paragraph fontSize="14">{description}</Paragraph>
@@ -52,7 +28,7 @@ const ProjectListItem: React.FC<IProjectListItem> = ({ project }) => {
           <StyledAvatar alt="project preview" src={image[theme.key as Theme]} />
         )}
       </StyledProjectDescription>
-    </StyledProjectContainer>
+    </BaseListElement>
   );
 };
 

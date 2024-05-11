@@ -10,4 +10,7 @@ export const StyledTag = styled(StyledParagraph)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: ${({ theme }) => theme.primary};
+  font-weight: 400;
+  font-size: 14px;
 `;
