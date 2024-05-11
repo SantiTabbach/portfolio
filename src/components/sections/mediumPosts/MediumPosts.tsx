@@ -1,13 +1,16 @@
 import { TMediumPost } from "../../../models";
-import { RegularList, Section, Typography } from "../../common";
+import { BaseList, Section, Typography } from "../../common";
 import PostListItem from "./components/PostListItem";
 import { MEDIUM_POSTS } from "./helper/const";
-import { StyledMediumPostsContainer } from "./StyledMediumPosts";
 import PeaceAvatar from "../../../assets/avatars/peace-avatar.png";
 import PeaceAvatarLight from "../../../assets/avatars/peace-avatar-light.png";
 import { useTheme } from "styled-components";
 import { Theme } from "../../../models";
-import { StyledAvatar, StyledDescription } from "../../commonStyled";
+import {
+  StyledAvatar,
+  StyledDescription,
+  StyledListWrapper,
+} from "../../commonStyled";
 
 const { Paragraph } = Typography;
 
@@ -35,13 +38,13 @@ const MediumPosts = () => {
       <Paragraph>
         Occasionally, I also feel motivated to publish my own writings:
       </Paragraph>
-      <StyledMediumPostsContainer>
-        <RegularList<TMediumPost, IPostListItem>
+      <StyledListWrapper>
+        <BaseList<TMediumPost, IPostListItem>
           items={MEDIUM_POSTS}
           resourceName="post"
           itemComponent={PostListItem}
         />
-      </StyledMediumPostsContainer>
+      </StyledListWrapper>
     </Section>
   );
 };

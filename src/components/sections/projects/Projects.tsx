@@ -2,9 +2,12 @@ import { useTheme } from "styled-components";
 import { Theme, TProject } from "../../../models";
 import ProgrammingAvatar from "../../../assets/avatars/programming-avatar.png";
 import ProgrammingAvatarLight from "../../../assets/avatars/programming-avatar-light.png";
-import { RegularList, Section, Typography } from "../../common";
-import { StyledAvatar, StyledDescription } from "../../commonStyled";
-import { StyledProjectsContainer } from "./StyledProjects";
+import { BaseList, Section, Typography } from "../../common";
+import {
+  StyledAvatar,
+  StyledDescription,
+  StyledListWrapper,
+} from "../../commonStyled";
 import { PROJECTS } from "./helper/consts";
 import ProjectListItem from "./components/ProjectListItem";
 
@@ -35,13 +38,13 @@ const Projects = () => {
           }
         />
       </StyledDescription>
-      <StyledProjectsContainer>
-        <RegularList<TProject, IProjectItem>
+      <StyledListWrapper>
+        <BaseList<TProject, IProjectItem>
           items={PROJECTS}
           resourceName="project"
           itemComponent={ProjectListItem}
         />
-      </StyledProjectsContainer>
+      </StyledListWrapper>
     </Section>
   );
 };
