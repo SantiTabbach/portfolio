@@ -14,18 +14,31 @@ export const StyledTechnologyElement = styled.li`
   flex-direction: column;
   align-items: center;
   width: 25%;
-  height: 100px;
+  height: 128px;
   padding-bottom: 20px;
 
   .technology-icon {
     height: 36px;
+    transition: height 0.3s ease-in-out;
+  }
+
+  p {
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  &:hover {
+    .technology-icon {
+      transition: height 0.3s ease-in-out;
+      height: 48px;
+    }
+
+    p {
+      transition: font-size 0.3s ease-in-out;
+      font-size: 21px;
+    }
   }
 
   @media (max-width: 400px) {
     width: 33.33%;
-
-    .technology-icon {
-      height: 60px;
-    }
   }
 `;
