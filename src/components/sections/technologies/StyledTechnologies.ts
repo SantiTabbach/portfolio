@@ -12,10 +12,10 @@ export const StyledTenchnologiesContainer = styled.ul`
 export const StyledTechnologyElement = styled.li`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 25%;
   height: 128px;
-  padding-bottom: 20px;
 
   .technology-icon {
     height: 36px;
