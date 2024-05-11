@@ -9,6 +9,8 @@ export const StyledAvatar = styled.img`
   }
 
   @media (max-width: 520px) {
+    width: 125px;
+    height: 100px;
     margin: 16px;
   }
 `;
