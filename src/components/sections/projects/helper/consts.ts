@@ -2,6 +2,22 @@ import { TProject } from "../../../../models/Projects";
 
 export const PROJECTS: TProject[] = [
   {
+    name: "My TODOs",
+    description:
+      "This is my first Full Stack application. By doing this project I learned how to build a complete CRUD with an authentication and authorization system using the MERN stack.",
+    technologies: [
+      "Typescript",
+      "JWT",
+      "Mongoose",
+      "Express",
+      "Node",
+      "React Native",
+      "Expo",
+      "RTK Query",
+      "Redux Toolkit",
+    ],
+  },
+  {
     name: "Alertify",
     description:
       "This application serves as my thesis project for my Software Engineering degree. Developed a mobile application to alert neighborhood residents about incidents, track them and generate reports for authorities.",
