@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledLink = styled.a`
-  display: inline-flex;
+  display: inline;
   margin-right: 19px;
   position: relative;
   text-decoration: none;
@@ -13,7 +13,7 @@ export const StyledLink = styled.a`
 
   .arrow {
     position: absolute;
-    left: calc(100% + 5px);
+    margin-left: 4px;
     transform: rotate(-45deg);
     transition: transform 0.3s ease;
   }
