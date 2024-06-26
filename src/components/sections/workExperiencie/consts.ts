@@ -2,12 +2,24 @@ import { IWorkExperience } from "../../../models";
 
 export const WORK_EXPERIENCE: IWorkExperience[] = [
   {
+    title: "FullStack developer",
+    company: "CodeaIT",
+    time: "2024-06-24 - Present",
+    summary:
+      "Maintaining and developing new features for a mobile PROJECT application.",
+    project: {
+      text: "glucose measurement",
+      url: "https://maverickwellbeing.com/",
+    },
+  },
+  {
     title: "SSR Software Engineer",
     company: "Intive",
-    time: "2023-08-01 - Present",
-    summary: "Maintaining and developing new features for PROJECT",
+    time: "2023-08-01 - 2024-06-30",
+    summary:
+      "Maintaining and developing new features for a PROJECT desktop application.",
     project: {
-      text: "medical software",
+      text: "shoulder surgery planning",
       url: "https://shoulderinnovations.com/provoyance-shoulder/",
     },
   },

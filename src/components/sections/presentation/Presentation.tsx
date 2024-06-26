@@ -14,8 +14,8 @@ const Presentation = () => {
         <StyledBold>UX/UI design</StyledBold>.
       </Paragraph>
       <Paragraph>
-        Currently developing new features for a USA healthcare project at{" "}
-        <Link href="https://intive.com/es">Intive</Link>
+        Currently developing new features for an Argentinian healthcare project
+        at <Link href="https://www.codeait.com/es">CodeaIT</Link>
       </Paragraph>
       <DownloadButton />
     </Section>

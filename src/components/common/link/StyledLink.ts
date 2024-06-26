@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledLink = styled.a`
+  display: inline-flex;
+  margin-right: 19px;
   position: relative;
   text-decoration: none;
   font-size: 16px;
