@@ -13,8 +13,7 @@ export const PROJECTS: TProject[] = [
       "Node",
       "React Native",
       "Expo",
-      "RTK Query",
-      "Redux Toolkit",
+      "Axios",
     ],
   },
   {
