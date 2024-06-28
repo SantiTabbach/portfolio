@@ -7,4 +7,5 @@ export interface IWorkExperience {
     text: string;
     url: string;
   };
+  skills: string[];
 }

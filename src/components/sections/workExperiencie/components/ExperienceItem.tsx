@@ -5,8 +5,10 @@ import { useTheme } from "styled-components";
 import {
   StyledCircle,
   StyledContainer,
+  StyledSkill,
   StyledSummary,
 } from "./StyledExperienceItem";
+import { StyledFooterContainer } from "../../../common/baseList/components/StyledBaseListElement";
 
 const { Paragraph, Subtitle } = Typography;
 
@@ -16,6 +18,7 @@ export const ExperienceItem: React.FC<IWorkExperience> = ({
   time,
   summary,
   project,
+  skills,
 }) => {
   const theme = useTheme();
 
@@ -41,6 +44,11 @@ export const ExperienceItem: React.FC<IWorkExperience> = ({
         {project && <SummaryLink text={project.text} link={project.url} />}
         {splittedSummary[1] && splittedSummary[1]}
       </StyledSummary>
+      <StyledFooterContainer>
+        {skills.map((skill) => (
+          <StyledSkill key={skill}>{skill}</StyledSkill>
+        ))}
+      </StyledFooterContainer>
     </StyledContainer>
   );
 };

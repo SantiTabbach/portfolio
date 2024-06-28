@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledParagraph } from "../../../common/typography/StyledTypography";
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -35,4 +36,17 @@ export const StyledLine = styled.div`
   left: 0px;
   width: 1.5px;
   ${({ theme }) => `background-color: ${theme.secondary}`};
+`;
+
+export const StyledSkill = styled(StyledParagraph)`
+  padding: 2px 12px 2px 12px !important;
+  background-color: ${({ theme }) => theme.secondary};
+  border-radius: 16px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: ${({ theme }) => theme.subtitle};
+  font-weight: 300;
+  font-size: 14px;
 `;
