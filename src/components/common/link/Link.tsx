@@ -9,8 +9,10 @@ interface ILink {
 const Link: React.FC<ILink> = ({ children, href, style }) => {
   return (
     <StyledLink target="_blank" href={href} style={style}>
-      {children}
-      <span className="arrow">&rarr;</span>
+      <span style={{ display: "inline-block" }}>
+        {children}
+        <span className="arrow">&rarr;</span>
+      </span>
     </StyledLink>
   );
 };
