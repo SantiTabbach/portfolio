@@ -1,0 +1,70 @@
+{
+	"language": "EN",
+	"firstname": "SANTI",
+	"lastname": "TABBACH",
+	"time": {
+		"mo": "mos",
+		"mos": "mos",
+		"yr": "yr",
+		"yrs": "yr"
+	},
+	"presentation": {
+		"title": "Hey! I'm Santi",
+		"paragraph1": "Passionate <1>SSR Software Developer</1> with experience in <3>React</3> and <5>React Native</5>, and a keen interest in <7>UX/UI design</7>.",
+		"paragraph2": "Currently contributing to an on-site immersive experience project, while training in backend development at <1>Codea IT</1>",
+		"paragraph3": "Also working on my <1>thesis project</1> to complete my Software Engineering degree.",
+		"resume": "Resume"
+	},
+	"work-experience": {
+		"title": "Work experience",
+		"experience1": {
+			"title": "Junior Software Engineer",
+			"time": "2021-11-01 - 2023-07-31",
+			"summary": "Taking my first steps in my professional career as a developer, learning, and contributing to the team with a proactive attitude."
+		},
+		"experience2": {
+			"title": "SSR Software Engineer",
+			"time": "2023-08-01 - 2024-06-30",
+			"summary": "Maintaining and developing new features for a USA PROJECT desktop application.",
+			"project": "shoulder surgery planning"
+		},
+		"experience3": {
+			"title": "FullStack developer",
+			"time": "2024-06-24 - Present",
+			"summary": "Developing new features for a web and on-site PROJECT application while taking my first steps in backend development.",
+			"project": "AI-powered"
+		}
+	},
+	"technologies": {
+		"title": "Technologies that I use"
+	},
+	"projects": {
+		"title": "My projects",
+		"description": "My professional experience focuses on web development with React; however, my true passion lies in mobile development. You'll catch that vibe in my personal projects..",
+		"project1": {
+			"name": "5 Tenedores",
+			"description": "The first application I developed following a Udemy course. This app allows users to search for and review restaurants, including authentication and restaurant creation features."
+		},
+		"project2": {
+			"name": "Recycling Mate",
+			"description": "Recycling Mate emerged as an internal project at SimTLiX for academic purposes. I developed this app for the team to test a Machine Learning model for waste classification. It allows users to take a photo and display the model's results."
+		},
+		"project3": {
+			"name": "My Finances",
+			"description": "I developed an application to manage my personal finances, allowing me to create and track shopping lists and generate reports based on the data collected by the app."
+		},
+		"project4": {
+			"name": "Alertify",
+			"description": "This application serves as my thesis project for my Software Engineering degree. Developed a mobile application to alert neighborhood residents about incidents, track them and generate reports for authorities."
+		},
+		"project5": {
+			"name": "My TODOs",
+			"description": "This is my first Full Stack application. By doing this project I learned how to build a complete CRUD with an authentication and authorization system using the MERN stack."
+		}
+	},
+	"posts": {
+		"title": "Medium posts",
+		"description1": "I find pleasure in reading programming articles on Medium during my free time. It's a great way to stay up to date on the latest trends.",
+		"description2": "Occasionally, I also feel motivated to publish my own writings:"
+	}
+}

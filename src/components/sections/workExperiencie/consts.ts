@@ -2,13 +2,12 @@ import { IWorkExperience } from '../../../models';
 
 export const WORK_EXPERIENCE: IWorkExperience[] = [
 	{
-		title: 'FullStack developer',
+		title: 'work-experience.experience3.title',
 		company: 'Codea IT',
-		time: '2024-06-24 - Present',
-		summary:
-			'Developing new features for a web and on-site PROJECT application while taking my first steps in backend development.',
+		time: 'work-experience.experience3.time',
+		summary: 'work-experience.experience3.summary',
 		project: {
-			text: 'AI-powered',
+			text: 'work-experience.experience3.project',
 			url: 'https://www.emulateme.ai/',
 		},
 		skills: ['React', 'RTKQuery', 'Tailwind', 'Express', 'Node', 'Mongo'],
@@ -26,23 +25,21 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 	// 	skills: ['React Native', 'Expo', 'Zustand', 'Express', 'Node', 'Mongo'],
 	// },
 	{
-		title: 'SSR Software Engineer',
+		title: 'work-experience.experience2.title',
 		company: 'Intive',
-		time: '2023-08-01 - 2024-06-30',
-		summary:
-			'Maintaining and developing new features for a USA PROJECT desktop application.',
+		time: 'work-experience.experience2.time',
+		summary: 'work-experience.experience2.summary',
 		project: {
-			text: 'shoulder surgery planning',
+			text: 'work-experience.experience2.project',
 			url: 'https://shoulderinnovations.com/provoyance-shoulder/',
 		},
 		skills: ['React', 'Electron', 'Redux', 'Jest', 'Enzyme', 'Axios'],
 	},
 	{
-		title: 'Junior Software Engineer',
+		title: 'work-experience.experience1.title',
 		company: 'SimTLiX (now Intive)',
-		time: '2021-11-01 - 2023-07-31',
-		summary:
-			'Taking my first steps in my professional career as a developer, learning, and contributing to the team with a proactive attitude.',
+		time: 'work-experience.experience1.time',
+		summary: 'work-experience.experience1.summary',
 		skills: ['React', 'Electron', 'Redux', 'Jest', 'Enzyme', 'Axios'],
 	},
 ];

@@ -1,3 +1,5 @@
+import { Trans } from 'react-i18next';
+import useTranslation from '../../../hooks/useTranslation';
 import { Link, Section, Typography } from '../../common';
 import { StyledBold } from '../../commonStyled';
 import DownloadButton from '../../downloadButton/DownloadButton';
@@ -5,23 +7,40 @@ import DownloadButton from '../../downloadButton/DownloadButton';
 const { Paragraph } = Typography;
 
 const Presentation = () => {
+	const { t } = useTranslation();
+
 	return (
-		<Section title="Hey! I'm Santi">
+		<Section title={t('presentation.title')}>
 			<Paragraph>
-				Passionate <StyledBold>SSR Software Developer</StyledBold> with
-				experience in <StyledBold>React</StyledBold> and{' '}
-				<StyledBold>React Native</StyledBold>, and a keen interest in{' '}
-				<StyledBold>UX/UI design</StyledBold>.
+				<Trans
+					i18nKey="presentation.paragraph1"
+					components={{
+						1: <StyledBold />,
+						3: <StyledBold />,
+						5: <StyledBold />,
+						7: <StyledBold />,
+					}}
+				/>
 			</Paragraph>
 			<Paragraph>
-				Currently contributing to an on-site immersive experience project, while
-				training in backend development at{' '}
-				<Link href="https://www.codeait.com/es">Codea IT</Link>
+				<Trans
+					i18nKey="presentation.paragraph2"
+					components={{
+						1: <Link href="https://www.codeait.com/es">Codea IT</Link>,
+					}}
+				/>
 			</Paragraph>
 			<Paragraph>
-				Also working on my{' '}
-				<Link href="https://www.alertify.ar">thesis project</Link> to complete
-				my Software Engineering degree.
+				<Trans
+					i18nKey="presentation.paragraph3"
+					components={{
+						1: (
+							<Link href="https://www.instagram.com/alertify.ar/">
+								thesis project
+							</Link>
+						),
+					}}
+				/>
 			</Paragraph>
 			<DownloadButton />
 		</Section>
