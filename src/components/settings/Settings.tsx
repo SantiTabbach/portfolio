@@ -1,6 +1,8 @@
+import { LOCALE_OPTIONS } from '../../../i18n';
 import { MoonIcon, SunIcon } from '../../assets/icons/settings';
 import useTranslation from '../../hooks/useTranslation';
 import { Theme } from '../../models';
+import { LS_KEYS, persistDataOnStorage } from '../../utils/storage';
 import { Typography } from '../common';
 import { StyledSettingsBox, StyledButton } from './StyledSettings';
 
@@ -16,10 +18,13 @@ const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
 
 	const handleChangeLanguage = () => {
 		if (t('language') === 'AR') {
-			changeLanguage('en');
+			changeLanguage(LOCALE_OPTIONS.EN);
+			persistDataOnStorage(LS_KEYS.LOCALE, LOCALE_OPTIONS.EN);
 		} else {
-			changeLanguage('es');
+			changeLanguage(LOCALE_OPTIONS.ES);
+			persistDataOnStorage(LS_KEYS.LOCALE, LOCALE_OPTIONS.ES);
 		}
+		window.location.reload();
 	};
 
 	return (
