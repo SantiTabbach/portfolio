@@ -1,0 +1,10 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/arm64/v8
+    image: stabbach/portfolio:latest
+    ports:
+      - '3000:3000'
