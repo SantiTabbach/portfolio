@@ -14,8 +14,8 @@ const Presentation = () => {
 				<StyledBold>UX/UI design</StyledBold>.
 			</Paragraph>
 			<Paragraph>
-				Currently contributing to an exciting web project with cutting-edge
-				technologies, while training in backend development at{' '}
+				Currently contributing to an on-site immersive experience project, while
+				training in backend development at{' '}
 				<Link href="https://www.codeait.com/es">Codea IT</Link>
 			</Paragraph>
 			<Paragraph>

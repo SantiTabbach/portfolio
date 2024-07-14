@@ -6,7 +6,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		company: 'Codea IT',
 		time: '2024-06-24 - Present',
 		summary:
-			'Developing new features for an PROJECT web application while taking my first steps in backend development.',
+			'Developing new features for a web and on-site PROJECT application while taking my first steps in backend development.',
 		project: {
 			text: 'AI-powered',
 			url: 'https://www.emulateme.ai/',
