@@ -2,7 +2,7 @@ import { LOCALE_OPTIONS } from '../../../i18n';
 import { MoonIcon, SunIcon } from '../../assets/icons/settings';
 import useTranslation from '../../hooks/useTranslation';
 import { Theme } from '../../models';
-import { LS_KEYS, persistDataOnStorage } from '../../utils/storage';
+import { persistLocaleOnStorage } from '../../utils/storage';
 import { Typography } from '../common';
 import { StyledSettingsBox, StyledButton } from './StyledSettings';
 import { sendLanguageEvent } from '../../utils/analytics';
@@ -27,7 +27,7 @@ const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
 		});
 
 		changeLanguage(newLanguage);
-		persistDataOnStorage(LS_KEYS.LOCALE, newLanguage);
+		persistLocaleOnStorage(newLanguage);
 		window.location.reload();
 	};
 

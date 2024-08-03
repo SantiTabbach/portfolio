@@ -15,7 +15,7 @@ import { ThemeConfig } from './theme/Theme';
 import { useTheme } from './theme/hooks/useTheme';
 import { GlobalStyles } from './theme/GlobalStyles';
 import useTranslation from './hooks/useTranslation';
-import { LS_KEYS, retrieveDataFromStorage } from './utils/storage';
+import { retrieveLocaleFromStorage } from './utils/storage';
 import { LOCALE_OPTIONS } from '../i18n';
 
 const LeftColumn = () => (
@@ -48,9 +48,7 @@ function App() {
 	const { changeLanguage } = useTranslation();
 
 	useEffect(() => {
-		changeLanguage(
-			retrieveDataFromStorage(LS_KEYS.LOCALE) ?? LOCALE_OPTIONS.EN
-		);
+		changeLanguage(retrieveLocaleFromStorage() ?? LOCALE_OPTIONS.EN);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
