@@ -32,4 +32,4 @@ This project is my personal portfolio website. It is designed to present my skil
 **Santi Tabbach**
 
 - [LinkedIn](https://www.linkedin.com/in/santiago-tabbach/)
-- Email: tabbach97@gmail.com
+- tabbach97@gmail.com
