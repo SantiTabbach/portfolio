@@ -5,6 +5,7 @@ import { Theme } from '../../models';
 import { LS_KEYS, persistDataOnStorage } from '../../utils/storage';
 import { Typography } from '../common';
 import { StyledSettingsBox, StyledButton } from './StyledSettings';
+import { sendLanguageEvent } from '../../utils/analytics';
 
 interface ISettings {
 	theme: Theme;
@@ -17,13 +18,16 @@ const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
 	const { t, changeLanguage } = useTranslation();
 
 	const handleChangeLanguage = () => {
-		if (t('language') === 'AR') {
-			changeLanguage(LOCALE_OPTIONS.EN);
-			persistDataOnStorage(LS_KEYS.LOCALE, LOCALE_OPTIONS.EN);
-		} else {
-			changeLanguage(LOCALE_OPTIONS.ES);
-			persistDataOnStorage(LS_KEYS.LOCALE, LOCALE_OPTIONS.ES);
-		}
+		const currentLanguage = t('language');
+		const newLanguage =
+			currentLanguage === 'AR' ? LOCALE_OPTIONS.EN : LOCALE_OPTIONS.ES;
+
+		sendLanguageEvent({
+			label: `Switch from ${currentLanguage} to ${newLanguage}`,
+		});
+
+		changeLanguage(newLanguage);
+		persistDataOnStorage(LS_KEYS.LOCALE, newLanguage);
 		window.location.reload();
 	};
 

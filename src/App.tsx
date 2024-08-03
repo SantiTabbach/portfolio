@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import { ThemeProvider } from 'styled-components';
 import {
 	Technologies,
@@ -33,6 +34,15 @@ const RightColumn = () => (
 );
 
 function App() {
+	const trackingId = import.meta.env.VITE_TRACKING_ID;
+	trackingId && ReactGA.initialize(trackingId);
+
+	ReactGA.send({
+		hitType: 'pageview',
+		page: '/',
+		title: 'App',
+	});
+
 	const { theme, themeToggler } = useTheme();
 
 	const { changeLanguage } = useTranslation();

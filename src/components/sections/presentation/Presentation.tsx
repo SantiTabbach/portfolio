@@ -3,6 +3,7 @@ import useTranslation from '../../../hooks/useTranslation';
 import { Link, Section, Typography } from '../../common';
 import { StyledBold } from '../../commonStyled';
 import DownloadButton from '../../downloadButton/DownloadButton';
+import { sendLinkEvent } from '../../../utils/analytics';
 
 const { Paragraph } = Typography;
 
@@ -26,7 +27,14 @@ const Presentation = () => {
 				<Trans
 					i18nKey="presentation.paragraph2"
 					components={{
-						1: <Link href="https://www.codeait.com/es">Codea IT</Link>,
+						1: (
+							<Link
+								onClick={() => sendLinkEvent({ label: 'company' })}
+								href="https://www.codeait.com/es"
+							>
+								Codea IT
+							</Link>
+						),
 					}}
 				/>
 			</Paragraph>
@@ -35,7 +43,10 @@ const Presentation = () => {
 					i18nKey="presentation.paragraph3"
 					components={{
 						1: (
-							<Link href="https://www.instagram.com/alertify.ar/">
+							<Link
+								onClick={() => sendLinkEvent({ label: 'thesis project' })}
+								href="https://www.instagram.com/alertify.ar/"
+							>
 								thesis project
 							</Link>
 						),
