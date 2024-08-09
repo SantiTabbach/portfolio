@@ -12,9 +12,9 @@ This project is my personal portfolio website. It is designed to present my skil
 
 - Personal introduction and professional background
 - Display of work experience
-- Showcase of personal projects
+- Showcase of personal projects and Medium posts
 - Downloadable resume
-- Multilingual support with i18next
+- Social media
 
 ## Technologies Used
 
