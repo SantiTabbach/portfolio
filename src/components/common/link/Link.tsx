@@ -9,7 +9,7 @@ interface ILink extends PropsWithChildren {
 
 const Link: React.FC<ILink> = ({ children, ...props }) => {
 	return (
-		<StyledLink target="_blank" {...props}>
+		<StyledLink target="_blank" rel="noopener noreferrer" {...props}>
 			<span style={{ display: 'inline-block' }}>
 				{children}
 				<span className="arrow">&rarr;</span>

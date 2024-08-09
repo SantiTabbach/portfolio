@@ -49,6 +49,7 @@ const SocialMedia = () => {
 					{MEDIA_BUTTONS.map(({ icon, url, title }) => (
 						<StyledMediaBtn
 							target="_blank"
+							rel="noopener noreferrer"
 							className="media-btn"
 							key={url}
 							href={url}
