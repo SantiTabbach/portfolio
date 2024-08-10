@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import { ThemeProvider } from 'styled-components';
 import {
@@ -9,7 +9,7 @@ import {
 	Projects,
 	SocialMedia,
 	Header,
-	Content,
+	Container,
 } from './components';
 import { ThemeConfig } from './theme/Theme';
 import { useTheme } from './theme/hooks/useTheme';
@@ -19,18 +19,18 @@ import { retrieveLocaleFromStorage } from './utils/storage';
 import { LOCALE_OPTIONS } from '../i18n';
 
 const LeftColumn = () => (
-	<React.Fragment>
+	<Fragment>
 		<Presentation />
 		<WorkExperience />
 		<Technologies />
-	</React.Fragment>
+	</Fragment>
 );
 
 const RightColumn = () => (
-	<React.Fragment>
+	<Fragment>
 		<Projects />
 		<MediumPosts />
-	</React.Fragment>
+	</Fragment>
 );
 
 function App() {
@@ -55,11 +55,11 @@ function App() {
 	return (
 		<ThemeProvider theme={ThemeConfig[theme]}>
 			<GlobalStyles />
-			<Header theme={theme} themeToggler={themeToggler} />
-			<Content>
+			<Container>
+				<Header theme={theme} themeToggler={themeToggler} />
 				<LeftColumn />
 				<RightColumn />
-			</Content>
+			</Container>
 			<SocialMedia />
 		</ThemeProvider>
 	);

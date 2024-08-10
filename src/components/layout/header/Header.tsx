@@ -5,11 +5,11 @@ import Settings from '../../settings/Settings';
 import { Theme } from '../../../models';
 import {
 	StyledAvatar,
-	StyledHeaderContainer,
 	StyledNameContainer,
 	StyledSantiContainer,
 } from './StyledHeader';
 import useTranslation from '../../../hooks/useTranslation';
+import { Fragment } from 'react/jsx-runtime';
 
 const { Title } = Typography;
 
@@ -22,7 +22,7 @@ const Header: React.FC<IHeader> = ({ theme, themeToggler }) => {
 	const { t } = useTranslation();
 
 	return (
-		<StyledHeaderContainer>
+		<Fragment>
 			<StyledSantiContainer>
 				<StyledAvatar
 					alt="santi memoji"
@@ -37,7 +37,7 @@ const Header: React.FC<IHeader> = ({ theme, themeToggler }) => {
 			<div className="settings-container">
 				<Settings theme={theme} themeToggler={themeToggler} />
 			</div>
-		</StyledHeaderContainer>
+		</Fragment>
 	);
 };
 
