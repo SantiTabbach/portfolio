@@ -8,8 +8,8 @@ import {
 	StyledSkill,
 	StyledSummary,
 } from './StyledExperienceItem';
-import { StyledFooterContainer } from '../../../common/baseList/components/StyledBaseListElement';
 import useTranslation from '../../../../hooks/useTranslation';
+import Tags from '@/components/common/baseList/components/components/Tags';
 
 const { Paragraph, Subtitle } = Typography;
 
@@ -43,13 +43,9 @@ export const ExperienceItem: React.FC<IExperienceItem> = ({ experience }) => {
 			<StyledSummary>
 				{splittedSummary[0]}
 				{project && <SummaryLink text={project.text} link={project.url} />}
-				{splittedSummary[1] && splittedSummary[1]}
+				{splittedSummary?.[1]}
 			</StyledSummary>
-			<StyledFooterContainer>
-				{skills.map((skill) => (
-					<StyledSkill key={skill}>{skill}</StyledSkill>
-				))}
-			</StyledFooterContainer>
+			<Tags tags={skills} renderItem={StyledSkill} />
 		</StyledContainer>
 	);
 };

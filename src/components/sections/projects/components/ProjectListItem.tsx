@@ -1,11 +1,12 @@
 import { useTheme } from 'styled-components';
-import { Typography } from '../../../common';
-import { TProject } from '../../../../models/Projects';
-import { StyledAvatar } from '../../../commonStyled';
-import { Theme } from '../../../../models';
-import BaseListElement from '../../../common/baseList/components/BaseListElement';
+import { useTranslation } from 'react-i18next';
+import { Typography } from '@/components/common';
+import { TProject } from '@/models/Projects';
+import { Avatar } from '@/components/commonStyled';
+import { Theme } from '@/models';
+
 import { StyledProjectDescription } from './StyledProjectListItem';
-import useTranslation from '../../../../hooks/useTranslation';
+import BaseListElement from '@/components/common/baseList/components/BaseListElement';
 
 const { Paragraph, Subtitle } = Typography;
 
@@ -20,14 +21,12 @@ const ProjectListItem: React.FC<IProjectListItem> = ({ project }) => {
 	const { t } = useTranslation();
 
 	return (
-		<BaseListElement
-			title={<Subtitle color={theme.primary}>{t(name)}</Subtitle>}
-			tags={technologies}
-		>
+		<BaseListElement tags={technologies}>
+			<Subtitle color={theme.primary}>{t(name)}</Subtitle>
 			<StyledProjectDescription>
 				<Paragraph fontSize="14">{t(description)}</Paragraph>
 				{image && (
-					<StyledAvatar alt="project preview" src={image[theme.key as Theme]} />
+					<Avatar alt="project preview" src={image[theme.key as Theme]} />
 				)}
 			</StyledProjectDescription>
 		</BaseListElement>

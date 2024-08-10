@@ -1,11 +1,12 @@
-import styled from "styled-components";
-import GlassBox from "../../glassBox/GlassBox";
+import styled from 'styled-components';
+import GlassBox from '../../glassBox/GlassBox';
 
-export const StyledListElementContainer = styled(GlassBox)`
-  margin-bottom: 10px;
+export const Container = styled(GlassBox)`
+	margin-bottom: 10px;
 `;
 
-export const StyledFooterContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+export const Footer = styled.div`
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: ${({ theme }) => theme.glassBox.footer.borderTop};
 `;

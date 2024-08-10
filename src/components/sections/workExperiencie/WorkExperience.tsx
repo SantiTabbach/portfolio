@@ -1,5 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-import React from 'react';
 import { BaseList, Section } from '../../common';
 import ExperienceItem, { IExperienceItem } from './components/ExperienceItem';
 import { StyledLine } from './components/StyledExperienceItem';
@@ -25,4 +23,4 @@ const WorkExperience = () => {
 	);
 };
 
-export default React.memo(WorkExperience);
+export default WorkExperience;

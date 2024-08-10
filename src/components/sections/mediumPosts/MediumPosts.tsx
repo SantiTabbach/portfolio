@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components';
 import { TMediumPost, Theme } from '@/models';
-import PostListItem from './components/PostListItem';
+import PostListItem, { IPostListItem } from './components/PostListItem';
 import { Avatar, Description, ListWrapper } from '@/components/commonStyled';
 import { BaseList, Section, Typography } from '@/components/common';
 import PeaceAvatarDark from '@/assets/avatars/peace-avatar.png';
@@ -9,10 +9,6 @@ import PeaceAvatarLight from '@/assets/avatars/peace-avatar-light.png';
 import { MEDIUM_POSTS } from './helper/const';
 
 const { Paragraph } = Typography;
-
-interface IPostListItem {
-	post: TMediumPost;
-}
 
 const avatar = {
 	[Theme.LIGHT]: PeaceAvatarLight,

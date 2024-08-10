@@ -1,33 +1,16 @@
-import {
-  StyledGlassBoxFooter,
-  StyledGlassBoxContainer,
-} from "./StyledGlassBox";
+import { GlassBoxType } from './models/glassBox';
+import { Container } from './StyledGlassBox';
 
 interface IGlassBox {
-  title?: React.ReactNode;
-  children: React.ReactNode;
-  footer?: React.ReactNode;
-  active?: boolean;
-  className?: string;
+	children: React.ReactNode;
+	type?: GlassBoxType;
 }
 
 const GlassBox: React.FC<IGlassBox> = ({
-  title,
-  children,
-  footer,
-  active,
-  className,
+	children,
+	type = GlassBoxType.INACTIVE,
 }) => {
-  return (
-    <StyledGlassBoxContainer
-      active={active ? "true" : ""}
-      className={className}
-    >
-      {title && title}
-      {children}
-      {footer && <StyledGlassBoxFooter>{footer}</StyledGlassBoxFooter>}
-    </StyledGlassBoxContainer>
-  );
+	return <Container type={type}>{children}</Container>;
 };
 
 export default GlassBox;

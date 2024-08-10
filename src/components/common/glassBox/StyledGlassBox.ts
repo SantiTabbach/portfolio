@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
+import { GlassBoxType } from './models/glassBox';
 
-export const StyledGlassBoxContainer = styled.div<{
-	active?: string;
+export const Container = styled.div<{
+	type: string;
 }>`
 	width: fit-content;
 	padding: 15px 20px 15px 20px;
@@ -18,7 +19,7 @@ export const StyledGlassBoxContainer = styled.div<{
 	}
 
 	${(props) =>
-		props.active &&
+		props.type === GlassBoxType.ACTIVE &&
 		css`
 			background: ${({ theme }) => theme.glassBox.active.background};
 			backdrop-filter: blur(5px);
@@ -26,10 +27,4 @@ export const StyledGlassBoxContainer = styled.div<{
 			border: ${({ theme }) => theme.glassBox.active.border};
 			box-shadow: ${({ theme }) => theme.glassBox.active.boxShadow};
 		`}
-`;
-
-export const StyledGlassBoxFooter = styled.div`
-	margin-top: 20px;
-	padding-top: 20px;
-	border-top: ${({ theme }) => theme.glassBox.footer.borderTop};
 `;
