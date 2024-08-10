@@ -6,6 +6,7 @@ export const Container = styled.div<{
 }>`
 	width: fit-content;
 	padding: 15px 20px 15px 20px;
+	margin-bottom: 15px;
 	border-radius: 8px;
 	border: 1px solid rgba(255, 255, 255, 0);
 	transition: background 0.3s ease-in-out;

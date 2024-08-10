@@ -1,4 +1,4 @@
-import useTranslation from '@/hooks/useTranslation';
+import { useTranslation } from 'react-i18next';
 import { Theme } from '@/models';
 import { Typography } from '@/components/common';
 import AvatarDark from '@/assets/avatars/avatar.png';

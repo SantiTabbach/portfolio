@@ -1,36 +1,24 @@
 import React from 'react';
-import { TECHNOLOGIES } from '../../../consts';
-import Typography from '../../common/typography/Typography';
-import {
-	StyledTechnologyElement,
-	StyledTenchnologiesContainer,
-} from './StyledTechnologies';
-import { Section } from '../../common';
-import useTranslation from '../../../hooks/useTranslation';
-
-interface ISkillElement {
-	icon: JSX.Element;
-	name: string;
-}
-
-const { Paragraph } = Typography;
+import { useTranslation } from 'react-i18next';
+import { TECHNOLOGIES } from '@/consts';
+import TechnologyListItem, {
+	ITechnologyListItem,
+} from './components/TechnologyListItem';
+import { BaseList, Section } from '@/components/common';
+import { StyledTenchnologiesContainer } from './StyledTechnologies';
+import { ITechnology } from '@/models/Technology';
 
 const Technologies: React.FC = () => {
 	const { t } = useTranslation();
 
-	const TechnologyElement = ({ icon, name }: ISkillElement) => (
-		<StyledTechnologyElement>
-			{icon}
-			<Paragraph>{name}</Paragraph>
-		</StyledTechnologyElement>
-	);
-
 	return (
 		<Section title={t('technologies.title')}>
-			<StyledTenchnologiesContainer className="technologies-container">
-				{TECHNOLOGIES.map(({ name, icon: Icon }) => (
-					<TechnologyElement key={name} name={name} icon={<Icon />} />
-				))}
+			<StyledTenchnologiesContainer>
+				<BaseList<ITechnology, ITechnologyListItem>
+					items={TECHNOLOGIES}
+					resourceName="technology"
+					itemComponent={TechnologyListItem}
+				/>
 			</StyledTenchnologiesContainer>
 		</Section>
 	);
