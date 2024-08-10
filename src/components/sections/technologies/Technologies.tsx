@@ -7,6 +7,7 @@ import TechnologyListItem, {
 import { BaseList, Section } from '@/components/common';
 import { StyledTenchnologiesContainer } from './StyledTechnologies';
 import { ITechnology } from '@/models/Technology';
+import { LIST_RESOURCES } from '@/enums/lists';
 
 const Technologies: React.FC = () => {
 	const { t } = useTranslation();
@@ -16,7 +17,7 @@ const Technologies: React.FC = () => {
 			<StyledTenchnologiesContainer>
 				<BaseList<ITechnology, ITechnologyListItem>
 					items={TECHNOLOGIES}
-					resourceName="technology"
+					resourceName={LIST_RESOURCES.technology}
 					itemComponent={TechnologyListItem}
 				/>
 			</StyledTenchnologiesContainer>

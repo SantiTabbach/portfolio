@@ -5,6 +5,7 @@ import { WORK_EXPERIENCE } from './consts';
 import useTranslation from '../../../hooks/useTranslation';
 import { IWorkExperience } from '../../../models';
 import { workExperienceMapper } from '../../../mappers/workExperience';
+import { LIST_RESOURCES } from '@/enums/lists';
 
 const WorkExperience = () => {
 	const { t } = useTranslation();
@@ -15,7 +16,7 @@ const WorkExperience = () => {
 				<StyledLine />
 				<BaseList<IWorkExperience, IExperienceItem>
 					items={workExperienceMapper(WORK_EXPERIENCE, t)}
-					resourceName="experience"
+					resourceName={LIST_RESOURCES.experience}
 					itemComponent={ExperienceItem}
 				/>
 			</div>

@@ -6,15 +6,14 @@ import { BaseList, Section, Typography } from '@/components/common';
 import { Avatar, Description, ListWrapper } from '@/components/commonStyled';
 
 import { PROJECTS } from './helper/consts';
-import ProjectListItem from './components/ProjectListItem';
+import ProjectListItem, {
+	IProjectListItem,
+} from './components/ProjectListItem';
 import ProgrammingAvatarDark from '@/assets/avatars/programming-avatar.png';
 import ProgrammingAvatarLight from '@/assets/avatars/programming-avatar-light.png';
+import { LIST_RESOURCES } from '@/enums/lists';
 
 const { Paragraph } = Typography;
-
-interface IProjectItem {
-	project: TProject;
-}
 
 const avatar = {
 	[Theme.LIGHT]: ProgrammingAvatarLight,
@@ -32,9 +31,9 @@ const Projects = () => {
 				<Avatar alt="santi tabbach memoji" src={avatar[theme.key as Theme]} />
 			</Description>
 			<ListWrapper>
-				<BaseList<TProject, IProjectItem>
+				<BaseList<TProject, IProjectListItem>
 					items={PROJECTS}
-					resourceName="project"
+					resourceName={LIST_RESOURCES.project}
 					itemComponent={ProjectListItem}
 				/>
 			</ListWrapper>

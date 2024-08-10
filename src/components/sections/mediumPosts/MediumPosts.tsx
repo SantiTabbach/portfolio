@@ -7,6 +7,7 @@ import { BaseList, Section, Typography } from '@/components/common';
 import PeaceAvatarDark from '@/assets/avatars/peace-avatar.png';
 import PeaceAvatarLight from '@/assets/avatars/peace-avatar-light.png';
 import { MEDIUM_POSTS } from './helper/const';
+import { LIST_RESOURCES } from '@/enums/lists';
 
 const { Paragraph } = Typography;
 
@@ -29,7 +30,7 @@ const MediumPosts = () => {
 			<ListWrapper>
 				<BaseList<TMediumPost, IPostListItem>
 					items={MEDIUM_POSTS}
-					resourceName="post"
+					resourceName={LIST_RESOURCES.post}
 					itemComponent={PostListItem}
 				/>
 			</ListWrapper>

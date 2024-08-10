@@ -10,7 +10,7 @@ import BaseListElement from '@/components/common/baseList/components/BaseListEle
 
 const { Paragraph, Subtitle } = Typography;
 
-interface IProjectListItem {
+export interface IProjectListItem {
 	project: TProject;
 }
 
