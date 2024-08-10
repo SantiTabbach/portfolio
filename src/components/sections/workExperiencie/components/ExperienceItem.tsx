@@ -13,14 +13,13 @@ import useTranslation from '../../../../hooks/useTranslation';
 
 const { Paragraph, Subtitle } = Typography;
 
-export const ExperienceItem: React.FC<IWorkExperience> = ({
-	title,
-	company,
-	time,
-	summary,
-	project,
-	skills,
-}) => {
+export interface IExperienceItem {
+	experience: IWorkExperience;
+}
+
+export const ExperienceItem: React.FC<IExperienceItem> = ({ experience }) => {
+	const { summary, skills, time, company, title, project } = experience;
+
 	const { t } = useTranslation();
 	const theme = useTheme();
 
