@@ -1,9 +1,10 @@
-import DownloadFileIcon from '../../assets/icons/DownloadFileIcon';
-import { StyledTitleLink, StyledButton } from './StyledDownloadButton';
-import resumePDF from '../../resources/resume.pdf';
 import { useCallback } from 'react';
-import useTranslation from '../../hooks/useTranslation';
-import { sendResumeEvent } from '../../utils/analytics';
+import { useTranslation } from 'react-i18next';
+import DownloadFileIcon from '@/assets/icons/DownloadFileIcon';
+import resumePDF from '@/resources/resume.pdf';
+import { sendResumeEvent } from '@/utils/analytics';
+import { Button } from './StyledResume';
+import { Typography } from '../common';
 
 const DownloadButton = () => {
 	const { t } = useTranslation();
@@ -19,10 +20,12 @@ const DownloadButton = () => {
 	}, []);
 
 	return (
-		<StyledButton onClick={downloadPdf}>
-			<StyledTitleLink>{t('presentation.resume')}</StyledTitleLink>
+		<Button onClick={downloadPdf}>
+			<Typography.Subtitle fontSize="16">
+				{t('presentation.resume')}
+			</Typography.Subtitle>
 			<DownloadFileIcon size={20} />
-		</StyledButton>
+		</Button>
 	);
 };
 

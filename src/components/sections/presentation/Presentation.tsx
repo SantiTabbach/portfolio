@@ -2,8 +2,9 @@ import { Trans } from 'react-i18next';
 import useTranslation from '../../../hooks/useTranslation';
 import { Link, Section, Typography } from '../../common';
 import { StyledBold } from '../../commonStyled';
-import DownloadButton from '../../downloadButton/DownloadButton';
+
 import { sendLinkEvent } from '../../../utils/analytics';
+import { Resume } from '@/components';
 
 const { Paragraph } = Typography;
 
@@ -53,7 +54,7 @@ const Presentation = () => {
 					}}
 				/>
 			</Paragraph>
-			<DownloadButton />
+			<Resume />
 		</Section>
 	);
 };
