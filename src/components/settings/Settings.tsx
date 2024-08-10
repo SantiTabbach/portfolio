@@ -1,45 +1,35 @@
-import { LOCALE_OPTIONS } from '../../../i18n';
-import { MoonIcon, SunIcon } from '../../assets/icons/settings';
-import useTranslation from '../../hooks/useTranslation';
-import { Theme } from '../../models';
-import { persistLocaleOnStorage } from '../../utils/storage';
+import { MoonIcon, SunIcon } from '@/assets/icons/settings';
+import { useChangeLanguage, useTranslation } from '@/hooks';
+import { Theme } from '@/models';
 import { Typography } from '../common';
-import { StyledSettingsBox, StyledButton } from './StyledSettings';
-import { sendLanguageEvent } from '../../utils/analytics';
+import { Container, Button } from './StyledSettings';
 
+const { Paragraph } = Typography;
 interface ISettings {
 	theme: Theme;
 	themeToggler: () => void;
 }
 
-const { Paragraph } = Typography;
+const themeIcon = {
+	[Theme.LIGHT]: SunIcon,
+	[Theme.DARK]: MoonIcon,
+};
 
 const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
-	const { t, changeLanguage } = useTranslation();
+	const ThemeIcon = themeIcon[theme];
 
-	const handleChangeLanguage = () => {
-		const currentLanguage = t('language');
-		const newLanguage =
-			currentLanguage === 'AR' ? LOCALE_OPTIONS.EN : LOCALE_OPTIONS.ES;
-
-		sendLanguageEvent({
-			label: `Switch from ${currentLanguage} to ${newLanguage}`,
-		});
-
-		changeLanguage(newLanguage);
-		persistLocaleOnStorage(newLanguage);
-		window.location.reload();
-	};
+	const { t } = useTranslation();
+	const { handleChangeLanguage } = useChangeLanguage();
 
 	return (
-		<StyledSettingsBox>
-			<StyledButton onClick={themeToggler} aria-label="theme switch">
-				{theme === Theme.LIGHT ? <SunIcon /> : <MoonIcon />}
-			</StyledButton>
-			<StyledButton onClick={handleChangeLanguage}>
+		<Container>
+			<Button onClick={themeToggler} aria-label="theme switch">
+				<ThemeIcon />
+			</Button>
+			<Button onClick={handleChangeLanguage}>
 				<Paragraph>{t('language')}</Paragraph>
-			</StyledButton>
-		</StyledSettingsBox>
+			</Button>
+		</Container>
 	);
 };
 

@@ -1,43 +1,32 @@
-import { Typography } from '../../common';
-import Avatar from '../../../assets/avatars/avatar.png';
-import AvatarLight from '../../../assets/avatars/avatar-light.png';
-import Settings from '../../settings/Settings';
-import { Theme } from '../../../models';
-import {
-	StyledAvatar,
-	StyledNameContainer,
-	StyledSantiContainer,
-} from './StyledHeader';
-import useTranslation from '../../../hooks/useTranslation';
-import { Fragment } from 'react/jsx-runtime';
+import useTranslation from '@/hooks/useTranslation';
+import { Theme } from '@/models';
+import { Typography } from '@/components/common';
+import AvatarDark from '@/assets/avatars/avatar.png';
+import AvatarLight from '@/assets/avatars/avatar-light.png';
+import { Avatar, NameContainer, Container } from './StyledHeader';
 
 const { Title } = Typography;
 
+const avatar = {
+	[Theme.LIGHT]: AvatarLight,
+	[Theme.DARK]: AvatarDark,
+};
+
 interface IHeader {
 	theme: Theme;
-	themeToggler: () => void;
 }
 
-const Header: React.FC<IHeader> = ({ theme, themeToggler }) => {
+const Header: React.FC<IHeader> = ({ theme }) => {
 	const { t } = useTranslation();
 
 	return (
-		<Fragment>
-			<StyledSantiContainer>
-				<StyledAvatar
-					alt="santi memoji"
-					className="avatar"
-					src={theme === Theme.LIGHT ? AvatarLight : Avatar}
-				/>
-				<StyledNameContainer>
-					<Title fontWeight="100">{t('firstname')}</Title>
-					<Title>{t('lastname')}</Title>
-				</StyledNameContainer>
-			</StyledSantiContainer>
-			<div className="settings-container">
-				<Settings theme={theme} themeToggler={themeToggler} />
-			</div>
-		</Fragment>
+		<Container>
+			<Avatar alt="santi memoji" src={avatar[theme]} />
+			<NameContainer>
+				<Title fontWeight="100">{t('firstname')}</Title>
+				<Title>{t('lastname')}</Title>
+			</NameContainer>
+		</Container>
 	);
 };
 

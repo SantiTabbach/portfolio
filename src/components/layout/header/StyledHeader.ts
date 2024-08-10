@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledSantiContainer = styled.div`
+export const Container = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -11,7 +11,7 @@ export const StyledSantiContainer = styled.div`
 	}
 `;
 
-export const StyledAvatar = styled.img`
+export const Avatar = styled.img`
 	width: 150px;
 	height: 141px;
 	margin-right: 25px;
@@ -21,7 +21,7 @@ export const StyledAvatar = styled.img`
 	}
 `;
 
-export const StyledNameContainer = styled.div`
+export const NameContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

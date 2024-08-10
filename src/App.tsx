@@ -10,11 +10,12 @@ import {
 	SocialMedia,
 	Header,
 	Container,
+	Settings,
 } from './components';
 import { ThemeConfig } from './theme/Theme';
 import { useTheme } from './theme/hooks/useTheme';
 import { GlobalStyles } from './theme/GlobalStyles';
-import useTranslation from './hooks/useTranslation';
+import { useTranslation } from '@/hooks';
 import { retrieveLocaleFromStorage } from './utils/storage';
 import { LOCALE_OPTIONS } from '../i18n';
 
@@ -56,7 +57,8 @@ function App() {
 		<ThemeProvider theme={ThemeConfig[theme]}>
 			<GlobalStyles />
 			<Container>
-				<Header theme={theme} themeToggler={themeToggler} />
+				<Header theme={theme} />
+				<Settings theme={theme} themeToggler={themeToggler} />
 				<LeftColumn />
 				<RightColumn />
 			</Container>

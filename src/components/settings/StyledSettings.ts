@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const StyledSettingsBox = styled.div`
+export const Container = styled.div`
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -13,7 +13,7 @@ export const StyledSettingsBox = styled.div`
 	box-shadow: ${({ theme }) => theme.settings.shadow};
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
 	color: ${({ theme }) => theme.icon};
 	background-color: ${(props) => props.color || 'transparent'};
 	display: flex;
