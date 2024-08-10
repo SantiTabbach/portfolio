@@ -1,22 +1,25 @@
 import { useTheme } from 'styled-components';
-import { Theme, TProject } from '../../../models';
-import ProgrammingAvatar from '../../../assets/avatars/programming-avatar.png';
-import ProgrammingAvatarLight from '../../../assets/avatars/programming-avatar-light.png';
-import { BaseList, Section, Typography } from '../../common';
-import {
-	StyledAvatar,
-	StyledDescription,
-	StyledListWrapper,
-} from '../../commonStyled';
-import useTranslation from '../../../hooks/useTranslation';
+import { useTranslation } from 'react-i18next';
+import { Theme, TProject } from '@/models';
+
+import { BaseList, Section, Typography } from '@/components/common';
+import { Avatar, Description, ListWrapper } from '@/components/commonStyled';
+
 import { PROJECTS } from './helper/consts';
 import ProjectListItem from './components/ProjectListItem';
+import ProgrammingAvatarDark from '@/assets/avatars/programming-avatar.png';
+import ProgrammingAvatarLight from '@/assets/avatars/programming-avatar-light.png';
+
+const { Paragraph } = Typography;
 
 interface IProjectItem {
 	project: TProject;
 }
 
-const { Paragraph } = Typography;
+const avatar = {
+	[Theme.LIGHT]: ProgrammingAvatarLight,
+	[Theme.DARK]: ProgrammingAvatarDark,
+};
 
 const Projects = () => {
 	const { t } = useTranslation();
@@ -24,24 +27,17 @@ const Projects = () => {
 
 	return (
 		<Section title={t('projects.title')}>
-			<StyledDescription>
+			<Description>
 				<Paragraph>{t('projects.description')}</Paragraph>
-				<StyledAvatar
-					alt="santi tabbach memoji"
-					src={
-						theme.key === Theme.LIGHT
-							? ProgrammingAvatarLight
-							: ProgrammingAvatar
-					}
-				/>
-			</StyledDescription>
-			<StyledListWrapper>
+				<Avatar alt="santi tabbach memoji" src={avatar[theme.key as Theme]} />
+			</Description>
+			<ListWrapper>
 				<BaseList<TProject, IProjectItem>
 					items={PROJECTS}
 					resourceName="project"
 					itemComponent={ProjectListItem}
 				/>
-			</StyledListWrapper>
+			</ListWrapper>
 		</Section>
 	);
 };

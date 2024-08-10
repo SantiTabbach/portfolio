@@ -1,23 +1,18 @@
-import { Typography } from "../index";
-import { StyledSection } from "./StyledSection";
-
-type TTitleProps = React.ComponentProps<typeof Typography>;
+import { Typography } from '../index';
+import { Container } from './StyledSection';
 
 interface ISection {
-  children: React.ReactNode;
-  titleProps?: TTitleProps;
-  title?: string;
+	children: React.ReactNode;
+	title: string;
 }
 
-const Section: React.FC<ISection> = ({ children, title, titleProps }) => {
-  return (
-    <StyledSection>
-      {title && (
-        <Typography.Subtitle {...titleProps}>{title}</Typography.Subtitle>
-      )}
-      {children}
-    </StyledSection>
-  );
+const Section: React.FC<ISection> = ({ children, title }) => {
+	return (
+		<Container>
+			<Typography.Subtitle>{title}</Typography.Subtitle>
+			{children}
+		</Container>
+	);
 };
 
 export default Section;

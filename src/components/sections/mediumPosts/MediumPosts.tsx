@@ -1,17 +1,12 @@
-import { TMediumPost } from '../../../models';
-import { BaseList, Section, Typography } from '../../common';
-import PostListItem from './components/PostListItem';
-import { MEDIUM_POSTS } from './helper/const';
-import PeaceAvatar from '../../../assets/avatars/peace-avatar.png';
-import PeaceAvatarLight from '../../../assets/avatars/peace-avatar-light.png';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components';
-import { Theme } from '../../../models';
-import {
-	StyledAvatar,
-	StyledDescription,
-	StyledListWrapper,
-} from '../../commonStyled';
-import useTranslation from '../../../hooks/useTranslation';
+import { TMediumPost, Theme } from '@/models';
+import PostListItem from './components/PostListItem';
+import { Avatar, Description, ListWrapper } from '@/components/commonStyled';
+import { BaseList, Section, Typography } from '@/components/common';
+import PeaceAvatarDark from '@/assets/avatars/peace-avatar.png';
+import PeaceAvatarLight from '@/assets/avatars/peace-avatar-light.png';
+import { MEDIUM_POSTS } from './helper/const';
 
 const { Paragraph } = Typography;
 
@@ -19,28 +14,29 @@ interface IPostListItem {
 	post: TMediumPost;
 }
 
+const avatar = {
+	[Theme.LIGHT]: PeaceAvatarLight,
+	[Theme.DARK]: PeaceAvatarDark,
+};
+
 const MediumPosts = () => {
-	//TODO: Create context
 	const theme = useTheme();
 	const { t } = useTranslation();
 
 	return (
 		<Section title={t('posts.title')}>
-			<StyledDescription>
+			<Description>
 				<Paragraph>{t('posts.description1')}</Paragraph>
-				<StyledAvatar
-					alt="santi tabbach memoji"
-					src={theme.key === Theme.LIGHT ? PeaceAvatarLight : PeaceAvatar}
-				/>
-			</StyledDescription>
+				<Avatar alt="santi tabbach memoji" src={avatar[theme.key as Theme]} />
+			</Description>
 			<Paragraph>{t('posts.description2')}</Paragraph>
-			<StyledListWrapper>
+			<ListWrapper>
 				<BaseList<TMediumPost, IPostListItem>
 					items={MEDIUM_POSTS}
 					resourceName="post"
 					itemComponent={PostListItem}
 				/>
-			</StyledListWrapper>
+			</ListWrapper>
 		</Section>
 	);
 };
