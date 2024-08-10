@@ -45,3 +45,13 @@ export const getElapsedTime = (
 		return `${years} ${yr} ${months} ${mos}`;
 	}
 };
+
+export const calculateFormattedTime = (
+	time: string,
+	t: TFunction<'translation', undefined>
+) => {
+	const [start, end] = time.split(' - ');
+
+	const calcTime = getElapsedTime(start, end, t);
+	return `${formatShortDate(start)} - ${formatShortDate(end)} · ${calcTime}`;
+};
