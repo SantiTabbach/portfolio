@@ -11,18 +11,14 @@ const BaseList = <T extends object & { key?: Key }, P>({
 	resourceName,
 	itemComponent: ItemComponent,
 }: IBaseList<T, P>) => {
-	return (
-		<>
-			{items.map((item, index) => {
-				return (
-					<ItemComponent
-						key={item.key ?? index}
-						{...({ [resourceName]: item } as P)}
-					/>
-				);
-			})}
-		</>
-	);
+	return items.map((item, index) => {
+		return (
+			<ItemComponent
+				key={item.key ?? index}
+				{...({ [resourceName]: item } as P)}
+			/>
+		);
+	});
 };
 
 export default BaseList;
