@@ -1,10 +1,8 @@
-import { Trans } from 'react-i18next';
-import useTranslation from '../../../hooks/useTranslation';
-import { Link, Section, Typography } from '../../common';
-import { StyledBold } from '../../commonStyled';
+import { Trans, useTranslation } from 'react-i18next';
 
-import { sendLinkEvent } from '../../../utils/analytics';
-import { Resume } from '@/components';
+import { sendLinkEvent } from '@/utils/analytics';
+import { Link, Resume, Section, Typography } from '@/components';
+import { StyledBold } from '@/components/commonStyled';
 
 const { Paragraph } = Typography;
 
