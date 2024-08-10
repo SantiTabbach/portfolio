@@ -1,29 +1,26 @@
 import { styled } from 'styled-components';
 
 export const Container = styled.div`
+	display: flex;
 	position: absolute;
 	top: 0;
 	right: 0;
-	display: flex;
-	border-radius: 24px;
-	padding: 4px;
 	gap: 4px;
-	height: fit-content;
-	width: fit-content;
+	padding: 4px;
+	border-radius: 24px;
 	box-shadow: ${({ theme }) => theme.settings.shadow};
 `;
 
 export const Button = styled.button`
 	color: ${({ theme }) => theme.icon};
-	background-color: ${(props) => props.color || 'transparent'};
+	background-color: ${(props) => props.color ?? 'transparent'};
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	border: none;
 	width: 36px;
 	height: 36px;
-	padding: 2px;
-	border-radius: 30px;
-	align-items: center;
-	justify-content: center;
+	border-radius: 18px;
 	transition: background-color 0.3s ease;
 	cursor: pointer;
 
