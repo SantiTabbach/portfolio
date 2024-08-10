@@ -8,13 +8,12 @@ import {
 	StyledDescription,
 	StyledListWrapper,
 } from '../../commonStyled';
+import useTranslation from '../../../hooks/useTranslation';
 import { PROJECTS } from './helper/consts';
 import ProjectListItem from './components/ProjectListItem';
-import useTranslation from '../../../hooks/useTranslation';
 
 interface IProjectItem {
 	project: TProject;
-	key: number;
 }
 
 const { Paragraph } = Typography;

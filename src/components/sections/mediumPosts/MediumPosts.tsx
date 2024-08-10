@@ -17,7 +17,6 @@ const { Paragraph } = Typography;
 
 interface IPostListItem {
 	post: TMediumPost;
-	key: number;
 }
 
 const MediumPosts = () => {
