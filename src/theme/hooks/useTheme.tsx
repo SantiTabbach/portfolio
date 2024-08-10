@@ -5,14 +5,20 @@ import {
 	retrieveThemeFromStorage,
 } from '../../utils/storage';
 
+const getCurrentTheme = (): Theme => {
+	return (retrieveThemeFromStorage() as Theme) ?? Theme.DARK;
+};
+
+const themeMap = {
+	[Theme.DARK]: Theme.LIGHT,
+	[Theme.LIGHT]: Theme.DARK,
+};
+
 export const useTheme = () => {
-	const [theme, setTheme] = useState<Theme>(
-		(retrieveThemeFromStorage() as Theme) ?? Theme.DARK
-	);
+	const [theme, setTheme] = useState<Theme>(getCurrentTheme);
 
 	const themeToggler = () => {
-		const isDarkTheme = theme === Theme.DARK;
-		const selectedTheme = isDarkTheme ? Theme.LIGHT : Theme.DARK;
+		const selectedTheme = themeMap[theme];
 		setTheme(selectedTheme);
 		persistThemeOnStorage(selectedTheme);
 	};
