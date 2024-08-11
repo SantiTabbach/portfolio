@@ -1,13 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import TechnologyListItem, {
+	ITechnologyListItem,
+} from './components/TechnologyListItem';
 import { BaseList, Section } from '@/components/common';
 import { ITechnology } from '@/models';
 import { LIST_RESOURCES } from '@/enums';
 import { TECHNOLOGIES } from '@/constants';
 import { StyledTenchnologiesContainer } from './StyledTechnologies';
-import TechnologyListItem, {
-	ITechnologyListItem,
-} from './components/TechnologyListItem';
 
 const Technologies: React.FC = () => {
 	const { t } = useTranslation();
