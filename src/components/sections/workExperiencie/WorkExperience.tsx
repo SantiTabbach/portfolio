@@ -19,6 +19,7 @@ const WorkExperience = () => {
 					items={workExperienceMapper(WORK_EXPERIENCE, t)}
 					resourceName={LIST_RESOURCES.experience}
 					itemComponent={ExperienceItem}
+					keyExtractor={({ title }) => title}
 				/>
 			</div>
 		</Section>

@@ -32,6 +32,7 @@ const MediumPosts = () => {
 					items={MEDIUM_POSTS}
 					resourceName={LIST_RESOURCES.post}
 					itemComponent={PostListItem}
+					keyExtractor={({ url }) => url}
 				/>
 			</ListWrapper>
 		</Section>

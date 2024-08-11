@@ -19,6 +19,7 @@ const Technologies: React.FC = () => {
 					items={TECHNOLOGIES}
 					resourceName={LIST_RESOURCES.technology}
 					itemComponent={TechnologyListItem}
+					keyExtractor={({ name }) => name}
 				/>
 			</StyledTenchnologiesContainer>
 		</Section>

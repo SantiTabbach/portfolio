@@ -35,6 +35,7 @@ const Projects = () => {
 					items={PROJECTS}
 					resourceName={LIST_RESOURCES.project}
 					itemComponent={ProjectListItem}
+					keyExtractor={({ name }) => name}
 				/>
 			</ListWrapper>
 		</Section>

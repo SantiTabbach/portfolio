@@ -14,6 +14,7 @@ const SocialMedia = () => {
 						items={SOCIAL_MEDIA}
 						resourceName={LIST_RESOURCES.media}
 						itemComponent={MediaListItem}
+						keyExtractor={({ title }) => title}
 					/>
 				</ListWrapper>
 			</GlassBox>
