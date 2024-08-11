@@ -1,4 +1,3 @@
-import { useTheme } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { IProject } from '@/models';
 
@@ -12,6 +11,7 @@ import ProgrammingAvatarDark from '@/assets/avatars/programming-avatar.png';
 import ProgrammingAvatarLight from '@/assets/avatars/programming-avatar-light.png';
 import { LIST_RESOURCES, THEME } from '@/enums';
 import { PROJECTS } from '@/constants';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const { Paragraph } = Typography;
 
@@ -22,13 +22,13 @@ const avatar = {
 
 const Projects = () => {
 	const { t } = useTranslation();
-	const theme = useTheme();
+	const { theme } = useTheme();
 
 	return (
 		<Section title={t('projects.title')}>
 			<Description>
 				<Paragraph>{t('projects.description')}</Paragraph>
-				<Avatar alt="santi tabbach memoji" src={avatar[theme.key as THEME]} />
+				<Avatar alt="santi tabbach memoji" src={avatar[theme]} />
 			</Description>
 			<ListWrapper>
 				<BaseList<IProject, IProjectListItem>
