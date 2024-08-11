@@ -1,7 +1,6 @@
 import { sendSocialMediaEvent } from '@/utils/analytics';
-
-import { MediaItem } from './StyledMediaListItem';
 import { ISocialMedia } from '@/models';
+import { MediaItem } from './StyledMediaListItem';
 
 export interface IMediaListItem {
 	media: ISocialMedia;

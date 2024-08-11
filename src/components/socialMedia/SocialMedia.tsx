@@ -1,12 +1,10 @@
-import { BaseList, GlassBox } from '../common';
-
-import { SocialMediaContainer, ListWrapper } from './StyledSocialMedia';
-
-import { SOCIAL_MEDIA } from './helper/const';
-import MediaListItem, { IMediaListItem } from './components/MediaListItem';
 import { ISocialMedia } from '@/models';
+import { LIST_RESOURCES } from '@/enums';
+import { SOCIAL_MEDIA } from '@/constants/socialMedia';
+import { BaseList, GlassBox } from '../common';
 import { GlassBoxType } from '../common/glassBox/models/glassBox';
-import { LIST_RESOURCES } from '@/enums/lists';
+import { SocialMediaContainer, ListWrapper } from './StyledSocialMedia';
+import MediaListItem, { IMediaListItem } from './components/MediaListItem';
 
 const SocialMedia = () => {
 	return (

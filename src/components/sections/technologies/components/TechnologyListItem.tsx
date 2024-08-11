@@ -1,6 +1,6 @@
-import { Typography } from '@/components/common';
+import { Typography } from '@/components';
 import { StyledTechnologyElement } from '../StyledTechnologies';
-import { ITechnology } from '@/models/Technology';
+import { ITechnology } from '@/models';
 
 const { Paragraph } = Typography;
 

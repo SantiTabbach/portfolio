@@ -1,18 +1,18 @@
 import { MoonIcon, SunIcon } from '@/assets/icons/settings';
 import { useChangeLanguage, useTranslation } from '@/hooks';
-import { Theme } from '@/models';
+import { THEME } from '@/enums';
 import { Typography } from '../common';
 import { Container, Button } from './StyledSettings';
 
 const { Paragraph } = Typography;
 interface ISettings {
-	theme: Theme;
+	theme: THEME;
 	themeToggler: () => void;
 }
 
 const themeIcon = {
-	[Theme.LIGHT]: SunIcon,
-	[Theme.DARK]: MoonIcon,
+	[THEME.LIGHT]: SunIcon,
+	[THEME.DARK]: MoonIcon,
 };
 
 const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {

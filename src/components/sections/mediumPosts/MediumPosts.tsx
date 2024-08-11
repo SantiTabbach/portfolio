@@ -1,19 +1,20 @@
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'styled-components';
-import { TMediumPost, Theme } from '@/models';
+import { IMediumPost } from '@/models';
 import PostListItem, { IPostListItem } from './components/PostListItem';
 import { Avatar, Description, ListWrapper } from '@/components/commonStyled';
-import { BaseList, Section, Typography } from '@/components/common';
+import { BaseList, Section, Typography } from '@/components';
 import PeaceAvatarDark from '@/assets/avatars/peace-avatar.png';
 import PeaceAvatarLight from '@/assets/avatars/peace-avatar-light.png';
-import { MEDIUM_POSTS } from './helper/const';
-import { LIST_RESOURCES } from '@/enums/lists';
+
+import { LIST_RESOURCES, THEME } from '@/enums';
+import { MEDIUM_POSTS } from '@/constants/mediumPosts';
 
 const { Paragraph } = Typography;
 
 const avatar = {
-	[Theme.LIGHT]: PeaceAvatarLight,
-	[Theme.DARK]: PeaceAvatarDark,
+	[THEME.LIGHT]: PeaceAvatarLight,
+	[THEME.DARK]: PeaceAvatarDark,
 };
 
 const MediumPosts = () => {
@@ -24,11 +25,11 @@ const MediumPosts = () => {
 		<Section title={t('posts.title')}>
 			<Description>
 				<Paragraph>{t('posts.description1')}</Paragraph>
-				<Avatar alt="santi tabbach memoji" src={avatar[theme.key as Theme]} />
+				<Avatar alt="santi tabbach memoji" src={avatar[theme.key as THEME]} />
 			</Description>
 			<Paragraph>{t('posts.description2')}</Paragraph>
 			<ListWrapper>
-				<BaseList<TMediumPost, IPostListItem>
+				<BaseList<IMediumPost, IPostListItem>
 					items={MEDIUM_POSTS}
 					resourceName={LIST_RESOURCES.post}
 					itemComponent={PostListItem}

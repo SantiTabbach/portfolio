@@ -1,6 +1,6 @@
-export type TMediumPost = {
+export interface IMediumPost {
 	url: string;
 	title: string;
 	description: string;
 	topics: string[];
-};
+}

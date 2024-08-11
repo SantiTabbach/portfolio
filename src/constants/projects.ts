@@ -1,6 +1,6 @@
-import { TProject } from '../../../../models/Projects';
+import { IProject } from '@/models';
 
-export const PROJECTS: TProject[] = [
+export const PROJECTS: IProject[] = [
 	{
 		name: 'projects.project5.name',
 		description: 'projects.project5.description',

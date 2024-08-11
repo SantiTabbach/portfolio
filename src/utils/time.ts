@@ -1,8 +1,8 @@
+import { SHORT_MONTHS } from '@/constants/date';
 import { TFunction } from 'i18next';
-import { SHORT_MONTHS } from '../consts';
 
 export const formatShortDate = (date: string) => {
-	if (!date.match(/(\d{4})-(\d{2})-(\d{2})/)) {
+	if (!RegExp(/(\d{4})-(\d{2})-(\d{2})/).exec(date)) {
 		return date;
 	}
 

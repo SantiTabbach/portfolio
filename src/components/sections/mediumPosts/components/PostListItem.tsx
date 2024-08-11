@@ -1,12 +1,12 @@
-import { Link, Typography } from '@/components/common';
+import { Link, Typography } from '@/components';
 import BaseListElement from '@/components/common/baseList/components/BaseListElement';
-import { TMediumPost } from '@/models';
+import { IMediumPost } from '@/models';
 import { sendMediumEvent } from '@/utils/analytics';
 
 const { Paragraph } = Typography;
 
 export interface IPostListItem {
-	post: TMediumPost;
+	post: IMediumPost;
 }
 
 const PostListItem: React.FC<IPostListItem> = ({ post }) => {

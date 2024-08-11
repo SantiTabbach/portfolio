@@ -7,9 +7,10 @@ import {
 	NodeIcon,
 	DockerIcon,
 	FigmaIcon,
-} from './assets/icons/technologies';
+} from '@/assets/icons/technologies';
+import { ITechnology } from '@/models';
 
-export const TECHNOLOGIES = [
+export const TECHNOLOGIES: ITechnology[] = [
 	{
 		icon: TypescriptIcon,
 		name: 'Typescript',
@@ -42,19 +43,4 @@ export const TECHNOLOGIES = [
 		icon: DockerIcon,
 		name: 'Docker',
 	},
-];
-
-export const SHORT_MONTHS = [
-	'Jan',
-	'Feb',
-	'Mar',
-	'Apr',
-	'May',
-	'Jun',
-	'Jul',
-	'Aug',
-	'Sep',
-	'Oct',
-	'Nov',
-	'Dic',
 ];

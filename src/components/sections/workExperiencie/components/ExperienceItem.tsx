@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, Typography } from '../../../common';
-import { IWorkExperience } from '../../../../models';
+import { Link, Typography } from '@/components';
+import { IWorkExperience } from '@/models';
 import { useTheme } from 'styled-components';
 import {
 	StyledCircle,
@@ -8,7 +8,7 @@ import {
 	StyledSkill,
 	StyledSummary,
 } from './StyledExperienceItem';
-import useTranslation from '../../../../hooks/useTranslation';
+import useTranslation from '@/hooks/useTranslation';
 import Tags from '@/components/common/baseList/components/components/Tags';
 
 const { Paragraph, Subtitle } = Typography;

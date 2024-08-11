@@ -1,7 +1,7 @@
-import { TMediumPost } from '@/models';
+import { IMediumPost } from '@/models';
 
 //TODO: Pull metadata from link;
-export const MEDIUM_POSTS: TMediumPost[] = [
+export const MEDIUM_POSTS: IMediumPost[] = [
 	{
 		url: 'https://medium.com/@ymmhydfct/handling-api-feedback-like-a-pro-the-react-higher-order-component-6de4c7b690a5',
 		title:

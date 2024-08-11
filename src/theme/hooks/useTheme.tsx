@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { Theme } from '../../models';
+import { THEME } from '@/enums';
 import {
 	persistThemeOnStorage,
 	retrieveThemeFromStorage,
 } from '../../utils/storage';
 
 const getCurrentTheme = (): Theme => {
-	return (retrieveThemeFromStorage() as Theme) ?? Theme.DARK;
+	return (retrieveThemeFromStorage() as Theme) ?? THEME.DARK;
 };
 
 const themeMap = {
-	[Theme.DARK]: Theme.LIGHT,
-	[Theme.LIGHT]: Theme.DARK,
+	[THEME.DARK]: THEME.LIGHT,
+	[THEME.LIGHT]: THEME.DARK,
 };
 
 export const useTheme = () => {

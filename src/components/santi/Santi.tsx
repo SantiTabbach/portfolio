@@ -1,22 +1,22 @@
 import { useTranslation } from 'react-i18next';
-import { Theme } from '@/models';
-import { Typography } from '@/components/common';
+import { THEME } from '@/enums';
+import { Typography } from '@/components';
 import AvatarDark from '@/assets/avatars/avatar.png';
 import AvatarLight from '@/assets/avatars/avatar-light.png';
-import { Avatar, NameContainer, Container } from './StyledHeader';
+import { Avatar, NameContainer, Container } from './StyledSanti';
 
 const { Title } = Typography;
 
 const avatar = {
-	[Theme.LIGHT]: AvatarLight,
-	[Theme.DARK]: AvatarDark,
+	[THEME.LIGHT]: AvatarLight,
+	[THEME.DARK]: AvatarDark,
 };
 
-interface IHeader {
-	theme: Theme;
+interface ISanti {
+	theme: THEME;
 }
 
-const Header: React.FC<IHeader> = ({ theme }) => {
+const Santi: React.FC<ISanti> = ({ theme }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -30,4 +30,4 @@ const Header: React.FC<IHeader> = ({ theme }) => {
 	);
 };
 
-export default Header;
+export default Santi;

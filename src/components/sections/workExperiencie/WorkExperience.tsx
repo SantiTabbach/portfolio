@@ -1,11 +1,12 @@
-import { BaseList, Section } from '../../common';
+import { BaseList, Section } from '@/components';
 import ExperienceItem, { IExperienceItem } from './components/ExperienceItem';
 import { StyledLine } from './components/StyledExperienceItem';
-import { WORK_EXPERIENCE } from './consts';
-import useTranslation from '../../../hooks/useTranslation';
-import { IWorkExperience } from '../../../models';
-import { workExperienceMapper } from '../../../mappers/workExperience';
-import { LIST_RESOURCES } from '@/enums/lists';
+
+import useTranslation from '@/hooks/useTranslation';
+import { IWorkExperience } from '@/models';
+import { workExperienceMapper } from '@/mappers/workExperience';
+import { LIST_RESOURCES } from '@/enums';
+import { WORK_EXPERIENCE } from '@/constants/workExperience';
 
 const WorkExperience = () => {
 	const { t } = useTranslation();

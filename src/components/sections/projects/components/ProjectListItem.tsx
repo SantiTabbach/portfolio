@@ -1,9 +1,9 @@
 import { useTheme } from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { Typography } from '@/components/common';
-import { TProject } from '@/models/Projects';
+import { Typography } from '@/components';
+import { IProject } from '@/models';
 import { Avatar } from '@/components/commonStyled';
-import { Theme } from '@/models';
+import { THEME } from '@/enums';
 
 import { StyledProjectDescription } from './StyledProjectListItem';
 import BaseListElement from '@/components/common/baseList/components/BaseListElement';
@@ -11,7 +11,7 @@ import BaseListElement from '@/components/common/baseList/components/BaseListEle
 const { Paragraph, Subtitle } = Typography;
 
 export interface IProjectListItem {
-	project: TProject;
+	project: IProject;
 }
 
 const ProjectListItem: React.FC<IProjectListItem> = ({ project }) => {
@@ -26,7 +26,7 @@ const ProjectListItem: React.FC<IProjectListItem> = ({ project }) => {
 			<StyledProjectDescription>
 				<Paragraph fontSize="14">{t(description)}</Paragraph>
 				{image && (
-					<Avatar alt="project preview" src={image[theme.key as Theme]} />
+					<Avatar alt="project preview" src={image[theme.key as THEME]} />
 				)}
 			</StyledProjectDescription>
 		</BaseListElement>

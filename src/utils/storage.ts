@@ -124,7 +124,6 @@ export const createRemoveData = (
 	};
 };
 
-// Specific functions for theme and locale
 export const persistThemeOnStorage = createPersistData(LS_KEYS.THEME);
 export const removeThemeFromStorage = createRemoveData(LS_KEYS.THEME);
 export const retrieveThemeFromStorage = createRetrieveData(LS_KEYS.THEME);
