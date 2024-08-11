@@ -4,23 +4,21 @@ import { useChangeLanguage } from '@/hooks';
 import { THEME } from '@/enums';
 import { Typography } from '@/components';
 import { Container, Button } from './StyledSettings';
+import { useTheme } from '@/theme/hooks/useTheme';
 
 const { Paragraph } = Typography;
-interface ISettings {
-	theme: THEME;
-	themeToggler: () => void;
-}
 
 const themeIcon = {
 	[THEME.LIGHT]: SunIcon,
 	[THEME.DARK]: MoonIcon,
 };
 
-const Settings: React.FC<ISettings> = ({ theme, themeToggler }) => {
-	const ThemeIcon = themeIcon[theme];
-
+const Settings: React.FC = () => {
+	const { theme, themeToggler } = useTheme();
 	const { t } = useTranslation();
 	const { handleChangeLanguage } = useChangeLanguage();
+
+	const ThemeIcon = themeIcon[theme];
 
 	return (
 		<Container>

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useTheme } from 'styled-components';
+import { useTheme } from '@/theme/hooks/useTheme';
 import { IMediumPost } from '@/models';
 import PostListItem, { IPostListItem } from './components/PostListItem';
 import { Avatar, Description, ListWrapper } from '@/components/commonStyled';
@@ -18,14 +18,14 @@ const avatar = {
 };
 
 const MediumPosts = () => {
-	const theme = useTheme();
+	const { theme } = useTheme();
 	const { t } = useTranslation();
 
 	return (
 		<Section title={t('posts.title')}>
 			<Description>
 				<Paragraph>{t('posts.description1')}</Paragraph>
-				<Avatar alt="santi tabbach memoji" src={avatar[theme.key as THEME]} />
+				<Avatar alt="santi tabbach memoji" src={avatar[theme]} />
 			</Description>
 			<Paragraph>{t('posts.description2')}</Paragraph>
 			<ListWrapper>

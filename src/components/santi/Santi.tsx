@@ -4,6 +4,7 @@ import { Typography } from '@/components';
 import AvatarDark from '@/assets/avatars/avatar.png';
 import AvatarLight from '@/assets/avatars/avatar-light.png';
 import { Avatar, NameContainer, Container } from './StyledSanti';
+import { useTheme } from '@/theme/hooks/useTheme';
 
 const { Title } = Typography;
 
@@ -12,12 +13,10 @@ const avatar = {
 	[THEME.DARK]: AvatarDark,
 };
 
-interface ISanti {
-	theme: THEME;
-}
-
-const Santi: React.FC<ISanti> = ({ theme }) => {
+const Santi: React.FC = () => {
 	const { t } = useTranslation();
+
+	const { theme } = useTheme();
 
 	return (
 		<Container>
