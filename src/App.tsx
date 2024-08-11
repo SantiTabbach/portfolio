@@ -7,7 +7,19 @@ import { ThemeConfig } from './theme/Theme';
 import { useTheme } from './theme/hooks/useTheme';
 import { GlobalStyles } from './theme/GlobalStyles';
 import { retrieveLocaleFromStorage } from '@/utils/storage';
-import Content from './Content';
+import {
+	Header,
+	Main,
+	MediumPosts,
+	Pane,
+	Presentation,
+	Projects,
+	Santi,
+	Settings,
+	SocialMedia,
+	Technologies,
+	WorkExperience,
+} from './components';
 
 function App() {
 	const trackingId = import.meta.env.VITE_TRACKING_ID;
@@ -31,7 +43,22 @@ function App() {
 	return (
 		<ThemeProvider theme={ThemeConfig[theme]}>
 			<GlobalStyles />
-			<Content theme={theme} themeToggler={themeToggler} />
+			<Header>
+				<Santi />
+				<Settings theme={theme} themeToggler={themeToggler} />
+			</Header>
+			<Main>
+				<Pane>
+					<Presentation />
+					<WorkExperience />
+					<Technologies />
+				</Pane>
+				<Pane>
+					<Projects />
+					<MediumPosts />
+				</Pane>
+			</Main>
+			<SocialMedia />
 		</ThemeProvider>
 	);
 }

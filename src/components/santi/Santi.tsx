@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useTheme } from 'styled-components';
 import { THEME } from '@/enums';
 import { Typography } from '@/components';
 import AvatarDark from '@/assets/avatars/avatar.png';
@@ -12,16 +13,13 @@ const avatar = {
 	[THEME.DARK]: AvatarDark,
 };
 
-interface ISanti {
-	theme: THEME;
-}
-
-const Santi: React.FC<ISanti> = ({ theme }) => {
+const Santi: React.FC = () => {
 	const { t } = useTranslation();
+	const theme = useTheme();
 
 	return (
 		<Container>
-			<Avatar alt="santi memoji" src={avatar[theme]} />
+			<Avatar alt="santi memoji" src={avatar[theme.key as THEME]} />
 			<NameContainer>
 				<Title fontWeight="100">{t('firstname')}</Title>
 				<Title>{t('lastname')}</Title>
