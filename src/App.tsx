@@ -6,9 +6,8 @@ import { LOCALE_OPTIONS } from '../i18n';
 import { ThemeConfig } from './theme/Theme';
 import { useTheme } from './theme/hooks/useTheme';
 import { GlobalStyles } from './theme/GlobalStyles';
-import { retrieveLocaleFromStorage } from './utils/storage';
+import { retrieveLocaleFromStorage } from '@/utils/storage';
 import Content from './Content';
-import { THEME } from './enums';
 
 function App() {
 	const trackingId = import.meta.env.VITE_TRACKING_ID;
@@ -30,7 +29,7 @@ function App() {
 	}, []);
 
 	return (
-		<ThemeProvider theme={ThemeConfig[theme as THEME]}>
+		<ThemeProvider theme={ThemeConfig[theme]}>
 			<GlobalStyles />
 			<Content theme={theme} themeToggler={themeToggler} />
 		</ThemeProvider>

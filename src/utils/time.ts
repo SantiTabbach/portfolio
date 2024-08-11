@@ -1,4 +1,4 @@
-import { SHORT_MONTHS } from '@/constants/date';
+import { SHORT_MONTHS } from '@/constants';
 import { TFunction } from 'i18next';
 
 export const formatShortDate = (date: string) => {

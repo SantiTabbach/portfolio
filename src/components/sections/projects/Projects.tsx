@@ -11,7 +11,7 @@ import ProjectListItem, {
 import ProgrammingAvatarDark from '@/assets/avatars/programming-avatar.png';
 import ProgrammingAvatarLight from '@/assets/avatars/programming-avatar-light.png';
 import { LIST_RESOURCES, THEME } from '@/enums';
-import { PROJECTS } from '@/constants/projects';
+import { PROJECTS } from '@/constants';
 
 const { Paragraph } = Typography;
 

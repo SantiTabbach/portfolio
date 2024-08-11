@@ -3,10 +3,10 @@ import { THEME } from '@/enums';
 import {
 	persistThemeOnStorage,
 	retrieveThemeFromStorage,
-} from '../../utils/storage';
+} from '@/utils/storage';
 
-const getCurrentTheme = (): Theme => {
-	return (retrieveThemeFromStorage() as Theme) ?? THEME.DARK;
+const getCurrentTheme = (): THEME => {
+	return (retrieveThemeFromStorage() as THEME) ?? THEME.DARK;
 };
 
 const themeMap = {
@@ -15,7 +15,7 @@ const themeMap = {
 };
 
 export const useTheme = () => {
-	const [theme, setTheme] = useState<Theme>(getCurrentTheme);
+	const [theme, setTheme] = useState<THEME>(getCurrentTheme);
 
 	const themeToggler = () => {
 		const selectedTheme = themeMap[theme];

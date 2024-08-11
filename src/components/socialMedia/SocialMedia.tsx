@@ -1,8 +1,7 @@
 import { ISocialMedia } from '@/models';
-import { LIST_RESOURCES } from '@/enums';
-import { SOCIAL_MEDIA } from '@/constants/socialMedia';
-import { BaseList, GlassBox } from '../common';
-import { GlassBoxType } from '../common/glassBox/models/glassBox';
+import { LIST_RESOURCES, GlassBoxType } from '@/enums';
+import { SOCIAL_MEDIA } from '@/constants';
+import { BaseList, GlassBox } from '@/components';
 import { SocialMediaContainer, ListWrapper } from './StyledSocialMedia';
 import MediaListItem, { IMediaListItem } from './components/MediaListItem';
 

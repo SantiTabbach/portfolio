@@ -1,7 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { MoonIcon, SunIcon } from '@/assets/icons/settings';
-import { useChangeLanguage, useTranslation } from '@/hooks';
+import { useChangeLanguage } from '@/hooks';
 import { THEME } from '@/enums';
-import { Typography } from '../common';
+import { Typography } from '@/components';
 import { Container, Button } from './StyledSettings';
 
 const { Paragraph } = Typography;

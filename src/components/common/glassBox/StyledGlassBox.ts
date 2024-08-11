@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { GlassBoxType } from './models/glassBox';
+import { GlassBoxType } from '@/enums';
 
 export const Container = styled.div<{
 	type: string;

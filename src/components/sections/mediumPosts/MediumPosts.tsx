@@ -8,7 +8,7 @@ import PeaceAvatarDark from '@/assets/avatars/peace-avatar.png';
 import PeaceAvatarLight from '@/assets/avatars/peace-avatar-light.png';
 
 import { LIST_RESOURCES, THEME } from '@/enums';
-import { MEDIUM_POSTS } from '@/constants/mediumPosts';
+import { MEDIUM_POSTS } from '@/constants';
 
 const { Paragraph } = Typography;
 

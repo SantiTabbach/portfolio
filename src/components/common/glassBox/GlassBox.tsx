@@ -1,4 +1,4 @@
-import { GlassBoxType } from './models/glassBox';
+import { GlassBoxType } from '@/enums';
 import { Container } from './StyledGlassBox';
 
 interface IGlassBox {

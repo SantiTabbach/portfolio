@@ -1,6 +1,6 @@
 import { TFunction } from 'i18next';
-import { IWorkExperience } from '../models';
-import { calculateFormattedTime } from '../utils/time';
+import { IWorkExperience } from '@/models';
+import { calculateFormattedTime } from '@/utils/time';
 
 export const workExperienceMapper = (
 	workExperience: IWorkExperience[],

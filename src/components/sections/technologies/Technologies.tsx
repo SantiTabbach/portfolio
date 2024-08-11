@@ -6,7 +6,7 @@ import TechnologyListItem, {
 import { BaseList, Section } from '@/components/common';
 import { ITechnology } from '@/models';
 import { LIST_RESOURCES } from '@/enums';
-import { TECHNOLOGIES } from '@/constants/technologies';
+import { TECHNOLOGIES } from '@/constants';
 import { StyledTenchnologiesContainer } from './StyledTechnologies';
 
 const Technologies: React.FC = () => {
