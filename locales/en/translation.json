@@ -11,7 +11,7 @@
 	"presentation": {
 		"title": "Hey! I'm Santi",
 		"paragraph1": "Passionate <1>SSR Software Developer</1> with experience in <3>React</3> and <5>React Native</5>, and a keen interest in <7>UX/UI design</7>.",
-		"paragraph2": "Currently contributing to an on-site immersive experience project, while training in backend development at <1>Codea IT</1>",
+		"paragraph2": "Currently leading a development team for a healthcare project at <1>Codea IT</1>",
 		"paragraph3": "Also I'm working on my <1>thesis project</1> to complete my Software Engineering degree.",
 		"resume": "Resume"
 	},
@@ -25,14 +25,20 @@
 		"experience2": {
 			"title": "SSR Software Engineer",
 			"time": "2023-08-01 - 2024-06-30",
-			"summary": "Maintaining and developing new features for a USA PROJECT desktop application.",
-			"project": "shoulder surgery planning"
+			"summary": "Maintaining and developing new features for a USA shoulder surgery planning PROJECT.",
+			"project": "desktop application"
 		},
 		"experience3": {
 			"title": "FullStack developer",
 			"time": "2024-06-24 - Present",
-			"summary": "Developing new features for a web and on-site PROJECT application while taking my first steps in backend development.",
-			"project": "AI-powered"
+			"summary": "Developing new features for a PROJECT and on-site AI-powered application while taking my first steps in backend development.",
+			"project": "web"
+		},
+		"experience4": {
+			"title": "Lead Developer",
+			"time": "2024-08-24 - Present",
+			"summary": "Leading the development of a PROJECT that allows users to sync glucose measurement devices and obtain enriched information.",
+			"project": "mobile application"
 		}
 	},
 	"technologies": {

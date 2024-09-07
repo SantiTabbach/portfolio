@@ -2,6 +2,24 @@ import { IWorkExperience } from '@/models';
 
 export const WORK_EXPERIENCE: IWorkExperience[] = [
 	{
+		title: 'work-experience.experience4.title',
+		company: 'Codea IT',
+		time: 'work-experience.experience4.time',
+		summary: 'work-experience.experience4.summary',
+		project: {
+			text: 'work-experience.experience4.project',
+			url: 'https://apps.apple.com/ar/app/maverick-weelbeing/id6502292196?l=en-GB',
+		},
+		skills: [
+			'React Native',
+			'Expo',
+			'Ble PLX',
+			'Zustand',
+			'TanStack Query',
+			'Typescript',
+		],
+	},
+	{
 		title: 'work-experience.experience3.title',
 		company: 'Codea IT',
 		time: 'work-experience.experience3.time',
@@ -12,18 +30,6 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		},
 		skills: ['React', 'RTKQuery', 'Tailwind', 'Express', 'Node', 'Mongo'],
 	},
-	// {
-	// 	title: 'FullStack developer',
-	// 	company: 'CodeaIT',
-	// 	time: '2024-06-24 - Present',
-	// 	summary:
-	// 		'Maintaining and developing new features for a mobile PROJECT application and training in backend development.',
-	// 	project: {
-	// 		text: 'glucose measurement',
-	// 		url: 'https://maverickwellbeing.com/',
-	// 	},
-	// 	skills: ['React Native', 'Expo', 'Zustand', 'Express', 'Node', 'Mongo'],
-	// },
 	{
 		title: 'work-experience.experience2.title',
 		company: 'Intive',

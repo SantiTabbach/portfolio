@@ -11,28 +11,34 @@
 	"presentation": {
 		"title": "Hola! Soy Santi",
 		"paragraph1": "Apasionado <1>desarrollador de software SSR</1> con experiencia en <3>React</3> y <5>React Native</5>, y un gran interés en <7>diseño UX/UI</7>.",
-		"paragraph2": "Actualmente me encuentro contribuyendo a un proyecto de experiencia inmersiva in situ, mientras me formo en desarrollo backend en <1>Codea IT</1>",
+		"paragraph2": "Actualmente me encuentro liderando un equipo de desarrollo para un proyecto de salud en <1>Codea IT</1>",
 		"paragraph3": "También estoy trabajando en mi <1>proyecto de tesis</1> para finalizar mi carrera en Ingeniería de Software.",
 		"resume": "Currículum"
 	},
 	"work-experience": {
 		"title": "Experiencia laboral",
 		"experience1": {
-			"title": "Ingeniero de Software Junior",
+			"title": "Junior Software Engineer",
 			"time": "2021-11-01 - 2023-07-31",
 			"summary": "Dando mis primeros pasos en mi carrera profesional como desarrollador, aprendiendo y contribuyendo al equipo con una actitud proactiva."
 		},
 		"experience2": {
-			"title": "Ingeniero de Software SSR",
+			"title": "SSR Software Engineer",
 			"time": "2023-08-01 - 2024-06-30",
-			"summary": "Manteniendo y desarrollando nuevas funcionalidades para una aplicación de escritorio para PROJECT.",
-			"project": "planificar cirugías de hombro"
+			"summary": "Manteniendo y desarrollando nuevas funcionalidades para una PROJECT para planificar cirugías de hombro.",
+			"project": "aplicación de escritorio"
 		},
 		"experience3": {
-			"title": "Desarrollador FullStack",
-			"time": "2024-06-24 - Presente",
-			"summary": "Desarrollando nuevas funcionalidades para una aplicación web e in situ PROJECT y dando mis primeros pasos en el desarrollo backend.",
-			"project": "Impulsada por IA"
+			"title": "FullStack developer",
+			"time": "2024-06-24 - 2024-08-24",
+			"summary": "Desarrollando nuevas funcionalidades para una PROJECT e in situ impulsada por IA y dando mis primeros pasos en el desarrollo backend.",
+			"project": "aplicación web"
+		},
+		"experience4": {
+			"title": "Lead Developer",
+			"time": "2024-08-24 - Presente",
+			"summary": "Liderando el desarrollo de una PROJECT que permite a los usuarios sincronizar dispositivos de medición de glucosa y obtener información enriquecida.",
+			"project": "aplicación mobile"
 		}
 	},
 	"technologies": {
