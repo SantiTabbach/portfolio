@@ -37,7 +37,7 @@
 		"experience4": {
 			"title": "Lead Developer",
 			"time": "2024-08-24 - Present",
-			"summary": "Leading the development of a PROJECT that allows users to sync glucose measurement devices and obtain enriched information.",
+			"summary": "Leading the development of a PROJECT that allows users to sync BLE medical devices and obtain enriched information.",
 			"project": "mobile application"
 		}
 	},
