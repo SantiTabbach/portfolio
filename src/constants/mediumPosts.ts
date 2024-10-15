@@ -3,7 +3,7 @@ import { IMediumPost } from '@/models';
 //TODO: Pull metadata from link;
 export const MEDIUM_POSTS: IMediumPost[] = [
 	{
-		url: 'https://medium.com/@ymmhydfct/handling-api-feedback-like-a-pro-the-react-higher-order-component-6de4c7b690a5',
+		url: 'https://medium.com/@santitabbach/handling-api-feedback-like-a-pro-the-react-higher-order-component-6de4c7b690a5',
 		title:
 			'Handling API Feedback like a PRO — The React Higher-Order Component',
 		description:
@@ -17,7 +17,7 @@ export const MEDIUM_POSTS: IMediumPost[] = [
 		],
 	},
 	{
-		url: 'https://medium.com/@ymmhydfct/streamlining-loading-state-management-with-redux-in-react-applications-d75765f9b224',
+		url: 'https://medium.com/@santitabbach/streamlining-loading-state-management-with-redux-in-react-applications-d75765f9b224',
 		title:
 			'Streamlining Loading State Management with Redux in React Native Applications in 2024',
 		description:

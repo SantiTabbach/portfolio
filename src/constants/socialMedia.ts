@@ -20,7 +20,7 @@ export const SOCIAL_MEDIA: ISocialMedia[] = [
 	{
 		icon: MediumIcon,
 		title: 'Medium',
-		url: 'https://medium.com/@ymmhydfct',
+		url: 'https://medium.com/@santitabbach',
 	},
 	{
 		icon: MailIcon,
