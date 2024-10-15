@@ -25,7 +25,6 @@ This project is my personal portfolio website. It is designed to present my skil
 - **Nginx**
 - **ESLint**
 - **TypeScript**
-- **i18next**
 
 ## Author
 

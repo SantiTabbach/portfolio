@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { IMediumPost } from '@/models';
 import PostListItem, { IPostListItem } from './components/PostListItem';
 import { Avatar, Description, ListWrapper } from '@/components/commonStyled';
@@ -18,15 +17,19 @@ const avatar = {
 
 const MediumPosts = () => {
 	const { theme } = useTheme();
-	const { t } = useTranslation();
 
 	return (
-		<Section title={t('posts.title')}>
+		<Section title="Medium posts">
 			<Description>
-				<Paragraph>{t('posts.description1')}</Paragraph>
+				<Paragraph>
+					I find pleasure in reading programming articles on Medium during my
+					free time. It's a great way to stay up to date on the latest trends.
+				</Paragraph>
 				<Avatar alt="santi tabbach memoji" src={avatar[theme]} />
 			</Description>
-			<Paragraph>{t('posts.description2')}</Paragraph>
+			<Paragraph>
+				Occasionally, I also feel motivated to publish my own writings:
+			</Paragraph>
 			<ListWrapper>
 				<BaseList<IMediumPost, IPostListItem>
 					items={MEDIUM_POSTS}

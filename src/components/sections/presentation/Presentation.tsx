@@ -1,5 +1,3 @@
-import { Trans, useTranslation } from 'react-i18next';
-
 import { sendLinkEvent } from '@/utils/analytics';
 import { Link, Resume, Section, Typography } from '@/components';
 import { StyledBold } from '@/components/commonStyled';
@@ -7,50 +5,32 @@ import { StyledBold } from '@/components/commonStyled';
 const { Paragraph } = Typography;
 
 const Presentation = () => {
-	const { t } = useTranslation();
-
 	return (
-		<Section title={t('presentation.title')}>
+		<Section title="Hey! I'm Santi">
 			<Paragraph>
-				<Trans
-					i18nKey="presentation.paragraph1"
-					components={{
-						1: <StyledBold />,
-						3: <StyledBold />,
-						5: <StyledBold />,
-						7: <StyledBold />,
-					}}
-				/>
+				Passionate <StyledBold>SSR Software Developer</StyledBold> with
+				experience in <StyledBold>React</StyledBold> and{' '}
+				<StyledBold>React Native</StyledBold>, and a keen interest in{' '}
+				<StyledBold>UX/UI design</StyledBold>.
 			</Paragraph>
 			<Paragraph>
-				<Trans
-					i18nKey="presentation.paragraph2"
-					components={{
-						1: (
-							<Link
-								onClick={() => sendLinkEvent({ label: 'company' })}
-								href="https://www.codeait.com/es"
-							>
-								Codea IT
-							</Link>
-						),
-					}}
-				/>
+				Currently leading a development team for a healthcare project at{' '}
+				<Link
+					onClick={() => sendLinkEvent({ label: 'company' })}
+					href="https://www.codeait.com/es"
+				>
+					Codea IT
+				</Link>
 			</Paragraph>
 			<Paragraph>
-				<Trans
-					i18nKey="presentation.paragraph3"
-					components={{
-						1: (
-							<Link
-								onClick={() => sendLinkEvent({ label: 'thesis project' })}
-								href="https://www.instagram.com/alertify.ar/"
-							>
-								thesis project
-							</Link>
-						),
-					}}
-				/>
+				Also I'm working on my{' '}
+				<Link
+					onClick={() => sendLinkEvent({ label: 'thesis project' })}
+					href="https://www.instagram.com/alertify.ar/"
+				>
+					thesis project
+				</Link>{' '}
+				to complete my Software Engineering degree.
 			</Paragraph>
 			<Resume />
 		</Section>

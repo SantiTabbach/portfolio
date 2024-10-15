@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import TechnologyListItem, {
 	ITechnologyListItem,
 } from './components/TechnologyListItem';
@@ -10,10 +9,8 @@ import { TECHNOLOGIES } from '@/constants';
 import { StyledTenchnologiesContainer } from './StyledTechnologies';
 
 const Technologies: React.FC = () => {
-	const { t } = useTranslation();
-
 	return (
-		<Section title={t('technologies.title')}>
+		<Section title="Technologies that I use">
 			<StyledTenchnologiesContainer>
 				<BaseList<ITechnology, ITechnologyListItem>
 					items={TECHNOLOGIES}

@@ -1,11 +1,5 @@
-import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
-
-import { useTranslation } from '@/hooks';
-import { LOCALE_OPTIONS } from '../i18n';
-
 import { GlobalStyles } from './theme/GlobalStyles';
-import { retrieveLocaleFromStorage } from '@/utils/storage';
 import {
 	Header,
 	Main,
@@ -30,13 +24,6 @@ function App() {
 		page: '/',
 		title: 'App',
 	});
-
-	const { changeLanguage } = useTranslation();
-
-	useEffect(() => {
-		changeLanguage(retrieveLocaleFromStorage() ?? LOCALE_OPTIONS.EN);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
 
 	return (
 		<ThemeProvider>

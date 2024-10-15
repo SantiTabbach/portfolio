@@ -1,8 +1,7 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { useTheme } from '@/contexts/ThemeContext';
 import { Typography } from '@/components';
-import { IWorkExperience } from '@/models';
+import { IExperience } from '@/models';
 import { Circle, Container, Skill } from './StyledExperienceItem';
 import Tags from '@/components/common/baseList/components/components/Tags';
 import Summary from './components/Summary';
@@ -10,23 +9,22 @@ import Summary from './components/Summary';
 const { Paragraph, Subtitle } = Typography;
 
 export interface IExperienceItem {
-	experience: IWorkExperience;
+	experience: IExperience;
 }
 
 export const ExperienceItem: React.FC<IExperienceItem> = ({ experience }) => {
-	const { summary, skills, time, company, title, project } = experience;
+	const { summary, skills, time, title, project } = experience;
 
-	const { t } = useTranslation();
 	const { themeStyles } = useTheme();
 
 	return (
 		<Container>
 			<Circle />
 			<Subtitle color={themeStyles.primary} fontSize="16">
-				{t(title)} - {t(company)}
+				{title}
 			</Subtitle>
 			<Paragraph color={themeStyles.subtitle} fontWeight="400" fontSize="14">
-				{t(time)}
+				{time}
 			</Paragraph>
 			<Summary summary={summary} project={project} />
 			<Tags tags={skills} renderItem={Skill} />

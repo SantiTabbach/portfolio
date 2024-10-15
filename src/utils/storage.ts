@@ -1,6 +1,5 @@
 export enum LS_KEYS {
 	THEME = 'theme',
-	LOCALE = 'locale',
 }
 
 /**
@@ -127,7 +126,3 @@ export const createRemoveData = (
 export const persistThemeOnStorage = createPersistData(LS_KEYS.THEME);
 export const removeThemeFromStorage = createRemoveData(LS_KEYS.THEME);
 export const retrieveThemeFromStorage = createRetrieveData(LS_KEYS.THEME);
-
-export const persistLocaleOnStorage = createPersistData(LS_KEYS.LOCALE);
-export const removeLocaleFromStorage = createRemoveData(LS_KEYS.LOCALE);
-export const retrieveLocaleFromStorage = createRetrieveData(LS_KEYS.LOCALE);

@@ -4,3 +4,4 @@ export * from './projects';
 export * from './socialMedia';
 export * from './technologies';
 export * from './workExperience';
+export * from './string';

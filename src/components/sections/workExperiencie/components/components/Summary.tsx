@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { Link } from '@/components';
 import { Container } from './StyledSummary';
 
@@ -11,16 +10,14 @@ interface ISummary {
 }
 
 const Summary: React.FC<ISummary> = ({ summary, project }) => {
-	const { t } = useTranslation();
-
-	const splittedSummary = t(summary).split('PROJECT');
+	const splittedSummary = summary.split('PROJECT');
 
 	return (
 		<Container>
 			{splittedSummary[0]}
 			{project && (
 				<Link href={project.url} style={{ fontSize: 14 }}>
-					{t(project.text)}
+					{project.text}
 				</Link>
 			)}
 			{splittedSummary?.[1]}

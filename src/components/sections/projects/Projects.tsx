@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { IProject } from '@/models';
 
 import { BaseList, Section, Typography } from '@/components';
@@ -21,13 +20,16 @@ const avatar = {
 };
 
 const Projects = () => {
-	const { t } = useTranslation();
 	const { theme } = useTheme();
 
 	return (
-		<Section title={t('projects.title')}>
+		<Section title="My projects">
 			<Description>
-				<Paragraph>{t('projects.description')}</Paragraph>
+				<Paragraph>
+					My professional experience focuses on web development with React;
+					however, my true passion lies in mobile development. You'll catch that
+					vibe in my personal projects..
+				</Paragraph>
 				<Avatar alt="santi tabbach memoji" src={avatar[theme]} />
 			</Description>
 			<ListWrapper>

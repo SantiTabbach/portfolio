@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import DownloadFileIcon from '@/assets/icons/DownloadFileIcon';
 import resumePDF from '@/resources/resume.pdf';
 import { sendResumeEvent } from '@/utils/analytics';
@@ -7,8 +6,6 @@ import { Button } from './StyledResume';
 import { Typography } from '../common';
 
 const DownloadButton = () => {
-	const { t } = useTranslation();
-
 	const downloadPdf = useCallback(() => {
 		sendResumeEvent({ label: 'Santi Tabbach.pdf downloaded' });
 		const link = document.createElement('a');
@@ -21,9 +18,7 @@ const DownloadButton = () => {
 
 	return (
 		<Button onClick={downloadPdf}>
-			<Typography.Subtitle fontSize="16">
-				{t('presentation.resume')}
-			</Typography.Subtitle>
+			<Typography.Subtitle fontSize="16">Resume</Typography.Subtitle>
 			<DownloadFileIcon size={20} />
 		</Button>
 	);

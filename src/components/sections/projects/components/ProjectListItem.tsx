@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { Typography } from '@/components';
 import { IProject } from '@/models';
 import { Avatar } from '@/components/commonStyled';
@@ -16,13 +15,12 @@ const ProjectListItem: React.FC<IProjectListItem> = ({ project }) => {
 	const { name, image, description, technologies } = project;
 
 	const { theme, themeStyles } = useTheme();
-	const { t } = useTranslation();
 
 	return (
 		<BaseListElement tags={technologies}>
-			<Subtitle color={themeStyles.primary}>{t(name)}</Subtitle>
+			<Subtitle color={themeStyles.primary}>{name}</Subtitle>
 			<StyledProjectDescription>
-				<Paragraph fontSize="14">{t(description)}</Paragraph>
+				<Paragraph fontSize="14">{description}</Paragraph>
 				{image && <Avatar alt="project preview" src={image[theme]} />}
 			</StyledProjectDescription>
 		</BaseListElement>

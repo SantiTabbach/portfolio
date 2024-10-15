@@ -1,5 +1,10 @@
-import { SHORT_MONTHS } from '@/constants';
-import { TFunction } from 'i18next';
+import {
+	EMPTY_STRING,
+	MONTH_REGEX,
+	SHORT_MONTHS,
+	YEAR_REGEX,
+} from '@/constants';
+import { IExperience } from '@/models';
 
 export const formatShortDate = (date: string) => {
 	if (!RegExp(/(\d{4})-(\d{2})-(\d{2})/).exec(date)) {
@@ -16,11 +21,7 @@ export const formatShortDate = (date: string) => {
 	return parsedMonth + ' ' + year;
 };
 
-export const getElapsedTime = (
-	startDate: string,
-	endDate: string,
-	t: TFunction<'translation', undefined>
-) => {
+export const getElapsedTime = (startDate: string, endDate: string) => {
 	const start = new Date(startDate);
 	const end = ['Present', 'Presente'].includes(endDate)
 		? new Date()
@@ -34,8 +35,8 @@ export const getElapsedTime = (
 	const years = Math.floor(diffMonths / 12);
 	const months = diffMonths % 12;
 
-	const mos = months === 1 ? t('time.mo') : t('time.mos');
-	const yr = years === 1 ? t('time.yr') : t('time.yrs');
+	const mos = months === 1 ? 'mo' : 'mos';
+	const yr = years === 1 ? 'yr' : 'yrs';
 
 	if (years === 0) {
 		return `${months} ${mos}`;
@@ -46,12 +47,42 @@ export const getElapsedTime = (
 	}
 };
 
-export const calculateFormattedTime = (
-	time: string,
-	t: TFunction<'translation', undefined>
-) => {
+export const calculateFormattedTime = (time: string) => {
 	const [start, end] = time.split(' - ');
 
-	const calcTime = getElapsedTime(start, end, t);
+	const calcTime = getElapsedTime(start, end);
 	return `${formatShortDate(start)} - ${formatShortDate(end)} · ${calcTime}`;
+};
+
+export const calculateTotalExperience = (experience: IExperience[]) => {
+	let totalYears = 0;
+	let totalMonths = 0;
+	let totalTime = EMPTY_STRING;
+
+	const firstExperience = experience[0];
+	const lastExperience = experience[experience.length - 1];
+
+	console.log(firstExperience, lastExperience);
+
+	experience.forEach((e) => {
+		const ellapsedTime = e.time.split(' · ')[1];
+
+		const yearMatch = RegExp(YEAR_REGEX).exec(ellapsedTime);
+		const monthMatch = RegExp(MONTH_REGEX).exec(ellapsedTime);
+
+		if (yearMatch) totalYears += parseInt(yearMatch[1], 10);
+		if (monthMatch) totalMonths += parseInt(monthMatch[1], 10);
+	});
+
+	totalYears += Math.floor(totalMonths / 12);
+	totalMonths = totalMonths % 12;
+
+	if (totalYears > 0) {
+		totalTime = `${totalYears} yr `;
+	}
+	if (totalMonths > 0) {
+		totalTime = `${totalTime}${totalMonths} mos`;
+	}
+
+	return totalTime;
 };

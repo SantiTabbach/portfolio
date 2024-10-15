@@ -2,7 +2,6 @@ import ReactGA from 'react-ga4';
 import { UaEventOptions } from 'react-ga4/types/ga4';
 
 export enum CATEGORIES {
-	LANGUAGE = 'Language',
 	MEDIUM_POSTS = 'Medium posts',
 	PROJECTS = 'Projects',
 	LINKS = 'Links',
@@ -11,7 +10,6 @@ export enum CATEGORIES {
 }
 
 export const ACTIONS = {
-	[CATEGORIES.LANGUAGE]: 'Change Language',
 	[CATEGORIES.MEDIUM_POSTS]: 'Open medium post',
 	[CATEGORIES.PROJECTS]: 'Read project',
 	[CATEGORIES.SOCIAL]: 'Visit social media',
@@ -32,10 +30,6 @@ const sendEvent = (category: CATEGORIES, action: string) => {
 	};
 };
 
-export const sendLanguageEvent = sendEvent(
-	CATEGORIES.LANGUAGE,
-	ACTIONS[CATEGORIES.LANGUAGE]
-);
 export const sendLinkEvent = sendEvent(
 	CATEGORIES.LINKS,
 	ACTIONS[CATEGORIES.LINKS]

@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { THEME } from '@/enums';
 import { Typography } from '@/components';
 import AvatarDark from '@/assets/avatars/avatar.png';
@@ -14,15 +13,14 @@ const avatar = {
 };
 
 const Santi: React.FC = () => {
-	const { t } = useTranslation();
 	const { theme } = useTheme();
 
 	return (
 		<Container>
 			<Avatar alt="santi memoji" src={avatar[theme]} />
 			<NameContainer>
-				<Title fontWeight="100">{t('firstname')}</Title>
-				<Title>{t('lastname')}</Title>
+				<Title fontWeight="100">SANTI</Title>
+				<Title>TABBACH</Title>
 			</NameContainer>
 		</Container>
 	);

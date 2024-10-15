@@ -2,8 +2,9 @@ import { IProject } from '@/models';
 
 export const PROJECTS: IProject[] = [
 	{
-		name: 'projects.project5.name',
-		description: 'projects.project5.description',
+		name: 'My TODOs',
+		description:
+			'This is my first Full Stack application. By doing this project I learned how to build a complete CRUD with an authentication and authorization system using the MERN stack.',
 		technologies: [
 			'Typescript',
 			'JWT',
@@ -16,8 +17,9 @@ export const PROJECTS: IProject[] = [
 		],
 	},
 	{
-		name: 'projects.project4.name',
-		description: 'projects.project4.description',
+		name: 'Alertify',
+		description:
+			'This application serves as my thesis project for my Software Engineering degree. Developed a mobile application to alert neighborhood residents about incidents, track them and generate reports for authorities.',
 		technologies: [
 			'Typescript',
 			'React Native',
@@ -29,18 +31,21 @@ export const PROJECTS: IProject[] = [
 		],
 	},
 	{
-		name: 'projects.project3.name',
-		description: 'projects.project3.description',
+		name: 'My Finances',
+		description:
+			'I developed an application to manage my personal finances, allowing me to create and track shopping lists and generate reports based on the data collected by the app.',
 		technologies: ['React Native', 'Expo', 'Firebase'],
 	},
 	{
-		name: 'projects.project2.name',
-		description: 'projects.project2.description',
+		name: 'Recycling Mate',
+		description:
+			"Recycling Mate emerged as an internal project at SimTLiX for academic purposes. I developed this app for the team to test a Machine Learning model for waste classification. It allows users to take a photo and display the model's results.",
 		technologies: ['React Native', 'Expo'],
 	},
 	{
-		name: 'projects.project1.name',
-		description: 'projects.project1.description',
+		name: '5 Tenedores',
+		description:
+			'The first application I developed following a Udemy course. This app allows users to search for and review restaurants, including authentication and restaurant creation features.',
 		technologies: ['React Native', 'Expo', 'Firebase'],
 	},
 ];

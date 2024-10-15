@@ -12,3 +12,6 @@ export const SHORT_MONTHS = [
 	'Nov',
 	'Dic',
 ];
+
+export const YEAR_REGEX = /(\d+)\s*yr/;
+export const MONTH_REGEX = /(\d+)\s*mos/;
