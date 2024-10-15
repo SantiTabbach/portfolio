@@ -1,11 +1,15 @@
+export interface IExperience {
+	title: string;
+	time: string;
+	summary: string;
+	project?: {
+		text: string;
+		url: string;
+	};
+	skills: string[];
+}
+
 export interface IWorkExperience {
-  title: string;
-  company: string;
-  time: string;
-  summary: string;
-  project?: {
-    text: string;
-    url: string;
-  };
-  skills: string[];
+	company: string;
+	experience: IExperience[];
 }

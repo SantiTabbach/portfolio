@@ -1,9 +1,9 @@
 import { TFunction } from 'i18next';
-import { IWorkExperience } from '@/models';
+import { IExperience } from '@/models';
 import { calculateFormattedTime } from '@/utils/time';
 
 export const workExperienceMapper = (
-	workExperience: IWorkExperience[],
+	workExperience: IExperience[],
 	t: TFunction<'translation', undefined>
 ) => {
 	return workExperience.map((item) => {
