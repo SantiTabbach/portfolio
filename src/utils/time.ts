@@ -1,10 +1,28 @@
-import {
-	EMPTY_STRING,
-	MONTH_REGEX,
-	SHORT_MONTHS,
-	YEAR_REGEX,
-} from '@/constants';
+import { EMPTY_STRING, SHORT_MONTHS } from '@/constants';
 import { IExperience } from '@/models';
+import { differenceInMonths, parseISO } from 'date-fns';
+
+export const getTimeDifference = (
+	startDate: string,
+	endDate: string
+): string => {
+	const end =
+		endDate.toLowerCase() === 'present' ? new Date() : parseISO(endDate);
+	const start = parseISO(startDate);
+
+	const totalMonths = differenceInMonths(end, start);
+	const years = Math.floor(totalMonths / 12);
+	const months = totalMonths % 12;
+
+	let result = EMPTY_STRING;
+	if (years > 0) result += `${years} yr${years > 1 ? 's' : EMPTY_STRING}`;
+	if (months > 0)
+		result += `${years > 0 ? ' ' : EMPTY_STRING}${months} mo${
+			months > 1 ? 's' : EMPTY_STRING
+		}`;
+
+	return result || '0 mos';
+};
 
 export const formatShortDate = (date: string) => {
 	if (!RegExp(/(\d{4})-(\d{2})-(\d{2})/).exec(date)) {
@@ -21,68 +39,20 @@ export const formatShortDate = (date: string) => {
 	return parsedMonth + ' ' + year;
 };
 
-export const getElapsedTime = (startDate: string, endDate: string) => {
-	const start = new Date(startDate);
-	const end = ['Present', 'Presente'].includes(endDate)
-		? new Date()
-		: new Date(endDate);
-
-	const diffMonths =
-		(end.getFullYear() - start.getFullYear()) * 12 +
-		end.getMonth() -
-		start.getMonth();
-
-	const years = Math.floor(diffMonths / 12);
-	const months = diffMonths % 12;
-
-	const mos = months === 1 ? 'mo' : 'mos';
-	const yr = years === 1 ? 'yr' : 'yrs';
-
-	if (years === 0) {
-		return `${months} ${mos}`;
-	} else if (months === 0) {
-		return `${years} ${yr}`;
-	} else {
-		return `${years} ${yr} ${months} ${mos}`;
-	}
+export const getDate = (time: string) => {
+	return time.split(' - ');
 };
 
 export const calculateFormattedTime = (time: string) => {
-	const [start, end] = time.split(' - ');
+	const [start, end] = getDate(time);
 
-	const calcTime = getElapsedTime(start, end);
+	const calcTime = getTimeDifference(start, end);
 	return `${formatShortDate(start)} - ${formatShortDate(end)} · ${calcTime}`;
 };
 
 export const calculateTotalExperience = (experience: IExperience[]) => {
-	let totalYears = 0;
-	let totalMonths = 0;
-	let totalTime = EMPTY_STRING;
+	const lastExperience = getDate(experience[0].time)[1];
+	const firstExperience = getDate(experience[experience.length - 1].time)[0];
 
-	const firstExperience = experience[0];
-	const lastExperience = experience[experience.length - 1];
-
-	console.log(firstExperience, lastExperience);
-
-	experience.forEach((e) => {
-		const ellapsedTime = e.time.split(' · ')[1];
-
-		const yearMatch = RegExp(YEAR_REGEX).exec(ellapsedTime);
-		const monthMatch = RegExp(MONTH_REGEX).exec(ellapsedTime);
-
-		if (yearMatch) totalYears += parseInt(yearMatch[1], 10);
-		if (monthMatch) totalMonths += parseInt(monthMatch[1], 10);
-	});
-
-	totalYears += Math.floor(totalMonths / 12);
-	totalMonths = totalMonths % 12;
-
-	if (totalYears > 0) {
-		totalTime = `${totalYears} yr `;
-	}
-	if (totalMonths > 0) {
-		totalTime = `${totalTime}${totalMonths} mos`;
-	}
-
-	return totalTime;
+	return getTimeDifference(firstExperience, lastExperience);
 };

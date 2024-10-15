@@ -25,7 +25,7 @@ const WorkExperience = () => {
 							fontWeight="400"
 							fontSize="14"
 						>
-							{e.company} · {calculateTotalExperience(items)}
+							{e.company} · {calculateTotalExperience(e.experience)}
 						</Paragraph>
 						<div style={{ position: 'relative' }}>
 							<Line />
