@@ -1,5 +1,5 @@
 import { sendLinkEvent } from '@/utils/analytics';
-import { Link, Resume, Section, Typography } from '@/components';
+import { Link, Resume, Section, Typography, Contact } from '@/components';
 import { StyledBold } from '@/components/commonStyled';
 
 const { Paragraph } = Typography;
@@ -8,31 +8,27 @@ const Presentation = () => {
 	return (
 		<Section title="Hey! I'm Santi">
 			<Paragraph>
-				Passionate <StyledBold>SSR Software Developer</StyledBold> with
-				experience in <StyledBold>React</StyledBold> and{' '}
-				<StyledBold>React Native</StyledBold>, and a keen interest in{' '}
-				<StyledBold>UX/UI design</StyledBold>.
+				<StyledBold>Software Engineer</StyledBold> with hands-on experience in
+				web and mobile development. Highly proficient in{' '}
+				<StyledBold>React</StyledBold> and <StyledBold>React Native</StyledBold>
+				, with knowledge on <StyledBold>NodeJS</StyledBold>,{' '}
+				<StyledBold>Express</StyledBold> and <StyledBold>NestJS</StyledBold>.
 			</Paragraph>
 			<Paragraph>
-				Currently leading a development team for a healthcare project at{' '}
+				Currently leading a development team on a healthcare project at{' '}
 				<Link
 					onClick={() => sendLinkEvent({ label: 'company' })}
 					href="https://www.codeait.com/es"
 				>
 					Codea IT
 				</Link>
+				while also collaborating with municipalities on a personal initiative
+				developed alongside colleagues.
 			</Paragraph>
-			<Paragraph>
-				Also I'm working on my{' '}
-				<Link
-					onClick={() => sendLinkEvent({ label: 'thesis project' })}
-					href="https://www.instagram.com/alertify.ar/"
-				>
-					thesis project
-				</Link>{' '}
-				to complete my Software Engineering degree.
-			</Paragraph>
-			<Resume />
+			<div style={{ display: 'flex', flexDirection: 'row', gap: 16 }}>
+				<Resume />
+				<Contact />
+			</div>
 		</Section>
 	);
 };
