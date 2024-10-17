@@ -28,12 +28,32 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 				title: 'FullStack developer',
 				time: '2024-06-24 - 2024-08-24',
 				summary:
-					'Developing new features for a PROJECT and on-site AI-powered application while taking my first steps in backend development.',
+					'Developing new features on both front and backend sides for a PROJECT and on-site AI-powered application.',
 				project: {
 					text: 'web',
 					url: 'https://www.emulateme.ai/museums',
 				},
 				skills: ['React', 'RTKQuery', 'Tailwind', 'Express', 'Node', 'Mongo'],
+			},
+		],
+	},
+	{
+		company: 'Alertify',
+		experience: [
+			{
+				title: 'SSR Software Engineer',
+				time: '2023-04-01 - Present',
+				summary:
+					'Collaborating with municipalities on the development of an initiative we are working on with colleagues from the Software Engineering program.',
+				skills: [
+					'Typescript',
+					'React Native',
+					'Expo',
+					'RTK Query',
+					'Redux Toolkit',
+					'Jest',
+					'React Testing Library',
+				],
 			},
 		],
 	},

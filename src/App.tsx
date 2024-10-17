@@ -36,9 +36,9 @@ function App() {
 				<Pane>
 					<Presentation />
 					<WorkExperience />
-					<Technologies />
 				</Pane>
 				<Pane>
+					<Technologies />
 					<Projects />
 					<MediumPosts />
 				</Pane>
