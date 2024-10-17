@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import DownloadFileIcon from '@/assets/icons/DownloadFileIcon';
 import resumePDF from '@/resources/resume.pdf';
 import { sendResumeEvent } from '@/utils/analytics';
-import { Button } from './StyledResume';
+import { Button } from '../common/button/StyledButton';
 import { Typography } from '../common';
 
 const DownloadButton = () => {

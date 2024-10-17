@@ -8,7 +8,7 @@ const DownloadFileIcon = ({ size }: { size: number }) => {
 			width={size}
 			height={size}
 			viewBox="0 0 24 24"
-			fill="#25314C"
+			fill={themeStyles.icon}
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
