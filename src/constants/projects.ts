@@ -2,6 +2,47 @@ import { IProject } from '@/models';
 
 export const PROJECTS: IProject[] = [
 	{
+		name: 'Blood pressure monitor',
+		description:
+			'A React Native application that allows seamless connection to a blood pressure monitor for real-time measurements. This app offers a smooth BLE experience with cross-platform support, ensuring a clean and maintainable architecture.',
+		technologies: [
+			'React Native',
+			'Expo',
+			'Typescript',
+			'React Native BLE PLX',
+			'Zustand',
+		],
+		link: 'https://github.com/SantiTabbach/ble-plx-example',
+	},
+	{
+		name: 'Pills of knowledge for the future',
+		description:
+			"A collection of concise, informative guides on various technologies I've learned over time. I continuously add new entries as I explore and learn new tools, making it a quick reference for myself and others.",
+		technologies: [
+			'React',
+			'React Native',
+			'Expo',
+			'Typescript',
+			'Docker',
+			'Nginx',
+			'React Native BLE PLX',
+			'more...',
+		],
+		link: 'https://github.com/SantiTabbach/pkf',
+	},
+	{
+		name: 'Breathe Ease',
+		description:
+			'This app uses React Native Reanimated to offer smooth animations for calming breathing sessions, creating a harmonious experience that reduces stress and improves focus while showcasing advanced mobile animations.',
+		technologies: [
+			'React',
+			'React Native',
+			'React Native Reanimated',
+			'Typescript',
+		],
+		link: 'https://github.com/SantiTabbach/breathe-ease',
+	},
+	{
 		name: 'My TODOs',
 		description:
 			'This is my first Full Stack application. By doing this project I learned how to build a complete CRUD with an authentication and authorization system using the MERN stack.',
@@ -15,6 +56,7 @@ export const PROJECTS: IProject[] = [
 			'Expo',
 			'Axios',
 		],
+		link: 'https://github.com/SantiTabbach/my-tasks-service',
 	},
 	{
 		name: 'Alertify',
