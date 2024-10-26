@@ -5,7 +5,7 @@ export const StyledLink = styled.a`
 	margin-right: 19px;
 	position: relative;
 	text-decoration: none;
-	font-size: 16px;
+	font-size: ${({ style }) => style?.fontSize ?? '16'}px;
 	font-weight: ${({ style }) => style?.fontWeight ?? 400};
 	font-size: ${({ style }) => style?.fontWeight ?? 16}px;
 	color: ${({ theme }) => theme.subtitle};
