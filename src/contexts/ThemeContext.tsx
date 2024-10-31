@@ -28,10 +28,10 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-	const [theme, setTheme] = useState<THEME>(THEME.LIGHT);
+	const [theme, setTheme] = useState<THEME>(THEME.DARK);
 
 	useEffect(() => {
-		const savedTheme = (retrieveThemeFromStorage() as THEME) || THEME.LIGHT;
+		const savedTheme = (retrieveThemeFromStorage() as THEME) || THEME.DARK;
 		setTheme(savedTheme);
 	}, []);
 
