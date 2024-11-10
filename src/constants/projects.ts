@@ -11,6 +11,8 @@ export const PROJECTS: IProject[] = [
 			'Typescript',
 			'React Native BLE PLX',
 			'Zustand',
+			'Jest',
+			'React Testing Library',
 		],
 		link: 'https://github.com/SantiTabbach/ble-plx-example',
 	},

@@ -8,7 +8,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 				title: 'Lead Developer',
 				time: '2024-08-24 - Present',
 				summary:
-					'Leading the development of a PROJECT that allows users to sync BLE medical devices and obtain enriched information.',
+					'Leading the development of a PROJECT for the healthcare field that allows diabetic patients to track their glucose levels, nutrition, exercise, etc., and share it with their doctor.',
 				project: {
 					text: 'mobile application',
 					url: 'https://apps.apple.com/ar/app/maverick-weelbeing/id6502292196?l=en-GB',
@@ -16,7 +16,6 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 				skills: [
 					'React Native',
 					'Expo',
-					'Ble PLX',
 					'Zustand',
 					'TanStack Query',
 					'Typescript',
