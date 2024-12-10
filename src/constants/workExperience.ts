@@ -6,7 +6,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		experience: [
 			{
 				title: 'Lead Developer',
-				time: '2024-08-24 - 2024-12-01',
+				time: '2024-08-24 - 2024-11-30',
 				summary:
 					'Leading the development of a PROJECT for the healthcare field that allows diabetic patients to track their glucose levels, nutrition, exercise, etc., and share it with their doctor.',
 				project: {
