@@ -15,14 +15,14 @@ const Presentation = () => {
 				<StyledBold>Express</StyledBold> and <StyledBold>NestJS</StyledBold>.
 			</Paragraph>
 			<Paragraph>
-				Currently collaborating with municipalities on a
+				Currently working as a ReactJS Engineer at{' '}
 				<Link
 					onClick={() => sendLinkEvent({ label: 'company' })}
-					href="https://www.alertify.com.ar"
+					href="https://santexgroup.com/"
 				>
-					personal initiative
-				</Link>{' '}
-				developed alongside colleagues.
+					Santex
+				</Link>
+				.
 			</Paragraph>
 			<div style={{ display: 'flex', flexDirection: 'row', gap: 16 }}>
 				<Resume />

@@ -2,6 +2,31 @@ import { IWorkExperience } from '@/models';
 
 export const WORK_EXPERIENCE: IWorkExperience[] = [
 	{
+		company: 'Santex',
+		experience: [
+			{
+				title: 'ReactJS Engineer',
+				time: '2024-12-01 - Present',
+				summary:
+					'Developing new features for a project related to the PROJECT.',
+				project: {
+					text: 'logistics sector',
+					url: 'https://www.lac.com.ar/website/',
+				},
+				skills: [
+					'ReactJS',
+					'Next',
+					'Typescript',
+					'Vite',
+					'Tanstack',
+					'Tailwind',
+					'Shadcn',
+					'Leaflet',
+				],
+			},
+		],
+	},
+	{
 		company: 'Codea IT',
 		experience: [
 			{
