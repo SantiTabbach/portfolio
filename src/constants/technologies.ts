@@ -3,10 +3,10 @@ import {
 	ReactIcon,
 	JestIcon,
 	TypescriptIcon,
-	FirebaseIcon,
+	NextJsIcon,
 	NodeIcon,
 	DockerIcon,
-	FigmaIcon,
+	ExpoIcon,
 } from '@/assets/icons/technologies';
 import { ITechnology } from '@/models';
 
@@ -28,12 +28,12 @@ export const TECHNOLOGIES: ITechnology[] = [
 		name: 'Jest',
 	},
 	{
-		icon: FigmaIcon,
-		name: 'Figma',
+		icon: ExpoIcon,
+		name: 'Expo',
 	},
 	{
-		icon: FirebaseIcon,
-		name: 'Firebase',
+		icon: NextJsIcon,
+		name: 'Next',
 	},
 	{
 		icon: NodeIcon,
