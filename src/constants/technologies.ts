@@ -20,20 +20,20 @@ export const TECHNOLOGIES: ITechnology[] = [
 		name: 'React',
 	},
 	{
-		icon: ReduxIcon,
-		name: 'Redux',
-	},
-	{
-		icon: JestIcon,
-		name: 'Jest',
-	},
-	{
 		icon: ExpoIcon,
 		name: 'Expo',
 	},
 	{
 		icon: NextJsIcon,
 		name: 'Next',
+	},
+	{
+		icon: ReduxIcon,
+		name: 'Redux',
+	},
+	{
+		icon: JestIcon,
+		name: 'Jest',
 	},
 	{
 		icon: NodeIcon,
