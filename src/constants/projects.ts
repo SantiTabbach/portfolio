@@ -1,21 +1,21 @@
 import { IProject } from '@/models';
 
 export const PROJECTS: IProject[] = [
-	// {
-	// 	name: 'Blood pressure monitor',
-	// 	description:
-	// 		'A React Native application that allows seamless connection to a blood pressure monitor for real-time measurements. This app offers a smooth BLE experience with cross-platform support, ensuring a clean and maintainable architecture.',
-	// 	technologies: [
-	// 		'React Native',
-	// 		'Expo',
-	// 		'Typescript',
-	// 		'React Native BLE PLX',
-	// 		'Zustand',
-	// 		'Jest',
-	// 		'React Testing Library',
-	// 	],
-	// 	link: 'https://github.com/SantiTabbach/ble-plx-example',
-	// },
+	{
+		name: 'Blood pressure monitor',
+		description:
+			'A React Native application that allows seamless connection to a blood pressure monitor for real-time measurements. This app offers a smooth BLE experience with cross-platform support, ensuring a clean and maintainable architecture.',
+		technologies: [
+			'React Native',
+			'Expo',
+			'Typescript',
+			'React Native BLE PLX',
+			'Zustand',
+			'Jest',
+			'React Testing Library',
+		],
+		link: 'https://github.com/SantiTabbach/ble-plx-example',
+	},
 	{
 		name: 'Pills of knowledge for the future',
 		description:
