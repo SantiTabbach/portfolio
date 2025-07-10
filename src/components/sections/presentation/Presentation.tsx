@@ -8,14 +8,14 @@ const Presentation = () => {
 	return (
 		<Section title="Hey! I'm Santi">
 			<Paragraph>
-				<StyledBold>Software Engineer</StyledBold> with hands-on experience in
-				web and mobile development. Highly proficient in{' '}
+				<StyledBold>Senior Software Engineer</StyledBold> with hands-on
+				experience in web and mobile development. Highly proficient in{' '}
 				<StyledBold>React</StyledBold> and <StyledBold>React Native</StyledBold>
 				, with knowledge on <StyledBold>NodeJS</StyledBold>,{' '}
 				<StyledBold>Express</StyledBold> and <StyledBold>NestJS</StyledBold>.
 			</Paragraph>
 			<Paragraph>
-				Currently working as a ReactJS Engineer at{' '}
+				Currently working as a Senior ReactJS Engineer at{' '}
 				<Link
 					onClick={() => sendLinkEvent({ label: 'company' })}
 					href="https://santexgroup.com/"

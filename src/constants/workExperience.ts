@@ -5,24 +5,35 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		company: 'Santex',
 		experience: [
 			{
-				title: 'ReactJS Engineer',
-				time: '2024-12-01 - Present',
+				title: 'Senior FullStack Engineer',
+				time: '2025-03-01 - Present',
 				summary:
-					'Developing new features for a project related to the PROJECT.',
+					'Developing full-stack features for a multitenant PROJECT, focusing on scalability, performance, and interactive user interfaces.',
 				project: {
-					text: 'logistics sector',
+					text: 'logistics platform',
 					url: 'https://www.lac.com.ar/website/',
 				},
 				skills: [
 					'ReactJS',
 					'Next',
 					'Typescript',
-					'Vite',
 					'Tanstack',
 					'Tailwind',
 					'Shadcn',
 					'Leaflet',
+					'V0',
 				],
+			},
+			{
+				title: 'ReactJS Engineer',
+				time: '2024-12-01 - 2025-03-01',
+				summary:
+					'Led architecture and development for the PROJECT in a monorepo setup. Managed client communication, documentation, and knowledge transfer sessions to ensure a smooth deployment handoff.',
+				project: {
+					text: 'Firehouse Subs landing page',
+					url: 'https://www.firehousesubs.com/',
+				},
+				skills: ['ReactJS', 'Next', 'Typescript', 'Tailwind', 'Sanity CMS'],
 			},
 		],
 	},
@@ -33,9 +44,9 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 				title: 'Lead Developer',
 				time: '2024-08-24 - 2024-11-30',
 				summary:
-					'Leading the development of a PROJECT for the healthcare field that allows diabetic patients to track their glucose levels, nutrition, exercise, etc., and share it with their doctor.',
+					'Architected the integration of BLE devices and led development of a PROJECT enabling diabetic patients to track glucose, nutrition, and activity, and securely share data with healthcare professionals.',
 				project: {
-					text: 'mobile application',
+					text: 'mobile first app',
 					url: 'https://apps.apple.com/ar/app/maverick-weelbeing/id6502292196?l=en-GB',
 				},
 				skills: [
@@ -46,15 +57,16 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 					'Typescript',
 					'NestJS',
 					'Postgres',
+					'WatermelonDB',
 				],
 			},
 			{
 				title: 'FullStack developer',
 				time: '2024-06-24 - 2024-08-24',
 				summary:
-					'Developing new features on both front and backend sides for a PROJECT and on-site AI-powered application.',
+					'Developed full-stack features for a PROJECT powered by AI, improving both frontend interfaces and backend services to enhance real-time user interaction in on-site environments.',
 				project: {
-					text: 'web',
+					text: 'web app',
 					url: 'https://www.emulateme.ai/museums',
 				},
 				skills: ['React', 'RTKQuery', 'Tailwind', 'Express', 'Node', 'Mongo'],
@@ -89,7 +101,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 
 				time: '2023-08-01 - 2024-06-30',
 				summary:
-					'Maintaining and developing new features for a USA shoulder surgery planning PROJECT.',
+					'Developed and maintained a React-Electron PROJECT for shoulder surgery planning, implementing new features and rigorous testing to ensure high-quality healthcare software.',
 				project: {
 					text: 'desktop application',
 					url: 'https://shoulderinnovations.com/provoyance-shoulder/',
