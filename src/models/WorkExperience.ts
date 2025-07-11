@@ -1,3 +1,10 @@
+export type Domain =
+	| 'Civic Tech'
+	| 'Healthcare'
+	| 'Logistic'
+	| 'AI'
+	| 'E-Commerce';
+
 export interface IExperience {
 	title: string;
 	time: string;
@@ -7,6 +14,7 @@ export interface IExperience {
 		url: string;
 	};
 	skills: string[];
+	domain: Domain[];
 }
 
 export interface IWorkExperience {

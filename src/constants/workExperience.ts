@@ -5,6 +5,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		company: 'Santex',
 		experience: [
 			{
+				domain: ['Logistic'],
 				title: 'Senior FullStack Engineer',
 				time: '2025-03-01 - Present',
 				summary:
@@ -25,6 +26,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 				],
 			},
 			{
+				domain: ['E-Commerce'],
 				title: 'ReactJS Engineer',
 				time: '2024-12-01 - 2025-03-01',
 				summary:
@@ -41,6 +43,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		company: 'Codea IT',
 		experience: [
 			{
+				domain: ['Healthcare'],
 				title: 'Lead Developer',
 				time: '2024-08-24 - 2024-11-30',
 				summary:
@@ -61,6 +64,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 				],
 			},
 			{
+				domain: ['AI'],
 				title: 'FullStack developer',
 				time: '2024-06-24 - 2024-08-24',
 				summary:
@@ -77,10 +81,15 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		company: 'Alertify',
 		experience: [
 			{
+				domain: ['Civic Tech'],
 				title: 'SSR Software Engineer',
 				time: '2023-04-01 - Present',
 				summary:
-					'Collaborating with municipalities on the development of an initiative we are working on with colleagues from the Software Engineering program.',
+					'Co-Founder and responsible for UX/UI design and mobile development in a PROJECT with municipalities, aiming to deliver a user-friendly app that enhances public safety and citizen interaction.',
+				project: {
+					text: 'civic technology project',
+					url: 'https://alertify.com.ar',
+				},
 				skills: [
 					'Typescript',
 					'React Native',
@@ -97,6 +106,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 		company: 'Intive',
 		experience: [
 			{
+				domain: ['Healthcare'],
 				title: 'SSR Software Engineer',
 
 				time: '2023-08-01 - 2024-06-30',
@@ -109,6 +119,7 @@ export const WORK_EXPERIENCE: IWorkExperience[] = [
 				skills: ['React', 'Electron', 'Redux', 'Jest', 'Enzyme', 'Axios'],
 			},
 			{
+				domain: ['Healthcare'],
 				title: 'Junior Software Engineer',
 				time: '2021-11-01 - 2023-07-31',
 				summary:
